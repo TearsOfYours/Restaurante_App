@@ -5,5 +5,4 @@ data class DependienteDTO (val id:String,
                            val email:String,
                            val imagePath:String,
                            val enabled: Boolean,
-                           val isAdmin:Boolean,
-                           val changePassword: String)
+                           val isAdmin:Boolean)

@@ -118,3 +118,5 @@ nov 20, 2025 8:16:06 P. M. ies.sequeros.com.dam.pmdm.administrador.infraestruct
 INFO: Ejecutando SQL: INSERT INTO DEPENDIENTE (id, name, email, password, image_path, enabled, is_admin) VALUES (?, ?, ?, ?, ?, ?, ?) | Params: [1]=88f28586-d1b3-44c6-9ed1-eb72085201d2, [2]=8889, [3]=766@123, [4]=12345678A, [5]=88f28586-d1b3-44c6-9ed1-eb72085201d2.png, [6]=true, [7]=false]
 nov 20, 2025 8:21:39 P. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.dependientes.DependienteDao getAll
 INFO: Ejecutando SQL: select * from DEPENDIENTE | Parametros: 
+nov 20, 2025 8:54:37 P. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.dependientes.DependienteDao getAll
+INFO: Ejecutando SQL: select * from DEPENDIENTE | Parametros: 

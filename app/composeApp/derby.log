@@ -1,6 +1,6 @@
 ----------------------------------------------------------------
-Thu Nov 20 20:21:39 CET 2025:
-Booting Derby version The Apache Software Foundation - Apache Derby - 10.16.1.1 - (1901046): instance a816c00e-019a-a2b7-16ed-00000e98c550 
+Thu Nov 20 20:54:37 CET 2025:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.16.1.1 - (1901046): instance a816c00e-019a-a2d5-4452-00000e9af660 
 on database directory /home/gersab2/Escriptori/Vegaburger/app/composeApp/bbdd/vegaburguer with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@4f2410ac 
 Loaded from file:/home/gersab2/.gradle/caches/modules-2/files-2.1/org.apache.derby/derby/10.16.1.1/f9ca2054b3e33ec3f3f19df4a7490352d82de54a/derby-10.16.1.1.jar
 java.vendor=Oracle Corporation
@@ -12,5 +12,5 @@ os.version=5.15.0-113-generic
 derby.system.home=null
 Database Class Loader started - derby.database.classpath=''
 ----------------------------------------------------------------
-Thu Nov 20 20:21:48 CET 2025:
-Shutting down instance a816c00e-019a-a2b7-16ed-00000e98c550 on database directory /home/gersab2/Escriptori/Vegaburger/app/composeApp/bbdd/vegaburguer with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@4f2410ac 
+Thu Nov 20 20:54:55 CET 2025:
+Shutting down instance a816c00e-019a-a2d5-4452-00000e9af660 on database directory /home/gersab2/Escriptori/Vegaburger/app/composeApp/bbdd/vegaburguer with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@4f2410ac 
