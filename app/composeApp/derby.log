@@ -1,16 +1,16 @@
 ----------------------------------------------------------------
-Wed Nov 19 21:11:25 CET 2025:
-Booting Derby version The Apache Software Foundation - Apache Derby - 10.16.1.1 - (1901046): instance a816c00e-019a-9dbe-4c89-00000d5ed000 
-on database directory C:\Users\gabri\Downloads\VegaBurguer_AD_PMDM_Template-master\VegaBurguer_AD_PMDM_Template-master\composeApp\bbdd\vegaburguer with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@11a4022a 
-Loaded from file:/C:/Users/gabri/.gradle/caches/modules-2/files-2.1/org.apache.derby/derby/10.16.1.1/f9ca2054b3e33ec3f3f19df4a7490352d82de54a/derby-10.16.1.1.jar
+Thu Nov 20 20:21:39 CET 2025:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.16.1.1 - (1901046): instance a816c00e-019a-a2b7-16ed-00000e98c550 
+on database directory /home/gersab2/Escriptori/Vegaburger/app/composeApp/bbdd/vegaburguer with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@4f2410ac 
+Loaded from file:/home/gersab2/.gradle/caches/modules-2/files-2.1/org.apache.derby/derby/10.16.1.1/f9ca2054b3e33ec3f3f19df4a7490352d82de54a/derby-10.16.1.1.jar
 java.vendor=Oracle Corporation
-java.runtime.version=24.0.1+9-30
-user.dir=C:\Users\gabri\Downloads\VegaBurguer_AD_PMDM_Template-master\VegaBurguer_AD_PMDM_Template-master\composeApp
-os.name=Windows 11
+java.runtime.version=21.0.2+13-58
+user.dir=/home/gersab2/Escriptori/Vegaburger/app/composeApp
+os.name=Linux
 os.arch=amd64
-os.version=10.0
+os.version=5.15.0-113-generic
 derby.system.home=null
 Database Class Loader started - derby.database.classpath=''
 ----------------------------------------------------------------
-Wed Nov 19 21:11:29 CET 2025:
-Shutting down instance a816c00e-019a-9dbe-4c89-00000d5ed000 on database directory C:\Users\gabri\Downloads\VegaBurguer_AD_PMDM_Template-master\VegaBurguer_AD_PMDM_Template-master\composeApp\bbdd\vegaburguer with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@11a4022a 
+Thu Nov 20 20:21:48 CET 2025:
+Shutting down instance a816c00e-019a-a2b7-16ed-00000e98c550 on database directory /home/gersab2/Escriptori/Vegaburger/app/composeApp/bbdd/vegaburguer with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@4f2410ac 
