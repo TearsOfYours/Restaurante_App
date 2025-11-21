@@ -42,6 +42,8 @@ kotlin {
             implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.9.0")
             //carga de imagenes
             implementation("io.coil-kt.coil3:coil-compose:3.3.0")
+            implementation("org.springframework.data:spring-data-jdbc:4.0.0")
+            implementation("com.mysql:mysql-connector-j:9.5.0")
 
            implementation(compose.runtime)
             implementation(compose.foundation)
@@ -59,6 +61,7 @@ kotlin {
             implementation(compose.desktop.currentOs)
             implementation(libs.kotlinx.coroutinesSwing)
             implementation("org.apache.derby:derby:10.16.1.1")
+            implementation("com.mysql:mysql-connector-j:9.5.0")
         }
     }
 }

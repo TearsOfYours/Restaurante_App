@@ -31,7 +31,7 @@ class BBDDDependienteRepository(
 
     override suspend fun getAll(): List<Dependiente> {
 
-        return bbddRepositorioDepedientesJava.all
+        return bbddRepositorioDepedientesJava.getAll()
     }
 
     override suspend fun findByName(name: String): Dependiente? {

@@ -68,3 +68,81 @@ nov 18, 2025 6:49:51 P. M. ies.sequeros.com.dam.pmdm.administrador.infraestruct
 INFO: Ejecutando SQL: select * from DEPENDIENTE | Parametros: 
 nov 19, 2025 9:11:26 P. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.dependientes.DependienteDao getAll
 INFO: Ejecutando SQL: select * from DEPENDIENTE | Parametros: 
+nov 20, 2025 7:59:38 P. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.dependientes.DependienteDao getAll
+INFO: Ejecutando SQL: select * from DEPENDIENTE | Parametros: 
+nov 20, 2025 7:59:52 P. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.dependientes.DependienteDao getById
+INFO: Ejecutando SQL: select * from DEPENDIENTE where id=? | Parametros: [id=164addcf-c622-4714-8b49-0ee82784847b]
+nov 20, 2025 7:59:52 P. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.dependientes.DependienteDao update
+INFO: Ejecutando SQL: UPDATE DEPENDIENTE SET name = ?, email = ?, password = ?, image_path = ?, enabled = ?, is_admin = ? WHERE id = ? | Params: [1]=89797, [2]=87897@dfds, [3]=123456789P, [4]=164addcf-c622-4714-8b49-0ee82784847b.jpg, [5]=true, [6]=false, [7]=164addcf-c622-4714-8b49-0ee82784847b]
+nov 20, 2025 8:00:05 P. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.dependientes.DependienteDao getById
+INFO: Ejecutando SQL: select * from DEPENDIENTE where id=? | Parametros: [id=164addcf-c622-4714-8b49-0ee82784847b]
+nov 20, 2025 8:00:05 P. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.dependientes.DependienteDao update
+INFO: Ejecutando SQL: UPDATE DEPENDIENTE SET name = ?, email = ?, password = ?, image_path = ?, enabled = ?, is_admin = ? WHERE id = ? | Params: [1]=89797, [2]=87897@dfds, [3]=123456789P, [4]=164addcf-c622-4714-8b49-0ee82784847b.jpg, [5]=false, [6]=true, [7]=164addcf-c622-4714-8b49-0ee82784847b]
+nov 21, 2025 11:05:28 P. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.dependientes.DependienteDao getAll
+INFO: Ejecutando SQL: select * from DEPENDIENTE | Parametros: 
+nov 21, 2025 11:07:54 P. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.dependientes.DependienteDao getAll
+INFO: Ejecutando SQL: select * from DEPENDIENTE | Parametros: 
+nov 21, 2025 11:10:50 P. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.dependientes.DependienteDao insert
+SEVERE: null
+java.sql.SQLSyntaxErrorException: Unknown column 'id' in 'field list'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:112)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:988)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1166)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1101)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:1448)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:1084)
+	at ies.sequeros.com.dam.pmdm.administrador.infraestructura.dependientes.DependienteDao.insert(DependienteDao.java:178)
+	at ies.sequeros.com.dam.pmdm.administrador.infraestructura.dependientes.BBDDRepositorioDependientesJava.add(BBDDRepositorioDependientesJava.java:20)
+	at ies.sequeros.com.dam.pmdm.administrador.infraestructura.BBDDDependienteRepository.add(BBDDDependienteRepository.kt:12)
+	at ies.sequeros.com.dam.pmdm.administrador.aplicacion.dependientes.crear.CrearDependienteUseCase.invoke(CrearDependienteUseCase.kt:33)
+	at ies.sequeros.com.dam.pmdm.administrador.aplicacion.dependientes.crear.CrearDependienteUseCase$invoke$1.invokeSuspend(CrearDependienteUseCase.kt)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at java.desktop/java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:318)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:723)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:702)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)
+
+nov 21, 2025 11:11:06 P. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.dependientes.DependienteDao getAll
+INFO: Ejecutando SQL: select * from DEPENDIENTE | Parametros: 
+nov 21, 2025 11:20:36 P. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.dependientes.DependienteDao getAll
+INFO: Ejecutando SQL: select * from DEPENDIENTE | Parametros: 
+nov 21, 2025 11:21:07 P. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.dependientes.DependienteDao insert
+SEVERE: null
+java.sql.SQLSyntaxErrorException: Unknown column 'image_path' in 'field list'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:112)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:988)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1166)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1101)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:1448)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:1084)
+	at ies.sequeros.com.dam.pmdm.administrador.infraestructura.dependientes.DependienteDao.insert(DependienteDao.java:178)
+	at ies.sequeros.com.dam.pmdm.administrador.infraestructura.dependientes.BBDDRepositorioDependientesJava.add(BBDDRepositorioDependientesJava.java:20)
+	at ies.sequeros.com.dam.pmdm.administrador.infraestructura.BBDDDependienteRepository.add(BBDDDependienteRepository.kt:12)
+	at ies.sequeros.com.dam.pmdm.administrador.aplicacion.dependientes.crear.CrearDependienteUseCase.invoke(CrearDependienteUseCase.kt:33)
+	at ies.sequeros.com.dam.pmdm.administrador.aplicacion.dependientes.crear.CrearDependienteUseCase$invoke$1.invokeSuspend(CrearDependienteUseCase.kt)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at java.desktop/java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:318)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:723)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:702)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)
+
+nov 21, 2025 11:22:42 P. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.dependientes.DependienteDao getAll
+INFO: Ejecutando SQL: select * from DEPENDIENTE | Parametros: 
+nov 21, 2025 11:23:00 P. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.dependientes.DependienteDao insert
+INFO: Ejecutando SQL: INSERT INTO DEPENDIENTE (id, name, email, password, image_path, enabled, is_admin) VALUES (?, ?, ?, ?, ?, ?, ?) | Params: [1]=1fdfa144-4d25-45ae-9a84-69ba1b234db6, [2]=12345678Aa, [3]=12345678Aa@a, [4]=12345678Aa, [5]=1fdfa144-4d25-45ae-9a84-69ba1b234db6.png, [6]=true, [7]=true]
+nov 21, 2025 11:23:22 P. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.dependientes.DependienteDao getAll
+INFO: Ejecutando SQL: select * from DEPENDIENTE | Parametros: 

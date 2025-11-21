@@ -21,7 +21,7 @@ public class DependienteDao implements IDao<Dependiente> {
     private final String selectbyid = "select * from " + table_name + " where id=?";
     private final String findbyname = "select * from " + table_name + " where name=?";
 
-    private final String deletebyid = "delete from " + table_name + " where id='?'";
+    private final String deletebyid = "delete from " + table_name + " where id=?";
     private final String insert = "INSERT INTO " + table_name + " (id, name, email, password, image_path, enabled, is_admin) " +
                     "VALUES (?, ?, ?, ?, ?, ?, ?)";
     private final String update =
