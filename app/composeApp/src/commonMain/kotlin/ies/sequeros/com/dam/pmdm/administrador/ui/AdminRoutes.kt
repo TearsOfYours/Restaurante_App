@@ -12,4 +12,6 @@ object  AdminRoutes {
     const val Dependiente="dependiente"
 
 
+    const val CambiarClave = "cambiarclavedependiente"
+
 }

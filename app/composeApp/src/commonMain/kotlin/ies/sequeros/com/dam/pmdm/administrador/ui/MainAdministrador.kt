@@ -45,6 +45,7 @@ import ies.sequeros.com.dam.pmdm.administrador.AdministradorViewModel
 
 import ies.sequeros.com.dam.pmdm.administrador.ui.dependientes.Dependientes
 import ies.sequeros.com.dam.pmdm.administrador.ui.dependientes.DependientesViewModel
+import ies.sequeros.com.dam.pmdm.administrador.ui.dependientes.changepassordform.CambiarClave
 import ies.sequeros.com.dam.pmdm.administrador.ui.dependientes.form.DependienteForm
 
 
@@ -164,7 +165,10 @@ fun MainAdministrador(
                         launchSingleTop = true
 
                     }
-                })
+                },{
+                    navController.navigate(AdminRoutes.CambiarClave)
+                }
+                )
             }
             composable (AdminRoutes.Dependiente){
                 DependienteForm(
@@ -176,6 +180,13 @@ fun MainAdministrador(
                     }
                 )
             }
+            composable (AdminRoutes.CambiarClave) {
+            CambiarClave(dependientesViewModel, {navController.popBackStack()}){
+                    print("Adiooos")
+                }
+            }
+
+
 
         }
     }

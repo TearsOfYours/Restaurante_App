@@ -8,8 +8,6 @@ import ies.sequeros.com.dam.pmdm.administrador.aplicacion.dependientes.activar.A
 import ies.sequeros.com.dam.pmdm.administrador.aplicacion.dependientes.activar.ActivarDependienteUseCase
 import ies.sequeros.com.dam.pmdm.administrador.aplicacion.dependientes.actualizar.ActualizarDependienteCommand
 import ies.sequeros.com.dam.pmdm.administrador.aplicacion.dependientes.actualizar.ActualizarDependienteUseCase
-import ies.sequeros.com.dam.pmdm.administrador.aplicacion.dependientes.cambiarcontrasena.CambiarContrasenaCommand
-import ies.sequeros.com.dam.pmdm.administrador.aplicacion.dependientes.cambiarcontrasena.CambiarContrasenaUseCase
 import ies.sequeros.com.dam.pmdm.administrador.aplicacion.dependientes.cambiarpermisos.CambiarPermisosCommand
 import ies.sequeros.com.dam.pmdm.administrador.aplicacion.dependientes.cambiarpermisos.CambiarPermisosUseCase
 import ies.sequeros.com.dam.pmdm.administrador.aplicacion.dependientes.crear.CrearDependienteCommand
@@ -100,6 +98,10 @@ class DependientesViewModel(
                     it
             }.toMutableList()
         }
+    }
+    // Tengo que manejar/validar la contraseña desde el viewmodel?
+    fun changePassword() {
+
     }
 
     fun delete(item: DependienteDTO) {

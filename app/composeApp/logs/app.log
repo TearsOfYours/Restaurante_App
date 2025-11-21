@@ -120,3 +120,55 @@ nov 20, 2025 8:21:39 P. M. ies.sequeros.com.dam.pmdm.administrador.infraestruct
 INFO: Ejecutando SQL: select * from DEPENDIENTE | Parametros: 
 nov 20, 2025 8:54:37 P. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.dependientes.DependienteDao getAll
 INFO: Ejecutando SQL: select * from DEPENDIENTE | Parametros: 
+nov 21, 2025 5:48:34 P. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.dependientes.DependienteDao getAll
+INFO: Ejecutando SQL: select * from DEPENDIENTE | Parametros: 
+nov 21, 2025 5:52:21 P. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.dependientes.DependienteDao getAll
+INFO: Ejecutando SQL: select * from DEPENDIENTE | Parametros: 
+nov 21, 2025 5:52:38 P. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.dependientes.DependienteDao getById
+INFO: Ejecutando SQL: select * from DEPENDIENTE where id=? | Parametros: [id=c27f8f72-2ff9-45dc-a114-d7f942ee15a4]
+nov 21, 2025 5:52:38 P. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.dependientes.DependienteDao update
+INFO: Ejecutando SQL: UPDATE DEPENDIENTE SET name = ?, email = ?, password = ?, image_path = ?, enabled = ?, is_admin = ? WHERE id = ? | Params: [1]=543536, [2]=fdsfds@dfdsf, [3]=123456789P, [4]=c27f8f72-2ff9-45dc-a114-d7f942ee15a4.jpg, [5]=false, [6]=false, [7]=c27f8f72-2ff9-45dc-a114-d7f942ee15a4]
+nov 21, 2025 5:52:39 P. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.dependientes.DependienteDao getById
+INFO: Ejecutando SQL: select * from DEPENDIENTE where id=? | Parametros: [id=c27f8f72-2ff9-45dc-a114-d7f942ee15a4]
+nov 21, 2025 5:52:39 P. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.dependientes.DependienteDao update
+INFO: Ejecutando SQL: UPDATE DEPENDIENTE SET name = ?, email = ?, password = ?, image_path = ?, enabled = ?, is_admin = ? WHERE id = ? | Params: [1]=543536, [2]=fdsfds@dfdsf, [3]=123456789P, [4]=c27f8f72-2ff9-45dc-a114-d7f942ee15a4.jpg, [5]=true, [6]=false, [7]=c27f8f72-2ff9-45dc-a114-d7f942ee15a4]
+nov 21, 2025 5:53:12 P. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.dependientes.DependienteDao getAll
+INFO: Ejecutando SQL: select * from DEPENDIENTE | Parametros: 
+nov 21, 2025 5:53:19 P. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.dependientes.DependienteDao getById
+INFO: Ejecutando SQL: select * from DEPENDIENTE where id=? | Parametros: [id=c27f8f72-2ff9-45dc-a114-d7f942ee15a4]
+nov 21, 2025 5:53:19 P. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.dependientes.DependienteDao update
+INFO: Ejecutando SQL: UPDATE DEPENDIENTE SET name = ?, email = ?, password = ?, image_path = ?, enabled = ?, is_admin = ? WHERE id = ? | Params: [1]=543536, [2]=fdsfds@dfdsf, [3]=123456789P, [4]=c27f8f72-2ff9-45dc-a114-d7f942ee15a4.jpg, [5]=true, [6]=true, [7]=c27f8f72-2ff9-45dc-a114-d7f942ee15a4]
+nov 21, 2025 5:53:20 P. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.dependientes.DependienteDao getById
+INFO: Ejecutando SQL: select * from DEPENDIENTE where id=? | Parametros: [id=c27f8f72-2ff9-45dc-a114-d7f942ee15a4]
+nov 21, 2025 5:53:20 P. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.dependientes.DependienteDao update
+INFO: Ejecutando SQL: UPDATE DEPENDIENTE SET name = ?, email = ?, password = ?, image_path = ?, enabled = ?, is_admin = ? WHERE id = ? | Params: [1]=543536, [2]=fdsfds@dfdsf, [3]=123456789P, [4]=c27f8f72-2ff9-45dc-a114-d7f942ee15a4.jpg, [5]=true, [6]=false, [7]=c27f8f72-2ff9-45dc-a114-d7f942ee15a4]
+nov 21, 2025 5:53:35 P. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.dependientes.DependienteDao getById
+INFO: Ejecutando SQL: select * from DEPENDIENTE where id=? | Parametros: [id=c27f8f72-2ff9-45dc-a114-d7f942ee15a4]
+nov 21, 2025 5:53:35 P. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.dependientes.DependienteDao update
+INFO: Ejecutando SQL: UPDATE DEPENDIENTE SET name = ?, email = ?, password = ?, image_path = ?, enabled = ?, is_admin = ? WHERE id = ? | Params: [1]=543536, [2]=fdsfds@dfdsf, [3]=123456789P, [4]=c27f8f72-2ff9-45dc-a114-d7f942ee15a4.jpg, [5]=true, [6]=false, [7]=c27f8f72-2ff9-45dc-a114-d7f942ee15a4]
+nov 21, 2025 6:01:31 P. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.dependientes.DependienteDao getAll
+INFO: Ejecutando SQL: select * from DEPENDIENTE | Parametros: 
+nov 21, 2025 6:01:54 P. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.dependientes.DependienteDao getAll
+INFO: Ejecutando SQL: select * from DEPENDIENTE | Parametros: 
+nov 21, 2025 6:46:15 P. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.dependientes.DependienteDao getAll
+INFO: Ejecutando SQL: select * from DEPENDIENTE | Parametros: 
+nov 21, 2025 6:54:05 P. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.dependientes.DependienteDao getAll
+INFO: Ejecutando SQL: select * from DEPENDIENTE | Parametros: 
+nov 21, 2025 6:54:21 P. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.dependientes.DependienteDao getById
+INFO: Ejecutando SQL: select * from DEPENDIENTE where id=? | Parametros: [id=c27f8f72-2ff9-45dc-a114-d7f942ee15a4]
+nov 21, 2025 6:54:21 P. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.dependientes.DependienteDao update
+INFO: Ejecutando SQL: UPDATE DEPENDIENTE SET name = ?, email = ?, password = ?, image_path = ?, enabled = ?, is_admin = ? WHERE id = ? | Params: [1]=543536, [2]=fdsfds@dfdsf, [3]=123456789P, [4]=c27f8f72-2ff9-45dc-a114-d7f942ee15a4.jpg, [5]=true, [6]=true, [7]=c27f8f72-2ff9-45dc-a114-d7f942ee15a4]
+nov 21, 2025 6:55:32 P. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.dependientes.DependienteDao getById
+INFO: Ejecutando SQL: select * from DEPENDIENTE where id=? | Parametros: [id=c27f8f72-2ff9-45dc-a114-d7f942ee15a4]
+nov 21, 2025 6:55:32 P. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.dependientes.DependienteDao update
+INFO: Ejecutando SQL: UPDATE DEPENDIENTE SET name = ?, email = ?, password = ?, image_path = ?, enabled = ?, is_admin = ? WHERE id = ? | Params: [1]=543536, [2]=fdsfds@dfdsf, [3]=123456789P, [4]=c27f8f72-2ff9-45dc-a114-d7f942ee15a4.jpg, [5]=true, [6]=false, [7]=c27f8f72-2ff9-45dc-a114-d7f942ee15a4]
+nov 21, 2025 6:59:53 P. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.dependientes.DependienteDao getAll
+INFO: Ejecutando SQL: select * from DEPENDIENTE | Parametros: 
+nov 21, 2025 7:09:12 P. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.dependientes.DependienteDao getAll
+INFO: Ejecutando SQL: select * from DEPENDIENTE | Parametros: 
+nov 21, 2025 7:11:11 P. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.dependientes.DependienteDao getAll
+INFO: Ejecutando SQL: select * from DEPENDIENTE | Parametros: 
+nov 21, 2025 7:16:50 P. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.dependientes.DependienteDao getAll
+INFO: Ejecutando SQL: select * from DEPENDIENTE | Parametros: 
+nov 21, 2025 7:22:52 P. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.dependientes.DependienteDao getAll
+INFO: Ejecutando SQL: select * from DEPENDIENTE | Parametros: 
