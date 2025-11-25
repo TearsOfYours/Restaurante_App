@@ -42,11 +42,17 @@ import androidx.navigation.compose.rememberNavController
 import androidx.window.core.layout.WindowWidthSizeClass
 import ies.sequeros.com.dam.pmdm.AppViewModel
 import ies.sequeros.com.dam.pmdm.administrador.AdministradorViewModel
+import ies.sequeros.com.dam.pmdm.administrador.ui.categorias.Categorias
+import ies.sequeros.com.dam.pmdm.administrador.ui.categorias.CategoriasViewModel
 
 import ies.sequeros.com.dam.pmdm.administrador.ui.dependientes.Dependientes
 import ies.sequeros.com.dam.pmdm.administrador.ui.dependientes.DependientesViewModel
 import ies.sequeros.com.dam.pmdm.administrador.ui.dependientes.changepassordform.CambiarClave
 import ies.sequeros.com.dam.pmdm.administrador.ui.dependientes.form.DependienteForm
+import ies.sequeros.com.dam.pmdm.administrador.ui.listado.Pedidos
+import ies.sequeros.com.dam.pmdm.administrador.ui.listado.PedidosViewModel
+import ies.sequeros.com.dam.pmdm.administrador.ui.productos.Productos
+import ies.sequeros.com.dam.pmdm.administrador.ui.productos.ProductosViewModel
 
 
 @Suppress("ViewModelConstructorInComposable")
@@ -56,8 +62,9 @@ fun MainAdministrador(
     mainViewModel: MainAdministradorViewModel,
     administradorViewModel: AdministradorViewModel,
     dependientesViewModel: DependientesViewModel,
-
-
+    categoriasViewModel: CategoriasViewModel,
+    productosViewModel: ProductosViewModel,
+    pedidosViewModel: PedidosViewModel,
     onExit: () -> Unit
 ) {
     val navController = rememberNavController()
@@ -84,7 +91,7 @@ fun MainAdministrador(
                         popUpTo(AdminRoutes.Dependientes)
                     }
                 },
-                "",
+                "Dependientes",
                 true
             ),
 
@@ -97,7 +104,7 @@ fun MainAdministrador(
                         popUpTo(AdminRoutes.Main)
                     }
                 },
-                "Users  Admin",
+                "Categorias",
                 true
             ),
             ItemOption(
@@ -109,19 +116,19 @@ fun MainAdministrador(
                         popUpTo(AdminRoutes.Main)
                     }
                 },
-                "Users  Admin",
+                "Productos",
                 true
             ),
             ItemOption(
                 Icons.AutoMirrored.Filled.FactCheck,
                 {
-                    navController.navigate(AdminRoutes.Pedido) {
+                    navController.navigate(AdminRoutes.Pedidos) {
                         //
                         launchSingleTop = true
                         popUpTo(AdminRoutes.Main)
                     }
                 },
-                "Users  Admin",
+                "Pedido",
                 true
             ),
 
@@ -170,6 +177,16 @@ fun MainAdministrador(
                 }
                 )
             }
+            composable (AdminRoutes.Categorias) {
+                Categorias(categoriasViewModel) { navController.popBackStack() }
+            }
+            composable (AdminRoutes.Productos ) {
+                Productos(productosViewModel) {navController.popBackStack()}
+            }
+            composable (AdminRoutes.Pedidos) {
+                Pedidos(pedidosViewModel) {navController.popBackStack()}
+            }
+
             composable (AdminRoutes.Dependiente){
                 DependienteForm(
                     dependientesViewModel,{
@@ -181,11 +198,9 @@ fun MainAdministrador(
                 )
             }
             composable (AdminRoutes.CambiarClave) {
-            CambiarClave(dependientesViewModel, {navController.popBackStack()}){
-                    print("Adiooos")
+                CambiarClave(dependientesViewModel, {navController.popBackStack()}){
                 }
             }
-
 
 
         }

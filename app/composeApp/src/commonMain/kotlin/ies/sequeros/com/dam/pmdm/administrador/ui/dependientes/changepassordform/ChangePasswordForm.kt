@@ -12,5 +12,5 @@ fun CambiarClave(
     onClose: () -> Unit,
     function: () -> Unit
 ) {
-    Text("holaaa", fontSize = (30.sp))
+    Text("cambiar contraseña", fontSize = (30.sp))
 }
