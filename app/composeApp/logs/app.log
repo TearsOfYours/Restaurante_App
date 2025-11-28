@@ -220,3 +220,171 @@ nov 25, 2025 6:58:28 P. M. ies.sequeros.com.dam.pmdm.administrador.infraestruct
 INFO: Ejecutando SQL: select * from DEPENDIENTE | Parametros: 
 nov 25, 2025 7:00:03 P. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.dependientes.DependienteDao getAll
 INFO: Ejecutando SQL: select * from DEPENDIENTE | Parametros: 
+nov 25, 2025 7:31:38 P. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.dependientes.DependienteDao getAll
+INFO: Ejecutando SQL: select * from DEPENDIENTE | Parametros: 
+nov 26, 2025 7:40:38 P. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.dependientes.DependienteDao getAll
+INFO: Ejecutando SQL: select * from DEPENDIENTE | Parametros: 
+nov 26, 2025 7:46:16 P. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.dependientes.DependienteDao getAll
+INFO: Ejecutando SQL: select * from DEPENDIENTE | Parametros: 
+nov 26, 2025 7:57:30 P. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.dependientes.DependienteDao getAll
+INFO: Ejecutando SQL: select * from DEPENDIENTE | Parametros: 
+nov 26, 2025 7:59:56 P. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.dependientes.DependienteDao getAll
+INFO: Ejecutando SQL: select * from DEPENDIENTE | Parametros: 
+nov 26, 2025 8:01:30 P. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.dependientes.DependienteDao getAll
+INFO: Ejecutando SQL: select * from DEPENDIENTE | Parametros: 
+nov 26, 2025 8:07:02 P. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.dependientes.DependienteDao getAll
+INFO: Ejecutando SQL: select * from DEPENDIENTE | Parametros: 
+nov 26, 2025 8:09:58 P. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.dependientes.DependienteDao getAll
+INFORMACIÓN: Ejecutando SQL: select * from DEPENDIENTE | Parametros: 
+nov 26, 2025 8:11:00 P. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.dependientes.DependienteDao getAll
+INFORMACIÓN: Ejecutando SQL: select * from DEPENDIENTE | Parametros: 
+nov 26, 2025 8:12:22 P. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.dependientes.DependienteDao getAll
+INFO: Ejecutando SQL: select * from DEPENDIENTE | Parametros: 
+nov 26, 2025 8:13:11 P. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.dependientes.DependienteDao getAll
+INFORMACIÓN: Ejecutando SQL: select * from DEPENDIENTE | Parametros: 
+nov 26, 2025 8:16:18 P. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.dependientes.DependienteDao getAll
+INFO: Ejecutando SQL: select * from DEPENDIENTE | Parametros: 
+nov 26, 2025 8:16:41 P. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.dependientes.DependienteDao getAll
+INFO: Ejecutando SQL: select * from DEPENDIENTE | Parametros: 
+nov 26, 2025 8:17:02 P. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.dependientes.DependienteDao getAll
+INFO: Ejecutando SQL: select * from DEPENDIENTE | Parametros: 
+nov 26, 2025 8:20:19 P. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.dependientes.DependienteDao getAll
+INFO: Ejecutando SQL: select * from DEPENDIENTE | Parametros: 
+nov 26, 2025 8:21:32 P. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.dependientes.DependienteDao getAll
+INFO: Ejecutando SQL: select * from DEPENDIENTE | Parametros: 
+nov 26, 2025 8:22:32 P. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.dependientes.DependienteDao getAll
+INFO: Ejecutando SQL: select * from DEPENDIENTE | Parametros: 
+nov 26, 2025 8:23:04 P. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.dependientes.DependienteDao getAll
+INFO: Ejecutando SQL: select * from DEPENDIENTE | Parametros: 
+nov 26, 2025 9:13:27 P. M. sun.awt.X11.XToolkit processException
+WARNING: Exception on Toolkit thread
+java.lang.NullPointerException: Cannot invoke "sun.awt.X11.XComponentPeer.pSetCursor(java.awt.Cursor)" because the return value of "sun.awt.AWTAccessor$ComponentAccessor.getPeer(java.awt.Component)" is null
+	at java.desktop/sun.awt.X11.XWindow.handleXCrossingEvent(XWindow.java:948)
+	at java.desktop/sun.awt.X11.XComponentPeer.handleXCrossingEvent(XComponentPeer.java:74)
+	at java.desktop/sun.awt.X11.XBaseWindow.dispatchEvent(XBaseWindow.java:1162)
+	at java.desktop/sun.awt.X11.XBaseWindow.dispatchToWindow(XBaseWindow.java:1120)
+	at java.desktop/sun.awt.X11.XToolkit.dispatchEvent(XToolkit.java:622)
+	at java.desktop/sun.awt.X11.XToolkit.run(XToolkit.java:735)
+	at java.desktop/sun.awt.X11.XToolkit.run(XToolkit.java:651)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+nov 26, 2025 9:17:30 P. M. sun.awt.X11.XToolkit processException
+WARNING: Exception on Toolkit thread
+java.lang.NullPointerException: Cannot invoke "sun.awt.X11.XComponentPeer.pSetCursor(java.awt.Cursor)" because the return value of "sun.awt.AWTAccessor$ComponentAccessor.getPeer(java.awt.Component)" is null
+	at java.desktop/sun.awt.X11.XWindow.handleXCrossingEvent(XWindow.java:948)
+	at java.desktop/sun.awt.X11.XComponentPeer.handleXCrossingEvent(XComponentPeer.java:74)
+	at java.desktop/sun.awt.X11.XBaseWindow.dispatchEvent(XBaseWindow.java:1162)
+	at java.desktop/sun.awt.X11.XBaseWindow.dispatchToWindow(XBaseWindow.java:1120)
+	at java.desktop/sun.awt.X11.XToolkit.dispatchEvent(XToolkit.java:622)
+	at java.desktop/sun.awt.X11.XToolkit.run(XToolkit.java:735)
+	at java.desktop/sun.awt.X11.XToolkit.run(XToolkit.java:651)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+nov 27, 2025 7:47:09 P. M. sun.awt.X11.XToolkit processException
+WARNING: Exception on Toolkit thread
+java.lang.NullPointerException: Cannot invoke "sun.awt.X11.XComponentPeer.pSetCursor(java.awt.Cursor)" because the return value of "sun.awt.AWTAccessor$ComponentAccessor.getPeer(java.awt.Component)" is null
+	at java.desktop/sun.awt.X11.XWindow.handleXCrossingEvent(XWindow.java:948)
+	at java.desktop/sun.awt.X11.XComponentPeer.handleXCrossingEvent(XComponentPeer.java:74)
+	at java.desktop/sun.awt.X11.XBaseWindow.dispatchEvent(XBaseWindow.java:1162)
+	at java.desktop/sun.awt.X11.XBaseWindow.dispatchToWindow(XBaseWindow.java:1120)
+	at java.desktop/sun.awt.X11.XToolkit.dispatchEvent(XToolkit.java:622)
+	at java.desktop/sun.awt.X11.XToolkit.run(XToolkit.java:735)
+	at java.desktop/sun.awt.X11.XToolkit.run(XToolkit.java:651)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+nov 27, 2025 7:50:18 P. M. sun.awt.X11.XToolkit processException
+WARNING: Exception on Toolkit thread
+java.lang.NullPointerException: Cannot invoke "sun.awt.X11.XComponentPeer.pSetCursor(java.awt.Cursor)" because the return value of "sun.awt.AWTAccessor$ComponentAccessor.getPeer(java.awt.Component)" is null
+	at java.desktop/sun.awt.X11.XWindow.handleXCrossingEvent(XWindow.java:948)
+	at java.desktop/sun.awt.X11.XComponentPeer.handleXCrossingEvent(XComponentPeer.java:74)
+	at java.desktop/sun.awt.X11.XBaseWindow.dispatchEvent(XBaseWindow.java:1162)
+	at java.desktop/sun.awt.X11.XBaseWindow.dispatchToWindow(XBaseWindow.java:1120)
+	at java.desktop/sun.awt.X11.XToolkit.dispatchEvent(XToolkit.java:622)
+	at java.desktop/sun.awt.X11.XToolkit.run(XToolkit.java:735)
+	at java.desktop/sun.awt.X11.XToolkit.run(XToolkit.java:651)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+nov 27, 2025 7:53:49 P. M. sun.awt.X11.XToolkit processException
+WARNING: Exception on Toolkit thread
+java.lang.NullPointerException: Cannot invoke "sun.awt.X11.XComponentPeer.pSetCursor(java.awt.Cursor)" because the return value of "sun.awt.AWTAccessor$ComponentAccessor.getPeer(java.awt.Component)" is null
+	at java.desktop/sun.awt.X11.XWindow.handleXCrossingEvent(XWindow.java:948)
+	at java.desktop/sun.awt.X11.XComponentPeer.handleXCrossingEvent(XComponentPeer.java:74)
+	at java.desktop/sun.awt.X11.XBaseWindow.dispatchEvent(XBaseWindow.java:1162)
+	at java.desktop/sun.awt.X11.XBaseWindow.dispatchToWindow(XBaseWindow.java:1120)
+	at java.desktop/sun.awt.X11.XToolkit.dispatchEvent(XToolkit.java:622)
+	at java.desktop/sun.awt.X11.XToolkit.run(XToolkit.java:735)
+	at java.desktop/sun.awt.X11.XToolkit.run(XToolkit.java:651)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+nov 27, 2025 8:02:52 P. M. sun.awt.X11.XToolkit processException
+WARNING: Exception on Toolkit thread
+java.lang.NullPointerException: Cannot invoke "sun.awt.X11.XComponentPeer.pSetCursor(java.awt.Cursor)" because the return value of "sun.awt.AWTAccessor$ComponentAccessor.getPeer(java.awt.Component)" is null
+	at java.desktop/sun.awt.X11.XWindow.handleXCrossingEvent(XWindow.java:948)
+	at java.desktop/sun.awt.X11.XComponentPeer.handleXCrossingEvent(XComponentPeer.java:74)
+	at java.desktop/sun.awt.X11.XBaseWindow.dispatchEvent(XBaseWindow.java:1162)
+	at java.desktop/sun.awt.X11.XBaseWindow.dispatchToWindow(XBaseWindow.java:1120)
+	at java.desktop/sun.awt.X11.XToolkit.dispatchEvent(XToolkit.java:622)
+	at java.desktop/sun.awt.X11.XToolkit.run(XToolkit.java:735)
+	at java.desktop/sun.awt.X11.XToolkit.run(XToolkit.java:651)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+nov 27, 2025 8:23:37 P. M. sun.awt.X11.XToolkit processException
+WARNING: Exception on Toolkit thread
+java.lang.NullPointerException: Cannot invoke "sun.awt.X11.XComponentPeer.pSetCursor(java.awt.Cursor)" because the return value of "sun.awt.AWTAccessor$ComponentAccessor.getPeer(java.awt.Component)" is null
+	at java.desktop/sun.awt.X11.XWindow.handleXCrossingEvent(XWindow.java:948)
+	at java.desktop/sun.awt.X11.XComponentPeer.handleXCrossingEvent(XComponentPeer.java:74)
+	at java.desktop/sun.awt.X11.XBaseWindow.dispatchEvent(XBaseWindow.java:1162)
+	at java.desktop/sun.awt.X11.XBaseWindow.dispatchToWindow(XBaseWindow.java:1120)
+	at java.desktop/sun.awt.X11.XToolkit.dispatchEvent(XToolkit.java:622)
+	at java.desktop/sun.awt.X11.XToolkit.run(XToolkit.java:735)
+	at java.desktop/sun.awt.X11.XToolkit.run(XToolkit.java:651)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+nov 27, 2025 8:36:47 P. M. sun.awt.X11.XToolkit processException
+WARNING: Exception on Toolkit thread
+java.lang.NullPointerException: Cannot invoke "sun.awt.X11.XComponentPeer.pSetCursor(java.awt.Cursor)" because the return value of "sun.awt.AWTAccessor$ComponentAccessor.getPeer(java.awt.Component)" is null
+	at java.desktop/sun.awt.X11.XWindow.handleXCrossingEvent(XWindow.java:948)
+	at java.desktop/sun.awt.X11.XComponentPeer.handleXCrossingEvent(XComponentPeer.java:74)
+	at java.desktop/sun.awt.X11.XBaseWindow.dispatchEvent(XBaseWindow.java:1162)
+	at java.desktop/sun.awt.X11.XBaseWindow.dispatchToWindow(XBaseWindow.java:1120)
+	at java.desktop/sun.awt.X11.XToolkit.dispatchEvent(XToolkit.java:622)
+	at java.desktop/sun.awt.X11.XToolkit.run(XToolkit.java:735)
+	at java.desktop/sun.awt.X11.XToolkit.run(XToolkit.java:651)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+nov 28, 2025 5:29:37 P. M. sun.awt.X11.XToolkit processException
+WARNING: Exception on Toolkit thread
+java.lang.NullPointerException: Cannot invoke "sun.awt.X11.XComponentPeer.pSetCursor(java.awt.Cursor)" because the return value of "sun.awt.AWTAccessor$ComponentAccessor.getPeer(java.awt.Component)" is null
+	at java.desktop/sun.awt.X11.XWindow.handleXCrossingEvent(XWindow.java:948)
+	at java.desktop/sun.awt.X11.XComponentPeer.handleXCrossingEvent(XComponentPeer.java:74)
+	at java.desktop/sun.awt.X11.XBaseWindow.dispatchEvent(XBaseWindow.java:1162)
+	at java.desktop/sun.awt.X11.XBaseWindow.dispatchToWindow(XBaseWindow.java:1120)
+	at java.desktop/sun.awt.X11.XToolkit.dispatchEvent(XToolkit.java:622)
+	at java.desktop/sun.awt.X11.XToolkit.run(XToolkit.java:735)
+	at java.desktop/sun.awt.X11.XToolkit.run(XToolkit.java:651)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+nov 28, 2025 6:55:29 P. M. sun.awt.X11.XToolkit processException
+WARNING: Exception on Toolkit thread
+java.lang.NullPointerException: Cannot invoke "sun.awt.X11.XComponentPeer.pSetCursor(java.awt.Cursor)" because the return value of "sun.awt.AWTAccessor$ComponentAccessor.getPeer(java.awt.Component)" is null
+	at java.desktop/sun.awt.X11.XWindow.handleXCrossingEvent(XWindow.java:948)
+	at java.desktop/sun.awt.X11.XComponentPeer.handleXCrossingEvent(XComponentPeer.java:74)
+	at java.desktop/sun.awt.X11.XBaseWindow.dispatchEvent(XBaseWindow.java:1162)
+	at java.desktop/sun.awt.X11.XBaseWindow.dispatchToWindow(XBaseWindow.java:1120)
+	at java.desktop/sun.awt.X11.XToolkit.dispatchEvent(XToolkit.java:622)
+	at java.desktop/sun.awt.X11.XToolkit.run(XToolkit.java:735)
+	at java.desktop/sun.awt.X11.XToolkit.run(XToolkit.java:651)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+nov 28, 2025 7:07:39 P. M. sun.awt.X11.XToolkit processException
+WARNING: Exception on Toolkit thread
+java.lang.NullPointerException: Cannot invoke "sun.awt.X11.XComponentPeer.pSetCursor(java.awt.Cursor)" because the return value of "sun.awt.AWTAccessor$ComponentAccessor.getPeer(java.awt.Component)" is null
+	at java.desktop/sun.awt.X11.XWindow.handleXCrossingEvent(XWindow.java:948)
+	at java.desktop/sun.awt.X11.XComponentPeer.handleXCrossingEvent(XComponentPeer.java:74)
+	at java.desktop/sun.awt.X11.XBaseWindow.dispatchEvent(XBaseWindow.java:1162)
+	at java.desktop/sun.awt.X11.XBaseWindow.dispatchToWindow(XBaseWindow.java:1120)
+	at java.desktop/sun.awt.X11.XToolkit.dispatchEvent(XToolkit.java:622)
+	at java.desktop/sun.awt.X11.XToolkit.run(XToolkit.java:735)
+	at java.desktop/sun.awt.X11.XToolkit.run(XToolkit.java:651)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+

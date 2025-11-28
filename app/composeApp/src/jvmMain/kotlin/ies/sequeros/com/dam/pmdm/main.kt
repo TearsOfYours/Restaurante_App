@@ -4,18 +4,27 @@ import androidx.compose.ui.window.Window
 import androidx.compose.ui.window.application
 import ies.sequeros.com.dam.pmdm.administrador.infraestructura.BBDDDependienteRepository
 import ies.sequeros.com.dam.pmdm.administrador.infraestructura.dependientes.BBDDRepositorioDependientesJava
+import ies.sequeros.com.dam.pmdm.administrador.infraestructura.memoria.FileDependienteRepository
+import ies.sequeros.com.dam.pmdm.administrador.infraestructura.memoria.MemDependienteRepository
 import ies.sequeros.com.dam.pmdm.administrador.modelo.IDependienteRepositorio
 import ies.sequeros.com.dam.pmdm.commons.infraestructura.AlmacenDatos
 import java.io.FileInputStream
 import java.util.logging.LogManager
 fun main() = application {
-    val dependienteRepositorioJava=BBDDRepositorioDependientesJava("/app.properties")
-    val dependienteRepositorio: IDependienteRepositorio = BBDDDependienteRepository(dependienteRepositorioJava )
+    //1º Importancia DDBB
+    //val dependienteRepositorioJava=BBDDRepositorioDependientesJava("/app.properties")
+   // val dependienteRepositorio: IDependienteRepositorio = BBDDDependienteRepository(dependienteRepositorioJava )
+    //se crea el almacen para el json
+    val almacenDatos:AlmacenDatos=  AlmacenDatos()
+
+    val dependienteRepositorio: IDependienteRepositorio = FileDependienteRepository(almacenDatos)//rBBDDDependienteRepository(dependienteRepositorioJava )
+
+
     configureExternalLogging("./logging.properties")
     Window(
         onCloseRequest = {
             //se cierra la conexion
-            dependienteRepositorioJava.close()
+           // dependienteRepositorioJava.close()
             exitApplication()},
         title = "VegaBurguer",
     ) {

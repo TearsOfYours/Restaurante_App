@@ -43,7 +43,7 @@ import vegaburguer.composeapp.generated.resources.hombre
 
 
 @Composable
-fun Principal(onAdministrador:()->Unit, onDependiente:()->Unit,onTPV:()->Unit){
+fun Principal(onAdministrador:()->Unit, onTPV:()->Unit,onDependiente:()->Unit){
     Res.drawable.hombre
     Box(
         modifier = Modifier
@@ -104,7 +104,7 @@ fun Principal(onAdministrador:()->Unit, onDependiente:()->Unit,onTPV:()->Unit){
                 }
                 Spacer(modifier = Modifier.height(2.dp))
                 OutlinedIconButton(
-                    onClick = { onTPV },
+                    onClick =  onTPV,
                     shape = RoundedCornerShape(8.dp),
                     modifier = Modifier.size(96.dp),
                     colors = IconButtonDefaults.iconButtonColors(
