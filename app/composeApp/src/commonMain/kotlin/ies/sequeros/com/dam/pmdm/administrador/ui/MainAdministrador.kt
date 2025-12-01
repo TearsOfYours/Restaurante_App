@@ -47,7 +47,7 @@ import ies.sequeros.com.dam.pmdm.administrador.ui.categorias.CategoriasViewModel
 
 import ies.sequeros.com.dam.pmdm.administrador.ui.dependientes.Dependientes
 import ies.sequeros.com.dam.pmdm.administrador.ui.dependientes.DependientesViewModel
-import ies.sequeros.com.dam.pmdm.administrador.ui.dependientes.changepassordform.CambiarClave
+import ies.sequeros.com.dam.pmdm.administrador.ui.dependientes.changepasswordform.CambiarClave
 import ies.sequeros.com.dam.pmdm.administrador.ui.dependientes.form.DependienteForm
 import ies.sequeros.com.dam.pmdm.administrador.ui.listado.Pedidos
 import ies.sequeros.com.dam.pmdm.administrador.ui.listado.PedidosViewModel

@@ -1,4 +1,4 @@
-package ies.sequeros.com.dam.pmdm.administrador.ui.dependientes.changepassordform
+package ies.sequeros.com.dam.pmdm.administrador.ui.dependientes.changepasswordform
 
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
