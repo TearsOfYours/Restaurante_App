@@ -17,7 +17,6 @@ class BBDDDependienteRepository(
         return true
     }
     override suspend fun remove(id: String): Boolean {
-
         bbddRepositorioDepedientesJava.remove(id)
         return true
 
@@ -31,7 +30,7 @@ class BBDDDependienteRepository(
 
     override suspend fun getAll(): List<Dependiente> {
 
-        return bbddRepositorioDepedientesJava.all
+        return bbddRepositorioDepedientesJava.getAll()
     }
 
     override suspend fun findByName(name: String): Dependiente? {
