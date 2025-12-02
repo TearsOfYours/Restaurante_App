@@ -13,7 +13,7 @@ import kotlinx.coroutines.launch
 
 class CategoriasViewModel(
     //private val categoriaRepositorio: ICategoriaRepositorio,
-    val almacenDatos: AlmacenDatos
+    //val almacenDatos: AlmacenDatos
 ) : ViewModel()
 {
     //Implementar todos los usos de casos de uso de Categorias
