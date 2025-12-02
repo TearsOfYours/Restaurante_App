@@ -30,10 +30,8 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import androidx.navigation.NavHostController
 import ies.sequeros.com.dam.pmdm.administrador.aplicacion.dependientes.listar.DependienteDTO
 
-import ies.sequeros.com.dam.pmdm.administrador.ui.AdminRoutes
 import ies.sequeros.com.dam.pmdm.administrador.ui.MainAdministradorViewModel
 
 
@@ -41,7 +39,8 @@ import ies.sequeros.com.dam.pmdm.administrador.ui.MainAdministradorViewModel
 fun Dependientes(
     mainAdministradorViewModel: MainAdministradorViewModel,
     dependientesViewModel: DependientesViewModel,
-    onSelectItem:(DependienteDTO?)->Unit
+    onSelectItem:(DependienteDTO?)->Unit,
+    onChangePassword:()->Unit
 ){
     val items by dependientesViewModel.items.collectAsState()
     var searchText by remember { mutableStateOf("")}
@@ -125,7 +124,13 @@ fun Dependientes(
 
 
 
-                    })
+                    },
+                    {
+                        dependientesViewModel.setSelectedDependiente(it)
+                        onChangePassword()
+
+                    }
+                    )
 
             }
         }

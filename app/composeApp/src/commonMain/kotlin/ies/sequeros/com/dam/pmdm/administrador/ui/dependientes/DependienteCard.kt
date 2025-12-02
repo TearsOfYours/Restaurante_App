@@ -55,12 +55,13 @@ import vegaburguer.composeapp.generated.resources.hombre
 @Composable
 fun DependienteCard(
     item: DependienteDTO,
-    onActivate: (item:DependienteDTO) -> Unit,
-    onDeactivate: (item:DependienteDTO) -> Unit,
+    onActivate: (item: DependienteDTO) -> Unit,
+    onDeactivate: (item: DependienteDTO) -> Unit,
     onView: () -> Unit,
     onEdit: (DependienteDTO) -> Unit,
     onDelete: (item: DependienteDTO) -> Unit,
-    onChangeAdmin: (item:DependienteDTO) -> Unit,
+    onChangeAdmin: (item: DependienteDTO) -> Unit,
+    onChangePassw: (item: DependienteDTO) -> Unit
 ) {
     val cardAlpha by animateFloatAsState(if (item.enabled) 1f else 0.5f)
     val imagePath =mutableStateOf(if(item.imagePath!=null && item.imagePath.isNotEmpty()) item.imagePath else "")
@@ -69,7 +70,6 @@ fun DependienteCard(
         !item.enabled -> MaterialTheme.colorScheme.outline
         else -> MaterialTheme.colorScheme.secondary
     }
-
     Card(
         modifier = Modifier
             .padding(8.dp)
@@ -206,6 +206,10 @@ fun DependienteCard(
                 // Editar
                 OutlinedIconButton(onClick = { onEdit(item) }) {
                     Icon(Icons.Default.Edit, contentDescription = "Editar")
+                }
+                //Cambiar contraseña
+                OutlinedIconButton(onClick = { onChangePassw(item)}) {
+                    Icon(Icons.Default.Edit, contentDescription = "Cambiar contraseña")
                 }
 
                 // Eliminar

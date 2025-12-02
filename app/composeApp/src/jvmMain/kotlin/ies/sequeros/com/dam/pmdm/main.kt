@@ -45,7 +45,7 @@ fun main() = application {
     Window(
         onCloseRequest = {
             //se cierra la conexion
-            dependienteRepositorioJava.close()
+           // dependienteRepositorioJava.close()
             exitApplication()},
         title = "VegaBurguer",
     ) {
