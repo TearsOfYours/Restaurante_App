@@ -106,7 +106,7 @@ class DependientesViewModel(
 
     fun delete(item: DependienteDTO) {
         viewModelScope.launch {
-          //  borrarDependienteUseCase.invoke(item.id)
+            borrarDependienteUseCase.invoke(item.id)
             _items.update { current ->
                 current.filterNot { it.id == item.id }.toMutableList()
             }

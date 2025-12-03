@@ -6,32 +6,44 @@ import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Delete
+import androidx.compose.material.icons.filled.Edit
+import androidx.compose.material.icons.filled.Visibility
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
+import androidx.compose.material3.Icon
+import androidx.compose.material3.IconButtonDefaults
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.OutlinedIconButton
+import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.mutableStateOf
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.unit.dp
+import ies.sequeros.com.dam.pmdm.administrador.aplicacion.categorias.listar.CategoriaDTO
 import ies.sequeros.com.dam.pmdm.commons.ui.ImagenDesdePath
-import org.jetbrains.skia.Color
 import vegaburguer.composeapp.generated.resources.Res
 import vegaburguer.composeapp.generated.resources.hombre
 
+@Suppress("UnrememberedMutableState")
 @Composable
 fun CategoriaCard(
-    //item: CategoriaDTO,
-    //onActivate: (item: CategoriaDTO) -> Unit,
-    //onDeactivate: (item: CategoriaDTO) -> Unit,
-    //onDelete: (item: CategoriaDTO) -> Unit
+    item: CategoriaDTO,
+    onActivate: (item: CategoriaDTO) -> Unit,
+    onDeactivate: (item: CategoriaDTO) -> Unit,
+    onDelete: (item: CategoriaDTO) -> Unit
 
 ) {
+    val imagePath =mutableStateOf(if(item.imagePath!=null && item.imagePath.isNotEmpty()) item.imagePath else "")
     Card(
         modifier = Modifier
             .padding(8.dp)
@@ -45,21 +57,47 @@ fun CategoriaCard(
     ) {
         Column(
             modifier = Modifier
-                .padding(16.dp)
+                .padding(6.dp)
                 .fillMaxWidth(),
             horizontalAlignment = Alignment.CenterHorizontally,
             verticalArrangement = Arrangement.spacedBy(12.dp)
         ) {
             Box(
                 modifier = Modifier
-                    .size(90.dp)
+                    .size(60.dp)
                     .clip(CircleShape)
-                    .border(3.dp, color = MaterialTheme.colorScheme.primary, CircleShape)
+                    .border(2.dp, color = MaterialTheme.colorScheme.primary, CircleShape)
                     .background(MaterialTheme.colorScheme.surfaceVariant),
                 contentAlignment = Alignment.Center
             ) {
-                //ImagenDesdePath(imagePath, Res.drawable.hombre, Modifier.fillMaxWidth())
+                ImagenDesdePath(imagePath, Res.drawable.hombre, Modifier.fillMaxWidth())
+            }
+            Text(item.name)
 
+        }
+        //Falta por implementar el código para que se pueda activar o desactivar
+        
+        Row(
+            modifier = Modifier.fillMaxWidth(),
+            horizontalArrangement = Arrangement.SpaceBetween,
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            OutlinedIconButton(
+                onClick = { onDelete(item) },
+                colors = IconButtonDefaults.iconButtonColors(
+                    contentColor = MaterialTheme.colorScheme.error
+                )
+            ) {
+                Icon(Icons.Default.Delete, contentDescription = "Eliminar")
+            }
+
+            OutlinedIconButton(
+                onClick = { onActivate(item) },
+                colors = IconButtonDefaults.iconButtonColors(
+                    contentColor = MaterialTheme.colorScheme.primary
+                )
+            ) {
+                Icon(Icons.Default.Visibility, contentDescription = "Activar")
             }
         }
 

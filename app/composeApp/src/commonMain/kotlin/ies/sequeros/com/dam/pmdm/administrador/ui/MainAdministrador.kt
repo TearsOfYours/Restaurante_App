@@ -44,6 +44,7 @@ import ies.sequeros.com.dam.pmdm.AppViewModel
 import ies.sequeros.com.dam.pmdm.administrador.AdministradorViewModel
 import ies.sequeros.com.dam.pmdm.administrador.ui.categorias.Categorias
 import ies.sequeros.com.dam.pmdm.administrador.ui.categorias.CategoriasViewModel
+import ies.sequeros.com.dam.pmdm.administrador.ui.categorias.form.CategoriaForm
 
 import ies.sequeros.com.dam.pmdm.administrador.ui.dependientes.Dependientes
 import ies.sequeros.com.dam.pmdm.administrador.ui.dependientes.DependientesViewModel
@@ -162,7 +163,6 @@ fun MainAdministrador(
             startDestination = AdminRoutes.Main
         ) {
             composable(AdminRoutes.Main) {
-
                 PrincipalAdministrador()
             }
             composable(AdminRoutes.Dependientes){
@@ -178,8 +178,16 @@ fun MainAdministrador(
                 )
             }
             composable (AdminRoutes.Categorias) {
-                Categorias(categoriasViewModel) { navController.popBackStack() }
+                Categorias(categoriasViewModel, {
+                    categoriasViewModel.setSelectedCategoria(it)
+                    navController.navigate(AdminRoutes.Categoria){
+                        launchSingleTop = true
+                    }
+                    }
+                ) { navController.popBackStack() }
             }
+
+
             composable (AdminRoutes.Productos ) {
                 Productos(productosViewModel) {navController.popBackStack()}
             }
@@ -201,6 +209,15 @@ fun MainAdministrador(
                 CambiarClave(dependientesViewModel, {navController.popBackStack()}){
                 }
             }
+
+            composable (AdminRoutes.Categoria){
+                CategoriaForm(categoriasViewModel, {navController.popBackStack()}, {
+                    categoriasViewModel.save(it)
+                    navController.popBackStack()
+                })
+            }
+
+
 
 
         }

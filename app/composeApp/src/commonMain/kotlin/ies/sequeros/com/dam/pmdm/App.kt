@@ -7,6 +7,8 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import ies.sequeros.com.dam.pmdm.administrador.AdministradorViewModel
+import ies.sequeros.com.dam.pmdm.administrador.infraestructura.ficheros.FileCategoriaRepository
+import ies.sequeros.com.dam.pmdm.administrador.modelo.ICategoriaRepositorio
 import ies.sequeros.com.dam.pmdm.commons.infraestructura.AlmacenDatos
 import ies.sequeros.com.dam.pmdm.administrador.modelo.IDependienteRepositorio
 
@@ -27,9 +29,9 @@ import ies.sequeros.com.dam.pmdm.dependiente.MainDependiente
 @Suppress("ViewModelConstructorInComposable")
 @Composable
 
-fun App( dependienteRepositorio : IDependienteRepositorio,almacenImagenes:AlmacenDatos) {
+fun App(categoriaRepository: ICategoriaRepositorio, dependienteRepositorio : IDependienteRepositorio,almacenImagenes:AlmacenDatos) {
 
-    //view model
+    //view model<<
     val appViewModel= viewModel {  AppViewModel() }
     val mainViewModel= remember { MainAdministradorViewModel() }
     val administradorViewModel= viewModel { AdministradorViewModel() }
@@ -39,7 +41,7 @@ fun App( dependienteRepositorio : IDependienteRepositorio,almacenImagenes:Almace
     val dependientesViewModel = viewModel{ DependientesViewModel(
         dependienteRepositorio, almacenImagenes
     )}
-    val categoriasViewModel = viewModel { CategoriasViewModel() }
+    val categoriasViewModel = viewModel { CategoriasViewModel(categoriaRepository, almacenImagenes) }
     val productosViewModel = viewModel { ProductosViewModel() }
     val pedidosViewModel = viewModel { PedidosViewModel() }
 

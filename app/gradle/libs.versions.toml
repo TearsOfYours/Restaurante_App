@@ -16,6 +16,7 @@ kotlin = "2.2.20"
 kotlinx-coroutines = "1.10.2"
 material3 = "1.4.0"
 playServicesLocation = "21.3.0"
+junitJupiter = "5.8.1"
 
 [libraries]
 kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
@@ -31,6 +32,7 @@ androidx-lifecycle-runtimeCompose = { module = "org.jetbrains.androidx.lifecycle
 kotlinx-coroutinesSwing = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-swing", version.ref = "kotlinx-coroutines" }
 androidx-material3 = { group = "androidx.compose.material3", name = "material3", version.ref = "material3" }
 play-services-location = { group = "com.google.android.gms", name = "play-services-location", version.ref = "playServicesLocation" }
+junit-jupiter = { group = "org.junit.jupiter", name = "junit-jupiter", version.ref = "junitJupiter" }
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }

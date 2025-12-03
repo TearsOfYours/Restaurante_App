@@ -4,10 +4,7 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
-import androidx.compose.runtime.Composable
-import androidx.compose.runtime.remember
-import androidx.compose.ui.tooling.preview.Preview
-import ies.sequeros.com.dam.pmdm.administrador.infraestructura.memoria.FileDependienteRepository
+import ies.sequeros.com.dam.pmdm.administrador.infraestructura.ficheros.FileDependienteRepository
 import ies.sequeros.com.dam.pmdm.administrador.modelo.IDependienteRepositorio
 import ies.sequeros.com.dam.pmdm.commons.infraestructura.AlmacenDatos
 

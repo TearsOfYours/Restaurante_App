@@ -1,5 +1,7 @@
 package ies.sequeros.com.dam.pmdm.commons.infraestructura;
 
+import org.jasypt.encryption.pbe.StandardPBEStringEncryptor;
+
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
@@ -17,35 +19,38 @@ public class DataBaseConnection {
     }
     public void open() throws Exception {
         FileReader fr = null;
-        File f =new File(System.getProperty("user.dir")+
+        File f = new File(System.getProperty("user.dir") +
                 this.getConfig_path());
         fr = new FileReader(f);
         Properties props = new Properties();
         try {
             props.load(fr);
         } catch (IOException ex) {
-           ex.printStackTrace();
+            ex.printStackTrace();
         }
 
+        String url = props.getProperty("database.path");
         String user = props.getProperty("database.user");
         String password = props.getProperty("database.password");
-        this.connection_string = props.getProperty("database.path")
-                + ";user=" + user + ";password=" + password;
-        this.conexion =
-                DriverManager.getConnection(this.connection_string);
+        // + ";user=" + user + ";password=" + password;
+        //this.conexion =
+        // DriverManager.getConnection(this.connection_string);
+
+        this.connection_string = url;
+        this.conexion = DriverManager.getConnection(connection_string, user, password);
     }
 
     public Connection getConnection() {
         return this.conexion;
     }
     public void close() throws SQLException {
+            if (conexion != null) {
+                conexion.close();
+                conexion = null;
+            }
+        }
 
-        conexion.close();
 
-        DriverManager.getConnection(this.connection_string+";shutdown=true");
-
-        conexion = null;
-    }
     public String getConfig_path() {
         return config_path;
     }

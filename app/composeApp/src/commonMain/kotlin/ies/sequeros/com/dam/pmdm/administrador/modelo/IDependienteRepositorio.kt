@@ -9,4 +9,5 @@ interface  IDependienteRepositorio {
     suspend fun findByName(name:String): Dependiente?
     suspend fun getById(id:String):Dependiente?
 
+
 }
