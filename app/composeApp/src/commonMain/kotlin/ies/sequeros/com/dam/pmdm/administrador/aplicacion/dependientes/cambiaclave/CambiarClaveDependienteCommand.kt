@@ -2,6 +2,8 @@ package ies.sequeros.com.dam.pmdm.administrador.aplicacion.dependientes.cambiacl
 
 
 
-data class CambiarClaveDependienteCommand(val name: String,
-                                          val password: String,
-                                          )
+data class CambiarClaveDependienteCommand(
+    val id: String,
+    val oldPassword: String,
+    val newPassword: String
+)

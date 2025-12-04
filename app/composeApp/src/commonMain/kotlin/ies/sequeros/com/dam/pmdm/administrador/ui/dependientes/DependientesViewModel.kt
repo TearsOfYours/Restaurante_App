@@ -99,6 +99,10 @@ class DependientesViewModel(
             }.toMutableList()
         }
     }
+    // Tengo que manejar/validar la contraseña desde el viewmodel?
+    fun changePassword() {
+
+    }
 
     fun delete(item: DependienteDTO) {
         viewModelScope.launch {

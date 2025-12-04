@@ -4,16 +4,16 @@ import ies.sequeros.com.dam.pmdm.administrador.modelo.Categoria
 import ies.sequeros.com.dam.pmdm.administrador.modelo.Dependiente
 import ies.sequeros.com.dam.pmdm.administrador.modelo.ICategoriaRepositorio
 import ies.sequeros.com.dam.pmdm.administrador.modelo.IDependienteRepositorio
-
+/*
 class MemCategoriaRepository: ICategoriaRepositorio {
 
     private val items=hashMapOf<String, Categoria>();
     init{
-        val c1= Categoria("0239485-5ada-403d-9f66-c6c5591240d8","Hamburguesas", "", true)
+        val c1= Categoria("0239485-5ada-403d-9f66-c6c5591240d8","Hamburguesas")
         items.put(c1.id!!,c1)
-        val c2= Categoria("0faea46f-b745-4fac-8048-2de194360332","Complementos", "", true)
+        val c2= Categoria("0faea46f-b745-4fac-8048-2de194360332","Complementos")
         items.put(c2.id!!,c2)
-        val c3= Categoria("f5be7eab-dbeb-4c54-870a-94c680ae6266","Bebidas", "", true)
+        val c3= Categoria("f5be7eab-dbeb-4c54-870a-94c680ae6266","Bebidas")
         items.put(c3.id!!,c3)
     }
     override suspend  fun add(item: Categoria) {
@@ -62,3 +62,4 @@ class MemCategoriaRepository: ICategoriaRepositorio {
 
 
 }
+*/
