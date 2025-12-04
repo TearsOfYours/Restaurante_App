@@ -27,8 +27,8 @@ public class CategoriaDao implements IDao<Categoria> {
     private final String findbyname = "select * from " + table_name + " where name=?";
 
     private final String deletebyid = "delete from " + table_name + " where id=?";
-    private final String insert = "INSERT INTO " + table_name + " (nombre, id, image_path, enabled) " +
-            "VALUES (?, ?, ?, ?)";
+    private final String insert = "INSERT INTO " + table_name + " (nombre, image_path, enabled) " +
+            "VALUES (?, ?, ?)";
     private final String update =
             "UPDATE " + table_name + " SET nombre = ? " +
                     "WHERE id = ?";
@@ -161,10 +161,10 @@ public class CategoriaDao implements IDao<Categoria> {
         try {
             pst = conn.getConnection().prepareStatement(insert,
                     Statement.RETURN_GENERATED_KEYS);
-            pst.setString(1, item.getId());
-            pst.setString(2, item.getName());
-            pst.setString(3, item.getImagePath());
-            pst.setBoolean(4, item.getEnabled());
+            //pst.setString(1, item.getId());
+            pst.setString(1, item.getName());
+            pst.setString(2, item.getImagePath());
+            pst.setBoolean(3, item.getEnabled());
 
             pst.executeUpdate();
             pst.close();
@@ -191,8 +191,8 @@ public class CategoriaDao implements IDao<Categoria> {
 
         try {
             ct=new Categoria(
-                    r.getString("ID"),
                     r.getString("NOMBRE"),
+                    r.getString("ID"),
                     r.getString("IMAGE_PATH"),
                     r.getBoolean("ENABLED")
             );

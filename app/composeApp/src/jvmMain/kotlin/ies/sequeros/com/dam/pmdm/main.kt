@@ -3,7 +3,7 @@ package ies.sequeros.com.dam.pmdm
 import androidx.compose.ui.window.Window
 import androidx.compose.ui.window.application
 import ies.sequeros.com.dam.pmdm.administrador.infraestructura.BBDDCategoriaRepository
-import ies.sequeros.com.dam.pmdm.administrador.infraestructura.BBDDCategoriaRepository
+
 import ies.sequeros.com.dam.pmdm.administrador.infraestructura.BBDDDependienteRepository
 import ies.sequeros.com.dam.pmdm.administrador.infraestructura.BBDDPedidoRepository
 import ies.sequeros.com.dam.pmdm.administrador.infraestructura.BBDDProductoRepository
@@ -17,7 +17,7 @@ import ies.sequeros.com.dam.pmdm.administrador.modelo.IPedidoRepositorio
 import ies.sequeros.com.dam.pmdm.administrador.modelo.IProductoRepositorio
 import ies.sequeros.com.dam.pmdm.commons.infraestructura.AlmacenDatos
 import ies.sequeros.com.dam.pmdm.commons.infraestructura.DataBaseConnection
-import ies.sequeros.com.dam.pmdm.commons.infraestructura.DataBaseConnection
+
 import java.io.FileInputStream
 import java.util.logging.LogManager
 fun main() = application {
@@ -41,7 +41,8 @@ fun main() = application {
     val dependienteRepositorio: IDependienteRepositorio = BBDDDependienteRepository(dependienteRepositorioJava )
 
     val categoriaRepositorioJava = BBDDRepositorioCategoriasJava(connection)
-    val categoriaRepositorio: ICategoriaRepositorio = BBDDCategoriaRepository(categoriaRepositorioJava)
+    val categoriaRepositorio: ICategoriaRepositorio =
+        BBDDCategoriaRepository(categoriaRepositorioJava)
 
     val productoRepositorioJava = BBDDRepositorioProductosJava(connection)
     val productoRepositorio: BBDDProductoRepository = BBDDProductoRepository(productoRepositorioJava)
