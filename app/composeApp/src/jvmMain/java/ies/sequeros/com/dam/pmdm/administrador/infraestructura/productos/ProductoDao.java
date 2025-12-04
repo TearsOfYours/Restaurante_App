@@ -3,6 +3,8 @@ package ies.sequeros.com.dam.pmdm.administrador.infraestructura.productos;
 
 import ies.sequeros.com.dam.pmdm.administrador.infraestructura.dependientes.DependienteDao;
 import ies.sequeros.com.dam.pmdm.administrador.modelo.Dependiente;
+import ies.sequeros.com.dam.pmdm.administrador.infraestructura.dependientes.DependienteDao;
+import ies.sequeros.com.dam.pmdm.administrador.modelo.Dependiente;
 import ies.sequeros.com.dam.pmdm.administrador.modelo.Producto;
 import ies.sequeros.com.dam.pmdm.commons.infraestructura.DataBaseConnection;
 import ies.sequeros.com.dam.pmdm.commons.infraestructura.IDao;
@@ -26,7 +28,11 @@ public class ProductoDao implements IDao<Producto> {
     private final String deletebyid = "delete from " + table_name + " where id=?";
     private final String insert = "INSERT INTO " + table_name + " (nombre, precio, idCategoria, image_path, enabled) " +
             "VALUES (?, ?, ?, ?, ?)";
+    private final String deletebyid = "delete from " + table_name + " where id=?";
+    private final String insert = "INSERT INTO " + table_name + " (nombre, precio, idCategoria, image_path, enabled) " +
+            "VALUES (?, ?, ?, ?, ?)";
     private final String update =
+            "UPDATE " + table_name + " SET nombre = ?, precio = ?, idCategoria = ?, image_path = ?, enabled = " +
             "UPDATE " + table_name + " SET nombre = ?, precio = ?, idCategoria = ?, image_path = ?, enabled = " +
                     "WHERE id = ?";
     public ProductoDao() {
@@ -177,6 +183,7 @@ public class ProductoDao implements IDao<Producto> {
             pst.executeUpdate();
             pst.close();
             Logger logger = Logger.getLogger(DependienteDao.class.getName());
+            Logger logger = Logger.getLogger(DependienteDao.class.getName());
             logger.info(() ->
                     "Ejecutando SQL: " + insert +
                             " | Params: [1]=" + item.getName() +
@@ -201,9 +208,13 @@ public class ProductoDao implements IDao<Producto> {
 
             pt = new Producto(
                     r.getString("NOMBRE"),
+            pt = new Producto(
+                    r.getString("NOMBRE"),
                     r.getString("IDCATEGORIA"),
                     r.getString("ID"),
                     r.getDouble("PRECIO"),
+                    r.getString("IMAGE_PATH"),
+                    r.getBoolean("ENABLED")
                     r.getString("IMAGE_PATH"),
                     r.getBoolean("ENABLED")
             );
