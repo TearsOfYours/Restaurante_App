@@ -9,16 +9,15 @@ fun Pedido.toDTO() = PedidoDTO(
     fecha = fecha,
     estado = estado
 )
-
 fun PedidoDTO.toPedido() = Pedido(
     name = name,
     id = id,
     fecha = fecha,
-    precio = 0.0,
+    lineas = emptyList(),
     estado = estado
 )
 fun Pedido.toDetallesCommand() = DetallesPedidoCommand(
     fecha = fecha,
-    precio = precio,
+    precio = precioTotal,
     name = name
 )

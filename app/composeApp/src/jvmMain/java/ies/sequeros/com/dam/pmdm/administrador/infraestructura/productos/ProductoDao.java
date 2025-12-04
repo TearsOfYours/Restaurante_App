@@ -1,6 +1,8 @@
 package ies.sequeros.com.dam.pmdm.administrador.infraestructura.productos;
 
 
+import ies.sequeros.com.dam.pmdm.administrador.infraestructura.dependientes.DependienteDao;
+import ies.sequeros.com.dam.pmdm.administrador.modelo.Dependiente;
 import ies.sequeros.com.dam.pmdm.administrador.modelo.Producto;
 import ies.sequeros.com.dam.pmdm.commons.infraestructura.DataBaseConnection;
 import ies.sequeros.com.dam.pmdm.commons.infraestructura.IDao;
@@ -21,11 +23,11 @@ public class ProductoDao implements IDao<Producto> {
     private final String selectbyid = "select * from " + table_name + " where id=?";
     private final String findbyname = "select * from " + table_name + " where name=?";
 
-    private final String deletebyid = "delete from " + table_name + " where id='?'";
-    private final String insert = "INSERT INTO " + table_name + " (nombre, precio, idCategoria, id) " +
-            "VALUES (?, ?, ?. ?)";
+    private final String deletebyid = "delete from " + table_name + " where id=?";
+    private final String insert = "INSERT INTO " + table_name + " (nombre, precio, idCategoria, image_path, enabled) " +
+            "VALUES (?, ?, ?, ?, ?)";
     private final String update =
-            "UPDATE " + table_name + " SET nombre = ?, precio = ?" +
+            "UPDATE " + table_name + " SET nombre = ?, precio = ?, idCategoria = ?, image_path = ?, enabled = " +
                     "WHERE id = ?";
     public ProductoDao() {
     }
@@ -153,7 +155,6 @@ public class ProductoDao implements IDao<Producto> {
         }
     }
 
-    @Override
     public void insert(final Producto item) {
 
         final PreparedStatement pst;
@@ -161,17 +162,21 @@ public class ProductoDao implements IDao<Producto> {
             pst = conn.getConnection().prepareStatement(insert,
                     Statement.RETURN_GENERATED_KEYS);
             pst.setString(1, item.getName());
-            pst.setString(2, item.getId());
-            pst.setString(3, String.valueOf(item.getIdCategoria()));
+            pst.setString(2, item.getIdCategoria());
+            pst.setDouble(3,item.getPrecio());
+            pst.setString(4, item.getImagePath());
+            pst.setBoolean(5, item.getEnabled());
 
             pst.executeUpdate();
             pst.close();
-            Logger logger = Logger.getLogger(ProductoDao.class.getName());
+            Logger logger = Logger.getLogger(DependienteDao.class.getName());
             logger.info(() ->
                     "Ejecutando SQL: " + insert +
                             " | Params: [1]=" + item.getName() +
-                            ", [2]=" + item.getId() +
-                            ", [3]=" + item.getIdCategoria() +
+                            ", [2]="+ item.getIdCategoria() +
+                            ", [3]=" + item.getPrecio() +
+                            ", [4]=" + item.getImagePath() +
+                            ", [5]=" + item.getEnabled() +
                             "]"
             );
 
@@ -186,12 +191,13 @@ public class ProductoDao implements IDao<Producto> {
         Producto pt =null;
         try {
 
-            pt=new Producto(
-                    r.getString("Nombre"),
+            pt = new Producto(
+                    r.getString("NOMBRE"),
                     r.getString("IDCATEGORIA"),
                     r.getString("ID"),
                     r.getDouble("PRECIO"),
-                    r.getString("IMAGEPATH")
+                    r.getString("IMAGE_PATH"),
+                    r.getBoolean("ENABLED")
             );
             return pt;
         } catch (final SQLException ex) {

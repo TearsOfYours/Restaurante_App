@@ -4,12 +4,15 @@ import androidx.compose.ui.window.Window
 import androidx.compose.ui.window.application
 import ies.sequeros.com.dam.pmdm.administrador.infraestructura.BBDDCategoriaRepository
 import ies.sequeros.com.dam.pmdm.administrador.infraestructura.BBDDDependienteRepository
+import ies.sequeros.com.dam.pmdm.administrador.infraestructura.BBDDPedidoRepository
 import ies.sequeros.com.dam.pmdm.administrador.infraestructura.BBDDProductoRepository
 import ies.sequeros.com.dam.pmdm.administrador.infraestructura.categorias.BBDDRepositorioCategoriasJava
 import ies.sequeros.com.dam.pmdm.administrador.infraestructura.dependientes.BBDDRepositorioDependientesJava
+import ies.sequeros.com.dam.pmdm.administrador.infraestructura.pedidos.BBDDRepositorioPedidosJava
 import ies.sequeros.com.dam.pmdm.administrador.infraestructura.productos.BBDDRepositorioProductosJava
 import ies.sequeros.com.dam.pmdm.administrador.modelo.ICategoriaRepositorio
 import ies.sequeros.com.dam.pmdm.administrador.modelo.IDependienteRepositorio
+import ies.sequeros.com.dam.pmdm.administrador.modelo.IPedidoRepositorio
 import ies.sequeros.com.dam.pmdm.administrador.modelo.IProductoRepositorio
 import ies.sequeros.com.dam.pmdm.commons.infraestructura.AlmacenDatos
 import ies.sequeros.com.dam.pmdm.commons.infraestructura.DataBaseConnection
@@ -40,6 +43,10 @@ fun main() = application {
 
     val productoRepositorioJava = BBDDRepositorioProductosJava(connection)
     val productoRepositorio: BBDDProductoRepository = BBDDProductoRepository(productoRepositorioJava)
+
+    val pedidoRepositorioJava = BBDDRepositorioPedidosJava(connection)
+    val pedidoRepositorio: IPedidoRepositorio = BBDDPedidoRepository(pedidoRepositorioJava)
+
 
     configureExternalLogging("./logging.properties")
     Window(

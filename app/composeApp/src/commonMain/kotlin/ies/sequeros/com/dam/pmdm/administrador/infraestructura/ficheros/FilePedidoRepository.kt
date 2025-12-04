@@ -43,6 +43,9 @@ class FilePedidoRepository(
     override suspend fun getById(id: String) =
         getAll().firstOrNull { it.id == id }
 
+    override suspend fun getByCliente(clienteName: String): List<Pedido> =
+        getAll().filter { it.name == clienteName }
+
     override suspend fun create(pedido: Pedido) {
         val current = getAll().toMutableList()
         current.add(pedido)
@@ -54,6 +57,6 @@ class FilePedidoRepository(
         save(current)
     }
 
-    override suspend fun findByName(name: String) =
+    suspend fun findByName(name: String): Pedido? =
         getAll().firstOrNull { it.name == name }
 }

@@ -983,3 +983,34 @@ dic 02, 2025 2:37:18 P. M. ies.sequeros.com.dam.pmdm.administrador.infraestruct
 INFO: Ejecutando SQL: INSERT INTO DEPENDIENTE (id, name, email, password, image_path, enabled, is_admin) VALUES (?, ?, ?, ?, ?, ?, ?) | Params: [1]=6de525e5-0b27-426c-b0e8-1db92dfd42c8, [2]=prueba1, [3]=prueba1@gmail.com, [4]=12345678Aa, [5]=6de525e5-0b27-426c-b0e8-1db92dfd42c8.png, [6]=true, [7]=true]
 dic 02, 2025 2:37:25 P. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.dependientes.DependienteDao getAll
 INFO: Ejecutando SQL: select * from DEPENDIENTE | Parametros: 
+<<<<<<< Updated upstream
+=======
+dic 02, 2025 6:17:56 P. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.dependientes.DependienteDao getAll
+INFORMACIÓN: Ejecutando SQL: select * from DEPENDIENTE | Parametros: 
+dic 02, 2025 6:19:11 P. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.dependientes.DependienteDao getAll
+INFORMACIÓN: Ejecutando SQL: select * from DEPENDIENTE | Parametros: 
+dic 02, 2025 6:19:47 P. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.dependientes.DependienteDao getById
+INFORMACIÓN: Ejecutando SQL: select * from DEPENDIENTE where id=? | Parametros: [id=6de525e5-0b27-426c-b0e8-1db92dfd42c8]
+dic 02, 2025 6:19:47 P. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.dependientes.DependienteDao getAll
+INFORMACIÓN: Ejecutando SQL: select * from DEPENDIENTE | Parametros: 
+dic 02, 2025 6:19:47 P. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.dependientes.DependienteDao getById
+INFORMACIÓN: Ejecutando SQL: select * from DEPENDIENTE where id=? | Parametros: [id=6de525e5-0b27-426c-b0e8-1db92dfd42c8]
+dic 02, 2025 6:19:47 P. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.dependientes.DependienteDao delete
+INFORMACIÓN: Ejecutando SQL: delete from DEPENDIENTE where id=? | Parametros: [id=6de525e5-0b27-426c-b0e8-1db92dfd42c8]
+dic 02, 2025 6:47:55 P. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.dependientes.DependienteDao getAll
+INFORMACIÓN: Ejecutando SQL: select * from DEPENDIENTE | Parametros: 
+dic 02, 2025 7:17:28 P. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.dependientes.DependienteDao getAll
+INFORMACIÓN: Ejecutando SQL: select * from DEPENDIENTE | Parametros: 
+dic 03, 2025 7:45:17 P. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.dependientes.DependienteDao getAll
+INFORMACIÓN: Ejecutando SQL: select * from DEPENDIENTE | Parametros: 
+dic 03, 2025 8:13:11 P. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.dependientes.DependienteDao getAll
+INFORMACIÓN: Ejecutando SQL: select * from DEPENDIENTE | Parametros: 
+dic 03, 2025 8:18:29 P. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.dependientes.DependienteDao getAll
+INFORMACIÓN: Ejecutando SQL: select * from DEPENDIENTE | Parametros: 
+dic 03, 2025 8:21:18 P. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.dependientes.DependienteDao getAll
+INFORMACIÓN: Ejecutando SQL: select * from DEPENDIENTE | Parametros: 
+dic 03, 2025 8:49:45 P. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.dependientes.DependienteDao getAll
+INFORMACIÓN: Ejecutando SQL: select * from DEPENDIENTE | Parametros: 
+dic 04, 2025 4:21:02 P. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.dependientes.DependienteDao getAll
+INFORMACIÓN: Ejecutando SQL: select * from DEPENDIENTE | Parametros: 
+>>>>>>> Stashed changes
