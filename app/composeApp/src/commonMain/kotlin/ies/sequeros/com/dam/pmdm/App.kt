@@ -18,7 +18,7 @@ import ies.sequeros.com.dam.pmdm.administrador.ui.dependientes.DependientesViewM
 @Composable
 
 fun App( dependienteRepositorio : IDependienteRepositorio,almacenImagenes:AlmacenDatos) {
-
+// comen
     //view model
     val appViewModel= viewModel {  AppViewModel() }
     val mainViewModel= remember { MainAdministradorViewModel() }
