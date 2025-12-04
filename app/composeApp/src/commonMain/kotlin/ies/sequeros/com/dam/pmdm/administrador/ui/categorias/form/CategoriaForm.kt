@@ -92,7 +92,7 @@ fun CategoriaForm(
                     onFailure = {}
                 )
             },
-            enabled = formValid
+            //enabled = formValid
         ) {
             Icon(Icons.Default.Save, contentDescription = null)
         }

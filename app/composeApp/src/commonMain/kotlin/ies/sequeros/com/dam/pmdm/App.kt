@@ -11,13 +11,14 @@ import ies.sequeros.com.dam.pmdm.administrador.infraestructura.ficheros.FileCate
 import ies.sequeros.com.dam.pmdm.administrador.modelo.ICategoriaRepositorio
 import ies.sequeros.com.dam.pmdm.commons.infraestructura.AlmacenDatos
 import ies.sequeros.com.dam.pmdm.administrador.modelo.IDependienteRepositorio
+import ies.sequeros.com.dam.pmdm.administrador.modelo.IProductoRepositorio
 
 import ies.sequeros.com.dam.pmdm.administrador.ui.MainAdministrador
 import ies.sequeros.com.dam.pmdm.administrador.ui.MainAdministradorViewModel
 import ies.sequeros.com.dam.pmdm.administrador.ui.categorias.CategoriasViewModel
 import ies.sequeros.com.dam.pmdm.administrador.ui.dependientes.DependientesViewModel
 import ies.sequeros.com.dam.pmdm.administrador.ui.listado.PedidosViewModel
-import ies.sequeros.com.dam.pmdm.administrador.ui.productos.ProductosViewModel
+import ies.sequeros.com.dam.pmdm.administrador.ui.productos.ProductoViewModel
 import ies.sequeros.com.dam.pmdm.cliente.ClienteViewModel
 import ies.sequeros.com.dam.pmdm.cliente.MainCliente
 import ies.sequeros.com.dam.pmdm.dependiente.DependienteRoutes
@@ -29,7 +30,7 @@ import ies.sequeros.com.dam.pmdm.dependiente.MainDependiente
 @Suppress("ViewModelConstructorInComposable")
 @Composable
 
-fun App(categoriaRepository: ICategoriaRepositorio, dependienteRepositorio : IDependienteRepositorio,almacenImagenes:AlmacenDatos) {
+fun App(productoRepository: IProductoRepositorio, categoriaRepository: ICategoriaRepositorio, dependienteRepositorio : IDependienteRepositorio,almacenImagenes:AlmacenDatos) {
 
     //view model<<
     val appViewModel= viewModel {  AppViewModel() }
@@ -42,7 +43,7 @@ fun App(categoriaRepository: ICategoriaRepositorio, dependienteRepositorio : IDe
         dependienteRepositorio, almacenImagenes
     )}
     val categoriasViewModel = viewModel { CategoriasViewModel(categoriaRepository, almacenImagenes) }
-    val productosViewModel = viewModel { ProductosViewModel() }
+    val productosViewModel = viewModel { ProductoViewModel(productoRepository,categoriaRepository, almacenImagenes) }
     val pedidosViewModel = viewModel { PedidosViewModel() }
 
     appViewModel.setWindowsAdatativeInfo( currentWindowAdaptiveInfo())

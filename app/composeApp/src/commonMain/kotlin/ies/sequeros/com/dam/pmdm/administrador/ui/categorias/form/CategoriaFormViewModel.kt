@@ -45,7 +45,7 @@ class CategoriaFormViewModel(private val item: CategoriaDTO?, ): ViewModel() {
     }
 
     fun onImagenPathChange(v: String) {
-        _uiState.value = _uiState.value.copy(imagePath = v, imagePathError = validateImage(v))
+        _uiState.value = _uiState.value.copy(imagePath = v, imagePathError = validateImagePath(v))
     }
 
     private fun validateNombre(nombre: String): String? {
@@ -53,7 +53,7 @@ class CategoriaFormViewModel(private val item: CategoriaDTO?, ): ViewModel() {
         return null
     }
 
-    private fun validateImage(path: String): String? {
+    private fun validateImagePath(path: String): String? {
         if (path.isBlank()) return  "No hay imagen"
         return null
     }

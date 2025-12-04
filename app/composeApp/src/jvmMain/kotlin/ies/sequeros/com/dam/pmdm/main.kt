@@ -8,7 +8,6 @@ import ies.sequeros.com.dam.pmdm.administrador.infraestructura.BBDDProductoRepos
 import ies.sequeros.com.dam.pmdm.administrador.infraestructura.categorias.BBDDRepositorioCategoriasJava
 import ies.sequeros.com.dam.pmdm.administrador.infraestructura.dependientes.BBDDRepositorioDependientesJava
 import ies.sequeros.com.dam.pmdm.administrador.infraestructura.ficheros.FileCategoriaRepository
-import ies.sequeros.com.dam.pmdm.administrador.infraestructura.ficheros.FileDependienteRepository
 import ies.sequeros.com.dam.pmdm.administrador.infraestructura.productos.BBDDRepositorioProductosJava
 import ies.sequeros.com.dam.pmdm.administrador.modelo.ICategoriaRepositorio
 import ies.sequeros.com.dam.pmdm.administrador.modelo.IDependienteRepositorio
@@ -54,7 +53,7 @@ fun main() = application {
         title = "VegaBurguer",
     ) {
         //se envuelve el repositorio en java en uno que exista en Kotlin
-        App(categoriaRepositorio,dependienteRepositorio,AlmacenDatos())
+        App(productoRepositorio,categoriaRepositorio,dependienteRepositorio,AlmacenDatos())
     }
 }
 fun configureExternalLogging(path: String) {

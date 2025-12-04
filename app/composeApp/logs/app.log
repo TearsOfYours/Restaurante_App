@@ -5378,3 +5378,75 @@ dic 03, 2025 9:48:50 P. M. ies.sequeros.com.dam.pmdm.administrador.infraestruct
 INFORMACIÓN: Ejecutando SQL: select * from DEPENDIENTE | Parametros: 
 dic 03, 2025 9:48:50 P. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.categorias.CategoriaDao getAll
 INFORMACIÓN: Ejecutando SQL: select * from CATEGORIA | Parametros: 
+dic 04, 2025 11:46:04 A. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.dependientes.DependienteDao getAll
+INFORMACIÓN: Ejecutando SQL: select * from DEPENDIENTE | Parametros: 
+dic 04, 2025 11:46:04 A. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.categorias.CategoriaDao getAll
+INFORMACIÓN: Ejecutando SQL: select * from CATEGORIA | Parametros: 
+dic 04, 2025 12:43:18 P. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.dependientes.DependienteDao getAll
+INFORMACIÓN: Ejecutando SQL: select * from DEPENDIENTE | Parametros: 
+dic 04, 2025 12:43:18 P. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.categorias.CategoriaDao getAll
+INFORMACIÓN: Ejecutando SQL: select * from CATEGORIA | Parametros: 
+dic 04, 2025 12:43:18 P. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.productos.ProductoDao getAll
+INFORMACIÓN: Ejecutando SQL: select * from PRODUCTO | Parametros: 
+dic 04, 2025 12:45:13 P. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.dependientes.DependienteDao getAll
+INFORMACIÓN: Ejecutando SQL: select * from DEPENDIENTE | Parametros: 
+dic 04, 2025 12:45:13 P. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.categorias.CategoriaDao getAll
+INFORMACIÓN: Ejecutando SQL: select * from CATEGORIA | Parametros: 
+dic 04, 2025 12:45:13 P. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.productos.ProductoDao getAll
+INFORMACIÓN: Ejecutando SQL: select * from PRODUCTO | Parametros: 
+dic 04, 2025 2:25:10 P. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.dependientes.DependienteDao getAll
+INFORMACIÓN: Ejecutando SQL: select * from DEPENDIENTE | Parametros: 
+dic 04, 2025 2:25:10 P. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.categorias.CategoriaDao getAll
+INFORMACIÓN: Ejecutando SQL: select * from CATEGORIA | Parametros: 
+dic 04, 2025 2:25:10 P. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.productos.ProductoDao getAll
+INFORMACIÓN: Ejecutando SQL: select * from PRODUCTO | Parametros: 
+dic 04, 2025 2:26:04 P. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.dependientes.DependienteDao getAll
+INFORMACIÓN: Ejecutando SQL: select * from DEPENDIENTE | Parametros: 
+dic 04, 2025 2:26:04 P. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.categorias.CategoriaDao getAll
+INFORMACIÓN: Ejecutando SQL: select * from CATEGORIA | Parametros: 
+dic 04, 2025 2:26:04 P. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.productos.ProductoDao getAll
+INFORMACIÓN: Ejecutando SQL: select * from PRODUCTO | Parametros: 
+dic 04, 2025 2:28:32 P. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.dependientes.DependienteDao getAll
+INFORMACIÓN: Ejecutando SQL: select * from DEPENDIENTE | Parametros: 
+dic 04, 2025 2:28:32 P. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.categorias.CategoriaDao getAll
+INFORMACIÓN: Ejecutando SQL: select * from CATEGORIA | Parametros: 
+dic 04, 2025 2:28:32 P. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.productos.ProductoDao getAll
+INFORMACIÓN: Ejecutando SQL: select * from PRODUCTO | Parametros: 
+dic 04, 2025 2:31:01 P. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.dependientes.DependienteDao getAll
+INFORMACIÓN: Ejecutando SQL: select * from DEPENDIENTE | Parametros: 
+dic 04, 2025 2:31:01 P. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.categorias.CategoriaDao getAll
+INFORMACIÓN: Ejecutando SQL: select * from CATEGORIA | Parametros: 
+dic 04, 2025 2:31:01 P. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.productos.ProductoDao getAll
+INFORMACIÓN: Ejecutando SQL: select * from PRODUCTO | Parametros: 
+dic 04, 2025 2:31:50 P. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.categorias.CategoriaDao getById
+INFORMACIÓN: Ejecutando SQL: select * from CATEGORIA where id=? | Parametros: [id=6]
+dic 04, 2025 2:31:50 P. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.productos.ProductoDao insert
+GRAVE: null
+java.sql.SQLException: No value specified for parameter 4
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1197)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1101)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:1448)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:1084)
+	at ies.sequeros.com.dam.pmdm.administrador.infraestructura.productos.ProductoDao.insert(ProductoDao.java:167)
+	at ies.sequeros.com.dam.pmdm.administrador.infraestructura.productos.BBDDRepositorioProductosJava.add(BBDDRepositorioProductosJava.java:22)
+	at ies.sequeros.com.dam.pmdm.administrador.infraestructura.BBDDProductoRepository.add(BBDDProductoRepository.kt:14)
+	at ies.sequeros.com.dam.pmdm.administrador.aplicacion.productos.crear.CrearProductoUseCase.invoke(CrearProductoUseCase.kt:39)
+	at ies.sequeros.com.dam.pmdm.administrador.aplicacion.productos.crear.CrearProductoUseCase$invoke$1.invokeSuspend(CrearProductoUseCase.kt)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at java.desktop/java.awt.event.InvocationEvent.dispatch(Unknown Source)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.EventQueue$4.run(Unknown Source)
+	at java.desktop/java.awt.EventQueue$4.run(Unknown Source)
+	at java.base/java.security.AccessController.doPrivileged(Unknown Source)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.run(Unknown Source)
+

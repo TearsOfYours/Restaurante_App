@@ -42,6 +42,7 @@ import androidx.navigation.compose.rememberNavController
 import androidx.window.core.layout.WindowWidthSizeClass
 import ies.sequeros.com.dam.pmdm.AppViewModel
 import ies.sequeros.com.dam.pmdm.administrador.AdministradorViewModel
+import ies.sequeros.com.dam.pmdm.administrador.ui.Producto.form.ProductoForm
 import ies.sequeros.com.dam.pmdm.administrador.ui.categorias.Categorias
 import ies.sequeros.com.dam.pmdm.administrador.ui.categorias.CategoriasViewModel
 import ies.sequeros.com.dam.pmdm.administrador.ui.categorias.form.CategoriaForm
@@ -52,8 +53,9 @@ import ies.sequeros.com.dam.pmdm.administrador.ui.dependientes.changepasswordfor
 import ies.sequeros.com.dam.pmdm.administrador.ui.dependientes.form.DependienteForm
 import ies.sequeros.com.dam.pmdm.administrador.ui.listado.Pedidos
 import ies.sequeros.com.dam.pmdm.administrador.ui.listado.PedidosViewModel
+import ies.sequeros.com.dam.pmdm.administrador.ui.productos.ProductoCard
 import ies.sequeros.com.dam.pmdm.administrador.ui.productos.Productos
-import ies.sequeros.com.dam.pmdm.administrador.ui.productos.ProductosViewModel
+import ies.sequeros.com.dam.pmdm.administrador.ui.productos.ProductoViewModel
 
 
 @Suppress("ViewModelConstructorInComposable")
@@ -64,7 +66,7 @@ fun MainAdministrador(
     administradorViewModel: AdministradorViewModel,
     dependientesViewModel: DependientesViewModel,
     categoriasViewModel: CategoriasViewModel,
-    productosViewModel: ProductosViewModel,
+    productosViewModel: ProductoViewModel,
     pedidosViewModel: PedidosViewModel,
     onExit: () -> Unit
 ) {
@@ -189,8 +191,21 @@ fun MainAdministrador(
 
 
             composable (AdminRoutes.Productos ) {
-                Productos(productosViewModel) {navController.popBackStack()}
+                Productos(productosViewModel, {
+                    productosViewModel.setSelectedProducto(it)
+                    navController.navigate(AdminRoutes.Producto){
+                        launchSingleTop = true
+                    }
+                }) {navController.popBackStack()}
             }
+
+            composable (AdminRoutes.Producto) {
+                ProductoForm(productosViewModel, categoriasViewModel,
+                    {
+                    navController.popBackStack()
+                }, {it -> productosViewModel.save(it)})
+            }
+
             composable (AdminRoutes.Pedidos) {
                 Pedidos(pedidosViewModel) {navController.popBackStack()}
             }
