@@ -39,10 +39,10 @@ actual class AlmacenDatos {
             val extension = src.extension
             if (!dst.exists()) dst.mkdirs()
             Files.copy(
-                Path.of(source), Path.of(dst.toString() + "/" + name + "." + extension),
+                Path.of(source), Path.of("$dst/$name.$extension"),
                 StandardCopyOption.REPLACE_EXISTING
             )
-            name + "." + extension
+            "$name.$extension"
         }
 
 

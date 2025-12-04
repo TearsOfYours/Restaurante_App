@@ -50,6 +50,7 @@ fun CategoriaForm(
     Column(
         modifier = Modifier.fillMaxSize().verticalScroll(rememberScrollState())
     ) {
+        // ------------------ Nombre ---------------------
         OutlinedTextField(
             value = state.nombre,
             onValueChange = {categoriaFormViewModel.onNombreChange(it)},

@@ -8,6 +8,8 @@ import ies.sequeros.com.dam.pmdm.administrador.infraestructura.BBDDProductoRepos
 import ies.sequeros.com.dam.pmdm.administrador.infraestructura.categorias.BBDDRepositorioCategoriasJava
 import ies.sequeros.com.dam.pmdm.administrador.infraestructura.dependientes.BBDDRepositorioDependientesJava
 import ies.sequeros.com.dam.pmdm.administrador.infraestructura.ficheros.FileCategoriaRepository
+import ies.sequeros.com.dam.pmdm.administrador.infraestructura.ficheros.FileDependienteRepository
+import ies.sequeros.com.dam.pmdm.administrador.infraestructura.ficheros.FileProductoRepository
 import ies.sequeros.com.dam.pmdm.administrador.infraestructura.productos.BBDDRepositorioProductosJava
 import ies.sequeros.com.dam.pmdm.administrador.modelo.ICategoriaRepositorio
 import ies.sequeros.com.dam.pmdm.administrador.modelo.IDependienteRepositorio
@@ -17,16 +19,19 @@ import ies.sequeros.com.dam.pmdm.commons.infraestructura.DataBaseConnection
 import java.io.FileInputStream
 import java.util.logging.LogManager
 fun main() = application {
-    val connection = DataBaseConnection()
-    connection.setConfig_path("./app.properties")
-    connection.open()
 /*
+    val connection = DataBaseConnection()
+    connection.setConfig_path("/app.properties")
+    connection.open()
+*/
     val almacenDatos:AlmacenDatos=  AlmacenDatos()
 
     val dependienteRepositorio: IDependienteRepositorio = FileDependienteRepository(almacenDatos)//rBBDDDependienteRepository(dependienteRepositorioJava )
 
-    val categoriaRepository: ICategoriaRepositorio = FileCategoriaRepository(almacenDatos)
-*/
+    val categoriaRepositorio: ICategoriaRepositorio = FileCategoriaRepository(almacenDatos)
+
+    val productoRepositorio: IProductoRepositorio = FileProductoRepository(almacenDatos)
+
 
 
 
@@ -34,7 +39,7 @@ fun main() = application {
      
 
 
-
+/*
     val dependienteRepositorioJava=BBDDRepositorioDependientesJava(connection)
     val dependienteRepositorio: IDependienteRepositorio = BBDDDependienteRepository(dependienteRepositorioJava )
 
@@ -43,7 +48,7 @@ fun main() = application {
 
     val productoRepositorioJava = BBDDRepositorioProductosJava(connection)
     val productoRepositorio: BBDDProductoRepository = BBDDProductoRepository(productoRepositorioJava)
-
+*/
     configureExternalLogging("./logging.properties")
     Window(
         onCloseRequest = {

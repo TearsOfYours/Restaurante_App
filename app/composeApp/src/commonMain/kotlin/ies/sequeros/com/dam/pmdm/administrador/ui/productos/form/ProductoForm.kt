@@ -5,6 +5,7 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
@@ -47,11 +48,9 @@ fun ProductoForm(
     val formValid by productoFormViewModel.isFormValid.collectAsState()
     val categorias by categoriasViewModel.items.collectAsState()
 
-    val imagePath = remember {
-        mutableStateOf(
-            if (!state.imagePath.isNullOrEmpty()) state.imagePath else ""
-        )
-    }
+    val imagePath =
+        remember { mutableStateOf(if (state.imagePath != null && state.imagePath.isNotEmpty()) state.imagePath else "") }
+
 
     Column(
         modifier = Modifier
@@ -123,12 +122,12 @@ fun ProductoForm(
 
         HorizontalDivider(thickness = 1.dp, color = MaterialTheme.colorScheme.outlineVariant)
 
-        SelectorImagenComposable { path ->
-            productoFormViewModel.onImagenPathChange(path)
-            imagePath.value = path
+        SelectorImagenComposable { it: String ->
+            productoFormViewModel.onImagenPathChange(it)
+            imagePath.value = it
         }
 
-        ImagenDesdePath(imagePath, Res.drawable.hombre, Modifier.fillMaxWidth())
+        ImagenDesdePath(imagePath, Res.drawable.hombre, Modifier.fillMaxSize().weight(1f))
 
         state.imagePathError?.let {
             Text(
@@ -143,10 +142,10 @@ fun ProductoForm(
             onClick = {
                 productoFormViewModel.submit(
                     onSuccess = { onConfirm(state) },
-                    onFailure = {}
+                    onFailure = {},
+
                 )
             },
-            enabled = formValid,
             modifier = Modifier.fillMaxWidth()
         ) {
             Icon(Icons.Default.Save, contentDescription = null)

@@ -22,8 +22,8 @@ public class ProductoDao implements IDao<Producto> {
     private final String findbyname = "select * from " + table_name + " where name=?";
 
     private final String deletebyid = "delete from " + table_name + " where id='?'";
-    private final String insert = "INSERT INTO " + table_name + " (nombre, precio, idCategoria, id) " +
-            "VALUES (?, ?, ?. ?)";
+    private final String insert = "INSERT INTO " + table_name + " (nombre, precio, image_path, idCategoria, id) " +
+            "VALUES (?, ?, ?, ?, ?)";
     private final String update =
             "UPDATE " + table_name + " SET nombre = ?, precio = ?" +
                     "WHERE id = ?";
@@ -171,7 +171,8 @@ public class ProductoDao implements IDao<Producto> {
                     "Ejecutando SQL: " + insert +
                             " | Params: [1]=" + item.getName() +
                             ", [2]=" + item.getId() +
-                            ", [3]=" + item.getIdCategoria() +
+                            ", [3]=" + item.getImagePath() +
+                            ", [4]=" + item.getIdCategoria() +
                             "]"
             );
 

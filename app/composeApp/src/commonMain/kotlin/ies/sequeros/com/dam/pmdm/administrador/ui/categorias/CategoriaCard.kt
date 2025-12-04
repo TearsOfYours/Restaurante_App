@@ -65,12 +65,15 @@ fun CategoriaCard(
             Box(
                 modifier = Modifier
                     .size(60.dp)
-                    .clip(CircleShape)
-                    .border(2.dp, color = MaterialTheme.colorScheme.primary, CircleShape)
+                    //.clip(CircleShape)
+                    .border(1.dp, color = MaterialTheme.colorScheme.primary, RoundedCornerShape(10.dp))
                     .background(MaterialTheme.colorScheme.surfaceVariant),
                 contentAlignment = Alignment.Center
             ) {
                 ImagenDesdePath(imagePath, Res.drawable.hombre, Modifier.fillMaxWidth())
+                print("Categoria")
+                print(imagePath)
+                print("\n")
             }
             Text(item.name)
 

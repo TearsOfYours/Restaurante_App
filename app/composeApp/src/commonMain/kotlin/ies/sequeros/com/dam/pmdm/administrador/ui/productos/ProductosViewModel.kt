@@ -62,8 +62,12 @@ class ProductoViewModel(
         )
 
         viewModelScope.launch {
-            val nuevo = crearProductoUseCase.invoke(command)
-            _items.value = (_items.value + nuevo) as MutableList<ProductoDTO>
+            try {
+                val producto = crearProductoUseCase.invoke(command)
+                _items.value = (_items.value + producto) as MutableList<ProductoDTO>
+            } catch (e: Exception) {
+                throw e
+            }
         }
     }
 

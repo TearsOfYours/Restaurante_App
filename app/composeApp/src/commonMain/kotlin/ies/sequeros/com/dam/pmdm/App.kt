@@ -30,7 +30,7 @@ import ies.sequeros.com.dam.pmdm.dependiente.MainDependiente
 @Suppress("ViewModelConstructorInComposable")
 @Composable
 
-fun App(productoRepository: IProductoRepositorio, categoriaRepository: ICategoriaRepositorio, dependienteRepositorio : IDependienteRepositorio,almacenImagenes:AlmacenDatos) {
+fun App(productoRepositorio: IProductoRepositorio, categoriaRepositorio: ICategoriaRepositorio, dependienteRepositorio : IDependienteRepositorio,almacenImagenes:AlmacenDatos) {
 
     //view model<<
     val appViewModel= viewModel {  AppViewModel() }
@@ -42,8 +42,8 @@ fun App(productoRepository: IProductoRepositorio, categoriaRepository: ICategori
     val dependientesViewModel = viewModel{ DependientesViewModel(
         dependienteRepositorio, almacenImagenes
     )}
-    val categoriasViewModel = viewModel { CategoriasViewModel(categoriaRepository, almacenImagenes) }
-    val productosViewModel = viewModel { ProductoViewModel(productoRepository,categoriaRepository, almacenImagenes) }
+    val categoriasViewModel = viewModel { CategoriasViewModel(categoriaRepositorio, almacenImagenes) }
+    val productosViewModel = viewModel { ProductoViewModel(productoRepositorio,categoriaRepositorio, almacenImagenes) }
     val pedidosViewModel = viewModel { PedidosViewModel() }
 
     appViewModel.setWindowsAdatativeInfo( currentWindowAdaptiveInfo())

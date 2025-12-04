@@ -201,9 +201,11 @@ fun MainAdministrador(
 
             composable (AdminRoutes.Producto) {
                 ProductoForm(productosViewModel, categoriasViewModel,
+                    {},
                     {
-                    navController.popBackStack()
-                }, {it -> productosViewModel.save(it)})
+                        it -> productosViewModel.save(it)
+                        navController.popBackStack()
+                    })
             }
 
             composable (AdminRoutes.Pedidos) {

@@ -6,6 +6,7 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
@@ -40,7 +41,7 @@ fun ProductoCard(
     onDeactivate: (item: ProductoDTO) -> Unit,
     onDelete: (item: ProductoDTO) -> Unit
 ) {
-    val imagePath = mutableStateOf(if(item.imagePath.isNotEmpty()) item.imagePath else "")
+    val imagePath = mutableStateOf(if(item.imagePath!=null && item.imagePath.isNotEmpty()) item.imagePath else "")
 
     Card(
         modifier = Modifier
@@ -62,12 +63,14 @@ fun ProductoCard(
             Box(
                 modifier = Modifier
                     .size(60.dp)
-                    .clip(CircleShape)
-                    .border(2.dp, color = MaterialTheme.colorScheme.primary, CircleShape)
+                    //.border(2.dp, color = MaterialTheme.colorScheme.primary, CircleShape)
                     .background(MaterialTheme.colorScheme.surfaceVariant),
                 contentAlignment = Alignment.Center
             ) {
                 ImagenDesdePath(imagePath, Res.drawable.hombre, Modifier.fillMaxWidth())
+                print("Producto")
+                print(imagePath)
+                print("\n")
             }
             Text(item.name, style = MaterialTheme.typography.titleMedium)
             Text("Precio: ${item.precio} €", style = MaterialTheme.typography.bodyMedium)
