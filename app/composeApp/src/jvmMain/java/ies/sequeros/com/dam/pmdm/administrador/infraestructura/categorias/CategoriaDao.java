@@ -21,14 +21,14 @@ import ies.sequeros.com.dam.pmdm.commons.infraestructura.IDao;
 
 public class CategoriaDao implements IDao<Categoria> {
     private DataBaseConnection conn;
-    private final String table_name = "DEPENDIENTE";
+    private final String table_name = "CATEGORIA";
     private final String selectall = "select * from " + table_name;
     private final String selectbyid = "select * from " + table_name + " where id=?";
     private final String findbyname = "select * from " + table_name + " where name=?";
 
-    private final String deletebyid = "delete from " + table_name + " where id='?'";
-    private final String insert = "INSERT INTO " + table_name + " (nombre, id) " +
-            "VALUES (?, ?)";
+    private final String deletebyid = "delete from " + table_name + " where id=?";
+    private final String insert = "INSERT INTO " + table_name + " (nombre, id, image_path, enabled) " +
+            "VALUES (?, ?, ?, ?)";
     private final String update =
             "UPDATE " + table_name + " SET nombre = ? " +
                     "WHERE id = ?";
@@ -163,6 +163,8 @@ public class CategoriaDao implements IDao<Categoria> {
                     Statement.RETURN_GENERATED_KEYS);
             pst.setString(1, item.getId());
             pst.setString(2, item.getName());
+            pst.setString(3, item.getImagePath());
+            pst.setBoolean(4, item.getEnabled());
 
             pst.executeUpdate();
             pst.close();
@@ -171,6 +173,9 @@ public class CategoriaDao implements IDao<Categoria> {
                     "Ejecutando SQL: " + insert +
                             " | Params: [1]=" + item.getId() +
                             ", [2]="+ item.getName() +
+                            ", [3]=" + item.getImagePath() +
+                            ", [4]=" + item.getEnabled() +
+
                             "]"
             );
 
@@ -188,7 +193,9 @@ public class CategoriaDao implements IDao<Categoria> {
             ct=new Categoria(
                     r.getString("ID"),
                     r.getString("NOMBRE"),
-                    r.getString("IMAGEPATH"));
+                    r.getString("IMAGE_PATH"),
+                    r.getBoolean("ENABLED")
+            );
             return ct;
         } catch (final SQLException ex) {
             Logger.getLogger(CategoriaDao.class.getName()).log(Level.SEVERE,

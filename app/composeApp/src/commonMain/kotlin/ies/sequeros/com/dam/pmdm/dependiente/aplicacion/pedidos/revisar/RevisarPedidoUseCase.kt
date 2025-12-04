@@ -4,7 +4,7 @@ import ies.sequeros.com.dam.pmdm.administrador.modelo.IPedidoRepositorio
 
 class RevisarPedidoUseCase(private val repo: IPedidoRepositorio) {
     suspend fun ejecutar(cmd: RevisarPedidoCommand) {
-        val actualizado = cmd.pedido.copy(estado="REVISADO") // falta campo y update
+        val actualizado = cmd.pedido.copy(estado="REVISADO")
         repo.update(actualizado)
     }
 }

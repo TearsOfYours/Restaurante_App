@@ -8,6 +8,6 @@ data class Producto(
     val idCategoria: String,
     var id: String,
     val precio: Double,
-    val imagePath:String
-    // val activo:Boolean = true
+    val imagePath:String,
+    val enabled:Boolean = true
 )

@@ -5,6 +5,6 @@ import kotlinx.serialization.Serializable
 data class Categoria (
     var id:String,
     val name:String,
-    val imagePath: String = ""
-    // val enabled:Boolean = true
+    val imagePath: String,
+    val enabled:Boolean = true
 )

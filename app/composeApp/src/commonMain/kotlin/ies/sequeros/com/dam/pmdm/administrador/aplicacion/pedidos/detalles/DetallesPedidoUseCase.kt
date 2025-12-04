@@ -12,7 +12,7 @@ class DetallesPedidoUseCase(
 
         return DetallesPedidoCommand(
             fecha = pedido.fecha,
-            precio = pedido.precio,
+            precio = pedido.precioTotal,
             name = pedido.name
         )
     }
