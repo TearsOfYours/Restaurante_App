@@ -27,7 +27,7 @@ import kotlinx.coroutines.launch
 class ProductoViewModel(
     private val productoRepositorio: IProductoRepositorio,
     private val categoriaRepositorio: ICategoriaRepositorio,
-    val almacenDatos: AlmacenDatos,
+    val almacenDatos: AlmacenDatos
 ) : ViewModel() {
 
     private val listarProductosUseCase: ListarProductosUseCase

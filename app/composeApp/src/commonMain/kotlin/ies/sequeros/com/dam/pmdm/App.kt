@@ -11,6 +11,7 @@ import ies.sequeros.com.dam.pmdm.administrador.infraestructura.ficheros.FileCate
 import ies.sequeros.com.dam.pmdm.administrador.modelo.ICategoriaRepositorio
 import ies.sequeros.com.dam.pmdm.commons.infraestructura.AlmacenDatos
 import ies.sequeros.com.dam.pmdm.administrador.modelo.IDependienteRepositorio
+import ies.sequeros.com.dam.pmdm.administrador.modelo.IPedidoRepositorio
 import ies.sequeros.com.dam.pmdm.administrador.modelo.IProductoRepositorio
 
 import ies.sequeros.com.dam.pmdm.administrador.ui.MainAdministrador
@@ -30,7 +31,7 @@ import ies.sequeros.com.dam.pmdm.dependiente.MainDependiente
 @Suppress("ViewModelConstructorInComposable")
 @Composable
 
-fun App(productoRepositorio: IProductoRepositorio, categoriaRepositorio: ICategoriaRepositorio, dependienteRepositorio : IDependienteRepositorio,almacenImagenes:AlmacenDatos) {
+fun App(pedidoRepositorio: IPedidoRepositorio, productoRepositorio: IProductoRepositorio, categoriaRepositorio: ICategoriaRepositorio, dependienteRepositorio : IDependienteRepositorio,almacenImagenes:AlmacenDatos) {
 
     //view model<<
     val appViewModel= viewModel {  AppViewModel() }
@@ -44,7 +45,7 @@ fun App(productoRepositorio: IProductoRepositorio, categoriaRepositorio: ICatego
     )}
     val categoriasViewModel = viewModel { CategoriasViewModel(categoriaRepositorio, almacenImagenes) }
     val productosViewModel = viewModel { ProductoViewModel(productoRepositorio,categoriaRepositorio, almacenImagenes) }
-    val pedidosViewModel = viewModel { PedidosViewModel() }
+    val pedidosViewModel = viewModel { PedidosViewModel(pedidoRepositorio, categoriaRepositorio, productoRepositorio,almacenImagenes) }
 
     appViewModel.setWindowsAdatativeInfo( currentWindowAdaptiveInfo())
     val navController= rememberNavController()
@@ -72,7 +73,15 @@ fun App(productoRepositorio: IProductoRepositorio, categoriaRepositorio: ICatego
                 ) { navController.popBackStack() }
             }
             composable(AppRoutes.Cliente) {
-                MainCliente(appViewModel, clienteViewModel) {}
+                MainCliente(
+                    appViewModel,
+                    categoriaRepositorio,
+                    pedidoRepositorio,
+                    productoRepositorio,
+                    almacenImagenes,
+                ) {
+                    navController.popBackStack()
+                }
             }
             composable(AppRoutes.Dependiente) {
                 MainDependiente(appViewModel, mainDependienteViewModel) {}

@@ -60,7 +60,7 @@ fun main() = application {
         title = "VegaBurguer",
     ) {
         //se envuelve el repositorio en java en uno que exista en Kotlin
-        App(productoRepositorio,categoriaRepositorio,dependienteRepositorio,AlmacenDatos())
+        App(pedidoRepositorio,productoRepositorio,categoriaRepositorio,dependienteRepositorio,AlmacenDatos())
     }
 }
 fun configureExternalLogging(path: String) {
