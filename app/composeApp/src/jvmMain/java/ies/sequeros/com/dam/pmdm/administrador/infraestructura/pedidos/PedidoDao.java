@@ -23,11 +23,11 @@ public class PedidoDao implements IDao<Pedido> {
     private final String deleteById = "DELETE FROM " + table_name + " WHERE id=?";
     private final String insert =
             "INSERT INTO " + table_name +
-                    " (id, nombre, fecha, estado, idCliente, precioTotal) VALUES (?, ?, ?, ?, ?, ?)";
+                    " (id, nombre, fecha, estado, precioTotal) VALUES (?, ?, ?, ?, ?)";
 
     private final String update =
             "UPDATE " + table_name +
-                    " SET nombre=?, fecha=?, estado=?, idCliente=?, precioTotal=? WHERE id=?";
+                    " SET nombre=?, fecha=?, estado=?, precioTotal=? WHERE id=?";
 
     public PedidoDao() {}
 
@@ -167,8 +167,7 @@ public class PedidoDao implements IDao<Pedido> {
             pst.setString(2, p.getName());
             pst.setDate(3, Date.valueOf(p.getFecha()));
             pst.setString(4, p.getEstado());
-            pst.setString(5, p.getIdCliente());
-            pst.setDouble(6, p.getPrecioTotal());
+            pst.setDouble(5, p.getPrecioTotal());
 
             pst.executeUpdate();
             pst.close();
@@ -180,7 +179,6 @@ public class PedidoDao implements IDao<Pedido> {
                             ", nombre=" + p.getName() +
                             ", fecha=" + p.getFecha() +
                             ", estado=" + p.getEstado() +
-                            ", idCliente=" + p.getId() +
                             ", precioTotal=" + p.getPrecioTotal()
             );
 
@@ -201,9 +199,12 @@ public class PedidoDao implements IDao<Pedido> {
             List<LineaPedido> lineas = new ArrayList<>();
             while (rsLineas.next()) {
                 lineas.add(new LineaPedido(
+                        rsLineas.getString("id"),
+                        rsLineas.getString("idPedido"),
                         rsLineas.getString("idProducto"),
                         rsLineas.getInt("cantidad"),
-                        rsLineas.getDouble("precio")
+                        rsLineas.getDouble("precio"),
+                        rsLineas.getString("estado")
                 ));
             }
             rsLineas.close();

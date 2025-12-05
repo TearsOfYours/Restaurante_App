@@ -1,4 +1,4 @@
-package ies.sequeros.com.dam.pmdm.cliente.aplicacion.pedidos
+package ies.sequeros.com.dam.pmdm.cliente.aplicacion.pedidos.crearPedido
 
 import ies.sequeros.com.dam.pmdm.administrador.modelo.IPedidoRepositorio
 import ies.sequeros.com.dam.pmdm.administrador.modelo.Pedido

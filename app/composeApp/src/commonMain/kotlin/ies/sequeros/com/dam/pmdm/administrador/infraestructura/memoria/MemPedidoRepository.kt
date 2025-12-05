@@ -9,21 +9,12 @@ class MemPedidoRepository : IPedidoRepositorio {
     private val items = hashMapOf<String, Pedido>()
 
     init {
-        val p1 = Pedido(
-            id = "1",
-            name = "Juan",
-            fecha = "2024-01-01",
-            lineas = listOf(LineaPedido(idProducto = "prod1", cantidad = 1, precioUnitario = 12.50))
-        )
-        val p2 = Pedido(
-            id = "2",
-            name = "Pepe",
-            fecha = "2024-01-02",
-            lineas = listOf(LineaPedido(idProducto = "prod2", cantidad = 2, precioUnitario = 4.10))
-        )
+        val p1 = Pedido(id = "1", name = "Juan", fecha = "2024-01-01", lineas = listOf(LineaPedido(id = "lp1", idPedido = "1", idProducto = "prod1", cantidad = 1, precioUnitario = 12.50)))
+        val p2 = Pedido(id = "2", name = "Pepe", fecha = "2024-01-02", lineas = listOf(LineaPedido(id = "lp2", idPedido = "2", idProducto = "prod2", cantidad = 2, precioUnitario = 4.10)))
         items[p1.id] = p1
         items[p2.id] = p2
     }
+
 
     override suspend fun getAll(): List<Pedido> = items.values.toList()
 
