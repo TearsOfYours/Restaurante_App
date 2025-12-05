@@ -214,8 +214,7 @@ public class PedidoDao implements IDao<Pedido> {
                     r.getString("NOMBRE"),
                     r.getString("FECHA"),
                     lineas,
-                    r.getString("ESTADO"),
-                    r.getString("idCliente")
+                    r.getString("ESTADO")
             );
         } catch (SQLException ex) {
             Logger.getLogger(PedidoDao.class.getName()).log(Level.SEVERE, null, ex);

@@ -13,13 +13,12 @@ import ies.sequeros.com.dam.pmdm.AppViewModel
 import ies.sequeros.com.dam.pmdm.administrador.modelo.ICategoriaRepositorio
 import ies.sequeros.com.dam.pmdm.administrador.modelo.IPedidoRepositorio
 import ies.sequeros.com.dam.pmdm.administrador.modelo.IProductoRepositorio
-import ies.sequeros.com.dam.pmdm.administrador.ui.AdminRoutes
 import ies.sequeros.com.dam.pmdm.cliente.login.LoginCliente
 import ies.sequeros.com.dam.pmdm.cliente.login.LoginClienteViewModel
 import ies.sequeros.com.dam.pmdm.cliente.login.menu.MenuCarta
 import ies.sequeros.com.dam.pmdm.cliente.login.menu.MenuCartaViewModel
 import ies.sequeros.com.dam.pmdm.cliente.login.menu.pedido.TerminarPedido
-import ies.sequeros.com.dam.pmdm.cliente.login.menu.pedido.TerminarPedidoViewModel
+import ies.sequeros.com.dam.pmdm.cliente.login.menu.pedido.RealizarPedidoViewModel
 import ies.sequeros.com.dam.pmdm.commons.infraestructura.AlmacenDatos
 
 @Composable
@@ -33,7 +32,7 @@ fun MainCliente(
 ) {
     val loginClienteViewModel = viewModel { LoginClienteViewModel() }
     val menuCartaViewModel = viewModel { MenuCartaViewModel() }
-    val terminarPedidoViewModel = viewModel { TerminarPedidoViewModel(productoRepositorio, categoriaRepositorio, pedidoRepositorio, almacenDatos) }
+    val realizarPedidoViewModel = viewModel { RealizarPedidoViewModel(productoRepositorio, categoriaRepositorio, pedidoRepositorio, almacenDatos) }
     var nombre by remember { mutableStateOf("") }
     val navController = rememberNavController()
 
@@ -64,7 +63,7 @@ fun MainCliente(
         }
 
         composable(ClienteRoutes.Pedido) {
-            TerminarPedido(terminarPedidoViewModel)
+            TerminarPedido(realizarPedidoViewModel)
         }
 
     }

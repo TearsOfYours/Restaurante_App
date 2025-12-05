@@ -7,16 +7,14 @@ fun Pedido.toDTO() = PedidoDTO(
     name = name,
     id = id,
     fecha = fecha,
-    estado = estado,
-    idCliente = idCliente
+    estado = estado
 )
 fun PedidoDTO.toPedido() = Pedido(
     name = name,
     id = id,
     fecha = fecha,
     lineas = emptyList(),
-    estado = estado,
-    idCliente = idCliente
+    estado = estado
 )
 fun Pedido.toDetallesCommand() = DetallesPedidoCommand(
     fecha = fecha,
