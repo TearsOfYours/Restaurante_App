@@ -6,5 +6,5 @@ data class Categoria (
     var id:String,
     val name:String,
     val imagePath: String,
-    val enabled:Boolean = true
+    val enabled:Boolean
 )

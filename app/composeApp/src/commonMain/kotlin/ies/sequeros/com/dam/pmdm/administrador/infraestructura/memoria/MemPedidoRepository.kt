@@ -9,8 +9,8 @@ class MemPedidoRepository : IPedidoRepositorio {
     private val items = hashMapOf<String, Pedido>()
 
     init {
-        val p1 = Pedido(name = "Juan", id = "1", fecha = "2024-01-01", lineas = listOf(LineaPedido(idProducto = "prod1", cantidad = 1, precioUnitario = 12.50)), estado = "PENDIENTE")
-        val p2 = Pedido(name = "Pepe", id = "2", fecha = "2024-01-02", lineas = listOf(LineaPedido(idProducto = "prod2", cantidad = 2, precioUnitario = 4.10)), estado = "PENDIENTE")
+        val p1 = Pedido(name = "Juan", id = "1", fecha = "2024-01-01", lineas = listOf(LineaPedido(idProducto = "prod1", cantidad = 1, precioUnitario = 12.50)), estado = "PENDIENTE", idCliente = "cliente1")
+        val p2 = Pedido(name = "Pepe", id = "2", fecha = "2024-01-02", lineas = listOf(LineaPedido(idProducto = "prod2", cantidad = 2, precioUnitario = 4.10)), estado = "PENDIENTE", idCliente = "cliente2")
         items[p1.id] = p1
         items[p2.id] = p2
     }

@@ -2,8 +2,13 @@ package ies.sequeros.com.dam.pmdm.administrador.ui.productos
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import ies.sequeros.com.dam.pmdm.administrador.aplicacion.categorias.activar.ActivarCategoriaCommand
+import ies.sequeros.com.dam.pmdm.administrador.aplicacion.categorias.activar.ActivarCategoriaUseCase
+import ies.sequeros.com.dam.pmdm.administrador.aplicacion.categorias.listar.CategoriaDTO
 import ies.sequeros.com.dam.pmdm.administrador.aplicacion.dependientes.actualizar.ActualizarProductoUseCase
 import ies.sequeros.com.dam.pmdm.administrador.aplicacion.productos.BorrarProductoUseCase
+import ies.sequeros.com.dam.pmdm.administrador.aplicacion.productos.activar.ActivarProductoCommand
+import ies.sequeros.com.dam.pmdm.administrador.aplicacion.productos.activar.ActivarProductoUseCase
 import ies.sequeros.com.dam.pmdm.administrador.aplicacion.productos.crear.CrearProductoCommand
 import ies.sequeros.com.dam.pmdm.administrador.aplicacion.productos.crear.CrearProductoUseCase
 import ies.sequeros.com.dam.pmdm.administrador.aplicacion.productos.actualizar.ActualizarProductoCommand
@@ -29,7 +34,7 @@ class ProductoViewModel(
     private val crearProductoUseCase: CrearProductoUseCase
     private val actualizarProductoUseCase: ActualizarProductoUseCase
     private val borrarProductoUseCase: BorrarProductoUseCase
-
+    private val activarProductoUseCase: ActivarProductoUseCase
     private val _items = MutableStateFlow<MutableList<ProductoDTO>>(mutableListOf())
     val items: StateFlow<List<ProductoDTO>> = _items.asStateFlow()
 
@@ -41,7 +46,7 @@ class ProductoViewModel(
         crearProductoUseCase = CrearProductoUseCase(productoRepositorio, categoriaRepositorio,almacenDatos)
         actualizarProductoUseCase = ActualizarProductoUseCase(productoRepositorio, almacenDatos)
         borrarProductoUseCase = BorrarProductoUseCase(productoRepositorio, almacenDatos)
-
+        activarProductoUseCase = ActivarProductoUseCase(productoRepositorio,almacenDatos)
         viewModelScope.launch {
             val productos = listarProductosUseCase.invoke()
             _items.value.clear()
@@ -103,5 +108,23 @@ class ProductoViewModel(
             add(state)
         else
             update(state)
+    }
+    fun switchEnableProducto(item: ProductoDTO) {
+        val command= ActivarProductoCommand(
+            item.id,
+            !item.enabled,
+        )
+
+        viewModelScope.launch {
+            val item=activarProductoUseCase.invoke(command)
+
+            _items.value = _items.value.map {
+                if (item.id == it.id)
+                    item
+                else
+                    it
+            } as MutableList<ProductoDTO>
+        }
+
     }
 }

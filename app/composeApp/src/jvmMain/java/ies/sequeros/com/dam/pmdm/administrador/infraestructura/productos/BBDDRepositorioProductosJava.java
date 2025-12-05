@@ -57,12 +57,12 @@ public class BBDDRepositorioProductosJava {
             ResultSet rs = pst.executeQuery();
             while (rs.next()) {
                 Producto p = new Producto(
-                        rs.getString("NOMBRE"),
-                        rs.getString("IDCATEGORIA"),
-                        String.valueOf(rs.getInt("ID")),
-                        rs.getDouble("PRECIO"),
-                        rs.getString("IMAGEPATH"),
-                        rs.getBoolean("ESTADO")
+                        rs.getString("nombre"),
+                        rs.getString("idCategoria"),
+                        rs.getString("id"),
+                        rs.getDouble("precio"),
+                        rs.getString("image_path"),
+                        rs.getBoolean("enabled")
                 );
                 productos.add(p);
             }
@@ -72,5 +72,6 @@ public class BBDDRepositorioProductosJava {
         }
         return productos;
     }
+
 }
 

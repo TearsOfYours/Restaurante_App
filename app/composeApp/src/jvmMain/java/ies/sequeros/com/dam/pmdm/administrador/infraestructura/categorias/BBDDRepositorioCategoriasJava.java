@@ -36,15 +36,16 @@ public class BBDDRepositorioCategoriasJava {
     public List<Categoria> getAll() {
         return this.dao.getAll();
     }
-    public Categoria findByName(String name){
 
-        return null;
-    }
+
+
     public Categoria  getById(String id){
         return this.dao.getById(id);
 
     }
-
+    public Categoria findByName(String name){
+        return this.dao.findByName(name);
+    }
     public List<Categoria> findByIds(List<String> ids){
         return null;
     }

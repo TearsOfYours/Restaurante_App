@@ -1,5 +1,6 @@
 package ies.sequeros.com.dam.pmdm.administrador.infraestructura.pedidos;
 
+import ies.sequeros.com.dam.pmdm.administrador.modelo.LineaPedido;
 import ies.sequeros.com.dam.pmdm.administrador.modelo.Pedido;
 import ies.sequeros.com.dam.pmdm.commons.infraestructura.DataBaseConnection;
 import ies.sequeros.com.dam.pmdm.commons.infraestructura.IDao;
@@ -166,7 +167,7 @@ public class PedidoDao implements IDao<Pedido> {
             pst.setString(2, p.getName());
             pst.setDate(3, Date.valueOf(p.getFecha()));
             pst.setString(4, p.getEstado());
-            pst.setString(5, p.getId());
+            pst.setString(5, p.getIdCliente());
             pst.setDouble(6, p.getPrecioTotal());
 
             pst.executeUpdate();
@@ -191,16 +192,54 @@ public class PedidoDao implements IDao<Pedido> {
     private Pedido registerToObject(final ResultSet r) {
         Pedido p = null;
         try {
+            String pedidoId = r.getString("ID");
+
+            PreparedStatement pstLineas = conn.getConnection().prepareStatement("SELECT * FROM LINEAPEDIDO WHERE idPedido=?");
+            pstLineas.setString(1, pedidoId);
+            ResultSet rsLineas = pstLineas.executeQuery();
+
+            List<LineaPedido> lineas = new ArrayList<>();
+            while (rsLineas.next()) {
+                lineas.add(new LineaPedido(
+                        rsLineas.getString("idProducto"),
+                        rsLineas.getInt("cantidad"),
+                        rsLineas.getDouble("precio")
+                ));
+            }
+            rsLineas.close();
+            pstLineas.close();
+
             p = new Pedido(
-                    r.getString("ID"),
+                    pedidoId,
                     r.getString("NOMBRE"),
                     r.getString("FECHA"),
-                    new ArrayList<>(),
-                    r.getString("ESTADO")
+                    lineas,
+                    r.getString("ESTADO"),
+                    r.getString("idCliente")
             );
         } catch (SQLException ex) {
             Logger.getLogger(PedidoDao.class.getName()).log(Level.SEVERE, null, ex);
         }
         return p;
+    }
+    public List<Pedido> getByCliente(final String clienteId) {
+        List<Pedido> lista = new ArrayList<>();
+        try {
+            PreparedStatement pst = conn.getConnection().prepareStatement(
+                    "SELECT * FROM PEDIDO WHERE idCliente=?"
+            );
+            pst.setString(1, clienteId);
+            ResultSet rs = pst.executeQuery();
+
+            while(rs.next()){
+                lista.add(registerToObject(rs));
+            }
+
+            rs.close();
+            pst.close();
+        } catch (SQLException ex) {
+            Logger.getLogger(PedidoDao.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return lista;
     }
 }

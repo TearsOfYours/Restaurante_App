@@ -17,7 +17,8 @@ data class Pedido(
     val name: String,
     val fecha: String,
     val lineas: List<LineaPedido>,
-    val estado: String = "PENDIENTE"
+    val estado: String = "PENDIENTE",
+    val idCliente: String
 ) {
     val precioTotal: Double get() = lineas.sumOf { it.subtotal }
 }

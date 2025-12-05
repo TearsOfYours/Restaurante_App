@@ -87,19 +87,11 @@ fun Categorias(
             )
         ) {
             items(filteredItems.size) { item ->
-                CategoriaCard(filteredItems.get(item),
-                    {
-                        val element=it.copy(
-                            //enabled = !it.enabled
-                        )
-                        //categoriasViewModel.switchEnabled(element)
-
-                    },{
-
-                    },{
-                        categoriasViewModel.delete(it)
-                    }
-
+                CategoriaCard(
+                    item = filteredItems[item],
+                    onActivate = { categoriasViewModel.switchEnableCategoria(it) },
+                    onDeactivate = { categoriasViewModel.switchEnableCategoria(it) },
+                    onDelete = { categoriasViewModel.delete(it) }
                 )
 
             }

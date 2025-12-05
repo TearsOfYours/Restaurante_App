@@ -3,12 +3,15 @@ package ies.sequeros.com.dam.pmdm.administrador.ui.categorias
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import ies.sequeros.com.dam.pmdm.administrador.aplicacion.categorias.BorrarCategoriaUseCase
+import ies.sequeros.com.dam.pmdm.administrador.aplicacion.categorias.activar.ActivarCategoriaCommand
+import ies.sequeros.com.dam.pmdm.administrador.aplicacion.categorias.activar.ActivarCategoriaUseCase
 import ies.sequeros.com.dam.pmdm.administrador.aplicacion.categorias.actualizar.ActualizarCategoriaCommand
 import ies.sequeros.com.dam.pmdm.administrador.aplicacion.categorias.actualizar.ActualizarCategoriaUseCase
 import ies.sequeros.com.dam.pmdm.administrador.aplicacion.categorias.crear.CrearCategoriaCommand
 import ies.sequeros.com.dam.pmdm.administrador.aplicacion.categorias.crear.CrearCategoriaUseCase
 import ies.sequeros.com.dam.pmdm.administrador.aplicacion.categorias.listar.ListarCategoriasUseCase
 import ies.sequeros.com.dam.pmdm.administrador.aplicacion.categorias.listar.CategoriaDTO
+import ies.sequeros.com.dam.pmdm.administrador.aplicacion.dependientes.activar.ActivarDependienteCommand
 import ies.sequeros.com.dam.pmdm.administrador.aplicacion.dependientes.actualizar.ActualizarDependienteCommand
 import ies.sequeros.com.dam.pmdm.administrador.aplicacion.dependientes.listar.DependienteDTO
 import ies.sequeros.com.dam.pmdm.administrador.modelo.Categoria
@@ -34,7 +37,7 @@ class CategoriasViewModel(
 
     private val actualizarCategoriaUseCase: ActualizarCategoriaUseCase
 
-    //private val activarCategoriaUseCase: ActivarCategoriaUseCase
+    private val activarCategoriaUseCase: ActivarCategoriaUseCase
 
     private val _items = MutableStateFlow<MutableList<CategoriaDTO>>(mutableListOf())
     val items: StateFlow<List<CategoriaDTO>> = _items.asStateFlow()
@@ -51,7 +54,7 @@ class CategoriasViewModel(
         borrarCategoriaUseCase = BorrarCategoriaUseCase(categoriaRepositorio,almacenDatos)
         crearCategoriaUseCase = CrearCategoriaUseCase(categoriaRepositorio,almacenDatos)
         listarCategoriasUseCase = ListarCategoriasUseCase(categoriaRepositorio,almacenDatos)
-        //activarCategoriaUseCase = Activar(categoriaRepositorio,almacenDatos)
+        activarCategoriaUseCase = ActivarCategoriaUseCase(categoriaRepositorio,almacenDatos)
         viewModelScope.launch {
             var items = listarCategoriasUseCase.invoke()
             _items.value.clear()
@@ -92,11 +95,26 @@ class CategoriasViewModel(
             }
         }
     }
-    /*
-    fun switchEnabledCategoria(item: Categoria){
+
+    fun switchEnableCategoria(item: CategoriaDTO) {
+        val command= ActivarCategoriaCommand(
+            item.id,
+            !item.enabled,
+        )
+
+        viewModelScope.launch {
+            val item=activarCategoriaUseCase.invoke(command)
+
+            _items.value = _items.value.map {
+                if (item.id == it.id)
+                    item
+                else
+                    it
+            } as MutableList<CategoriaDTO>
+        }
 
     }
-    */
+
 
     fun delete(item: CategoriaDTO) {
         viewModelScope.launch {

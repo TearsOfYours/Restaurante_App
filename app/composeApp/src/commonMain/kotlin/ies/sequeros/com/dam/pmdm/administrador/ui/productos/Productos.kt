@@ -96,10 +96,10 @@ fun Productos(
                 ProductoCard(
                     item = item,
                     onActivate = {
-                        // Aquí podrías cambiar el estado del producto si es necesario
+                        productosViewModel.switchEnableProducto(it)
                     },
                     onDeactivate = {
-                        // Aquí podrías cambiar el estado del producto si es necesario
+                        productosViewModel.switchEnableProducto(it)
                     },
                     onDelete = {
                         productosViewModel.delete(it)
