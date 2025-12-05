@@ -20,8 +20,8 @@ class BBDDPedidoRepository(
         return bbddRepositorioPedidosJava.getById(id)
     }
 
-    override suspend fun getByCliente(clienteName: String): List<Pedido> {
-        return bbddRepositorioPedidosJava.getAll().filter { it.name == clienteName }
+    override suspend fun getByCliente(name: String): List<Pedido> {
+        return bbddRepositorioPedidosJava.getAll().filter { it.name == name }
     }
 
     override suspend fun create(pedido: Pedido) {

@@ -4,8 +4,7 @@ data class PedidoDTO(
     val name: String,
     val id: String,
     val fecha: String,
-    val estado: String = "PENDIENTE",
-    val idCliente: String
+    val estado: String = "PENDIENTE"
 )
 data class LineaPedidoDTO(
     val nombreProducto: String,

@@ -20,7 +20,7 @@ import ies.sequeros.com.dam.pmdm.administrador.ui.dependientes.DependientesViewM
 import ies.sequeros.com.dam.pmdm.administrador.ui.listado.PedidosViewModel
 import ies.sequeros.com.dam.pmdm.administrador.ui.productos.ProductoViewModel
 import ies.sequeros.com.dam.pmdm.cliente.ClienteViewModel
-import ies.sequeros.com.dam.pmdm.cliente.MainCliente
+//import ies.sequeros.com.dam.pmdm.cliente.MainCliente
 import ies.sequeros.com.dam.pmdm.dependiente.DependienteRoutes
 import ies.sequeros.com.dam.pmdm.dependiente.login.LoginDependiente
 import ies.sequeros.com.dam.pmdm.dependiente.login.LoginDependienteViewModel
@@ -71,9 +71,9 @@ fun App(productoRepositorio: IProductoRepositorio, categoriaRepositorio: ICatego
 
                 ) { navController.popBackStack() }
             }
-            composable(AppRoutes.Cliente) {
-                MainCliente(appViewModel, clienteViewModel) {}
-            }
+//            composable(AppRoutes.Cliente) {
+//                MainCliente(appViewModel, clienteViewModel) {}
+//            }
             composable(AppRoutes.Dependiente) {
                 MainDependiente(appViewModel, mainDependienteViewModel) {}
             }

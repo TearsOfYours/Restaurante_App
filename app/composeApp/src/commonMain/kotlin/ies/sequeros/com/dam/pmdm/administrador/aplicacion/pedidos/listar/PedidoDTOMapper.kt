@@ -8,7 +8,6 @@ fun Pedido.toDTO() = PedidoDTO(
     id = id,
     fecha = fecha,
     estado = estado,
-    idCliente = idCliente
 )
 fun PedidoDTO.toPedido() = Pedido(
     name = name,
@@ -16,7 +15,6 @@ fun PedidoDTO.toPedido() = Pedido(
     fecha = fecha,
     lineas = emptyList(),
     estado = estado,
-    idCliente = idCliente
 )
 fun Pedido.toDetallesCommand() = DetallesPedidoCommand(
     fecha = fecha,

@@ -4,9 +4,12 @@ import kotlinx.serialization.Serializable
 
 @Serializable
 data class LineaPedido(
+    val id: String,
+    val idPedido: String,
     val idProducto: String,
     val cantidad: Int,
-    val precioUnitario: Double
+    val precioUnitario: Double,
+    val estado: String = "PENDIENTE"
 ) {
     val subtotal: Double get() = cantidad * precioUnitario
 }
@@ -17,8 +20,7 @@ data class Pedido(
     val name: String,
     val fecha: String,
     val lineas: List<LineaPedido>,
-    val estado: String = "PENDIENTE",
-    val idCliente: String
+    val estado: String = "PENDIENTE"
 ) {
     val precioTotal: Double get() = lineas.sumOf { it.subtotal }
 }

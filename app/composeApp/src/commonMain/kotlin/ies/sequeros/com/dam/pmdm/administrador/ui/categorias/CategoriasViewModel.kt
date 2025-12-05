@@ -30,6 +30,7 @@ class CategoriasViewModel(
     val almacenDatos: AlmacenDatos
 ) : ViewModel()
 {
+
     private val borrarCategoriaUseCase: BorrarCategoriaUseCase
     private val crearCategoriaUseCase: CrearCategoriaUseCase
     

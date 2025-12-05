@@ -2550,3 +2550,27 @@ dic 05, 2025 12:48:11 A. M. ies.sequeros.com.dam.pmdm.administrador.infraestruc
 INFO: Ejecutando SQL: select * from PRODUCTO where id=? | Parametros: [id=594d5b14-1697-42b1-9562-36ef3088b7e6]
 dic 05, 2025 12:48:11 A. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.productos.ProductoDao update
 INFO: Ejecutando SQL: UPDATE PRODUCTO SET nombre = ?, precio = ?, idCategoria = ?, image_path = ?, enabled = ? WHERE id = ? | Params: [1]=papoi, [2]=2121.0, [3]=d1fe3edf-1f11-4d0c-a605-3c33e3b90089, [4]=594d5b14-1697-42b1-9562-36ef3088b7e6.jpg, [5]=true, [6]=594d5b14-1697-42b1-9562-36ef3088b7e6
+dic 05, 2025 10:38:43 P. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.dependientes.DependienteDao getAll
+INFO: Ejecutando SQL: select * from DEPENDIENTE | Parametros: 
+dic 05, 2025 10:38:43 P. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.categorias.CategoriaDao getAll
+INFO: Ejecutando SQL: select * from CATEGORIA | Parametros: 
+dic 05, 2025 10:38:43 P. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.productos.ProductoDao getAll
+INFO: Ejecutando SQL: select * from PRODUCTO | Parametros: 
+dic 05, 2025 10:39:03 P. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.dependientes.DependienteDao insert
+INFO: Ejecutando SQL: INSERT INTO DEPENDIENTE (id, name, email, password, image_path, enabled, is_admin) VALUES (?, ?, ?, ?, ?, ?, ?) | Params: [1]=fd7f0128-64b8-40bb-9b79-2ecfc9dbe636, [2]=papoi, [3]=papoi@., [4]=papoiAa1, [5]=fd7f0128-64b8-40bb-9b79-2ecfc9dbe636.jpg, [6]=true, [7]=true]
+dic 05, 2025 10:39:08 P. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.categorias.CategoriaDao findByName
+INFO: Ejecutando SQL: select * from CATEGORIA where nombre=? | Parametros: [name=papoiAa1]
+dic 05, 2025 10:39:08 P. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.categorias.CategoriaDao findByName
+INFO: Ejecutando SQL: select * from CATEGORIA where nombre=? | Parametros: [name=papoiAa1]
+dic 05, 2025 10:39:08 P. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.categorias.CategoriaDao insert
+INFO: Ejecutando SQL: INSERT INTO CATEGORIA (id, nombre, image_path, enabled) VALUES (?, ?, ?, ?) | Params: [1]=9c58bc1b-cdd7-4215-bcab-6f08e6770c13, [2]=papoiAa1, [3]=9c58bc1b-cdd7-4215-bcab-6f08e6770c13.jpg, [4]=true]
+dic 05, 2025 10:39:16 P. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.categorias.CategoriaDao getById
+INFO: Ejecutando SQL: select * from CATEGORIA where id=? | Parametros: [id=9c58bc1b-cdd7-4215-bcab-6f08e6770c13]
+dic 05, 2025 10:39:16 P. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.productos.ProductoDao insert
+INFO: Ejecutando SQL: INSERT INTO PRODUCTO (id, nombre, precio, idCategoria, image_path, enabled) VALUES (?, ?, ?, ?, ?, ?) | Params: [1]=papoiAa1, [2]=1212.0, [3]=9c58bc1b-cdd7-4215-bcab-6f08e6770c13, [4]=3fa19cf9-4756-492e-9e5a-2edf9a5db290.jpg, [5]=true
+dic 05, 2025 10:39:24 P. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.dependientes.DependienteDao getAll
+INFO: Ejecutando SQL: select * from DEPENDIENTE | Parametros: 
+dic 05, 2025 10:39:24 P. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.categorias.CategoriaDao getAll
+INFO: Ejecutando SQL: select * from CATEGORIA | Parametros: 
+dic 05, 2025 10:39:24 P. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.productos.ProductoDao getAll
+INFO: Ejecutando SQL: select * from PRODUCTO | Parametros: 
