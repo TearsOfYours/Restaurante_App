@@ -1,4 +1,4 @@
-package ies.sequeros.com.dam.pmdm.cliente.login.menu.pedido
+package ies.sequeros.com.dam.pmdm.cliente.login.menu.pedido.lineapedido
 
 data class LineaPedidoState(
     val idProducto: String = "",

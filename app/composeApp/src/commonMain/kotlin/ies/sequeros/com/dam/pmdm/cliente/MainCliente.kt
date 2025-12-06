@@ -15,8 +15,10 @@ import ies.sequeros.com.dam.pmdm.administrador.modelo.IPedidoRepositorio
 import ies.sequeros.com.dam.pmdm.administrador.modelo.IProductoRepositorio
 import ies.sequeros.com.dam.pmdm.cliente.login.LoginCliente
 import ies.sequeros.com.dam.pmdm.cliente.login.LoginClienteViewModel
-import ies.sequeros.com.dam.pmdm.cliente.login.menu.MenuCarta
+import ies.sequeros.com.dam.pmdm.cliente.login.menu.MenuRestaurante
 import ies.sequeros.com.dam.pmdm.cliente.login.menu.MenuCartaViewModel
+import ies.sequeros.com.dam.pmdm.cliente.login.menu.categoria.ClienteCategoriaMainViewModel
+import ies.sequeros.com.dam.pmdm.cliente.login.menu.categoria.ClienteCategoriaMain
 import ies.sequeros.com.dam.pmdm.cliente.login.menu.pedido.TerminarPedido
 import ies.sequeros.com.dam.pmdm.cliente.login.menu.pedido.RealizarPedidoViewModel
 import ies.sequeros.com.dam.pmdm.commons.infraestructura.AlmacenDatos
@@ -28,12 +30,14 @@ fun MainCliente(
     pedidoRepositorio: IPedidoRepositorio,
     productoRepositorio: IProductoRepositorio,
     almacenDatos: AlmacenDatos,
+    clienteCategoriaMainViewModel: ClienteCategoriaMainViewModel,
     onExit: () -> Unit
 ) {
     val loginClienteViewModel = viewModel { LoginClienteViewModel() }
-    val menuCartaViewModel = viewModel { MenuCartaViewModel() }
+    val menuCartaViewModel = viewModel { MenuCartaViewModel(productoRepositorio, categoriaRepositorio, pedidoRepositorio, almacenDatos) }
     val realizarPedidoViewModel = viewModel { RealizarPedidoViewModel(productoRepositorio, categoriaRepositorio, pedidoRepositorio, almacenDatos) }
     var nombre by remember { mutableStateOf("") }
+    var idCategoria by remember {mutableStateOf("")}
     val navController = rememberNavController()
 
     NavHost(
@@ -52,18 +56,23 @@ fun MainCliente(
         }
 
         composable(ClienteRoutes.Menu) {
-            MenuCarta(
-                menuCartaViewModel, categoriaRepositorio, productoRepositorio, almacenDatos, nombre,
+            MenuRestaurante(
+                menuCartaViewModel, nombre,
                 {
                     navController.navigate(ClienteRoutes.Login) {
                         onExit()
                     }
                 },
-                { navController.navigate(ClienteRoutes.Pedido) })
+                { navController.navigate(ClienteRoutes.Pedido) },
+                {navController.navigate(ClienteRoutes.Producto)})
         }
 
         composable(ClienteRoutes.Pedido) {
             TerminarPedido(realizarPedidoViewModel)
+        }
+
+        composable(ClienteRoutes.Producto) {
+            ClienteCategoriaMain(clienteCategoriaMainViewModel)
         }
 
     }

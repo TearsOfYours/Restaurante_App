@@ -9,7 +9,7 @@ import ies.sequeros.com.dam.pmdm.administrador.modelo.ICategoriaRepositorio
 import ies.sequeros.com.dam.pmdm.administrador.modelo.IPedidoRepositorio
 import ies.sequeros.com.dam.pmdm.administrador.modelo.IProductoRepositorio
 import ies.sequeros.com.dam.pmdm.commons.infraestructura.AlmacenDatos
-import ies.sequeros.com.dam.pmdm.cliente.aplicacion.pedidos.CreaPedidoUseCase
+import ies.sequeros.com.dam.pmdm.cliente.aplicacion.pedidos.crearPedido.CreaPedidoUseCase
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
@@ -22,7 +22,7 @@ class RealizarPedidoViewModel(
     private val almacenDatos: AlmacenDatos
 ): ViewModel() {
 
-    private val crearPedidoUseCase = CreaPedidoUseCase(pedidoRepositorio)
+    private val crearPedidoUseCase: CreaPedidoUseCase
     private val listarPedidosUseCase: ListarPedidosUseCase
 
     private val _items = MutableStateFlow<MutableList<PedidoDTO>>(mutableListOf())
@@ -33,7 +33,7 @@ class RealizarPedidoViewModel(
 
     init {
         listarPedidosUseCase = ListarPedidosUseCase(pedidoRepositorio)
-        crearPedidoUseCase
+        crearPedidoUseCase = CreaPedidoUseCase(pedidoRepositorio)
         viewModelScope.launch {
             var items = listarPedidosUseCase.invoke()
             _items.value.clear()
