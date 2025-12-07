@@ -73,7 +73,7 @@ fun MainCliente(
         }
 
         composable(ClienteRoutes.Producto) {
-            ClienteCategoriaMain(clienteCategoriaMainViewModel, idCategoria)
+            ClienteCategoriaMain(clienteCategoriaMainViewModel, idCategoria, {}, {})
         }
 
     }

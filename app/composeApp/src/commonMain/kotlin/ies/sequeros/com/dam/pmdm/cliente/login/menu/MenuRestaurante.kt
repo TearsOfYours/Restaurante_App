@@ -30,6 +30,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import ies.sequeros.com.dam.pmdm.cliente.login.menu.categoria.cards.categoria.ClienteCategoriaCard
+import ies.sequeros.com.dam.pmdm.cliente.login.menu.scaffold.PantallaBase
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -42,96 +43,34 @@ fun MenuRestaurante(
     getCatId: (String) -> Unit
 ) {
     val items by menuCartaViewModel.items.collectAsState()
-    Scaffold(
-        modifier = Modifier.fillMaxSize(),
-        topBar = {
-            TopAppBar(
-                title = {
-                    Row(
-                        modifier = Modifier.fillMaxWidth().padding(32.dp, 0.dp),
-                        horizontalArrangement = Arrangement.SpaceBetween,
-                        verticalAlignment = Alignment.CenterVertically,
 
+    PantallaBase(
+        titulo = { Text("Buenos días, $nombreCliente") },
+        onTerminar = onTerminar,
+        onSalir = onExit
+    ) { paddingValues ->
+        Column(modifier = Modifier.padding(paddingValues)) {
+            LazyVerticalGrid(
+                columns = GridCells.Adaptive(200.dp)
+            ) {
+                items(items.size) { index ->
 
-                        ) {
-                        Text("Buenos días, $nombreCliente")
-                        OutlinedButton(
-                            onClick = { onTerminar() },
-                            colors = ButtonDefaults.outlinedButtonColors(containerColor = Color.White),
-                            content = {
-                                Icon(
-                                    imageVector = Icons.Default.ShoppingCart,
-                                    contentDescription = "Carrito de compra",
-                                    tint = MaterialTheme.colorScheme.secondary,
-                                    modifier = Modifier.size(30.dp)
-                                )
-                            }
-                        )
-                    }
-                }, colors = topAppBarColors(
-                    containerColor = MaterialTheme.colorScheme.primary
-                )
-            )
-        },
-        bottomBar = {
-            BottomAppBar {
-                Row(
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .padding(32.dp, 0.dp, 32.dp, 0.dp),
-                    horizontalArrangement = Arrangement.SpaceBetween,
-                    verticalAlignment = Alignment.CenterVertically
-                ) {
-                    Button(
-                        onClick = { onTerminar() },
-                        content = {
-                            Text("Terminar Pedido")
-                        }
+                    ClienteCategoriaCard(
+                        item = items[index],
+                        toProducts = { selected ->
+                            menuCartaViewModel.setSelectedCategoria(selected.id)
+                            onToProduct()
+                        },
+                        onSelect = { id ->
+                            menuCartaViewModel.setSelectedCategoria(id)
+                            getCatId(id)
+                        },
+                        nombreCliente = nombreCliente
                     )
-
-                    Button(
-                        onClick = { onExit() },
-                        content = {
-                            Text("Cancelar Pedido")
-                        }
-                    )
-
                 }
             }
-        },
-        content = { paddingValues ->
-            Column(modifier = Modifier.padding(paddingValues)) {
-                Row(modifier = Modifier.fillMaxWidth()) {
-
-                    LazyVerticalGrid(
-                        columns = GridCells.Adaptive(
-                            minSize = 200.dp
-                        )
-                    ) {
-                        items(items.size) { index ->
-                            ClienteCategoriaCard(
-                                item = items[index],
-                                toProducts = {selected ->
-                                    menuCartaViewModel.setSelectedCategoria(selected.id)
-                                    onToProduct()
-                                },
-                                onSelect = { id ->
-                                    menuCartaViewModel.setSelectedCategoria(id)
-                                    getCatId(id)
-                                },
-
-                            )
-
-                        }
-                    }
-
-
-                }
-            }
-
         }
-
-    )
-
-
+    }
 }
+
+

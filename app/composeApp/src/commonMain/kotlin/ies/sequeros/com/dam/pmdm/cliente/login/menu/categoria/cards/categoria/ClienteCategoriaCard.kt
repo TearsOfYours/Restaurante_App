@@ -32,7 +32,8 @@ import vegaburguer.composeapp.generated.resources.hombre
 fun ClienteCategoriaCard(
     item: CategoriaDTO,
     toProducts: (CategoriaDTO) -> Unit,
-    onSelect: (String) -> Unit
+    onSelect: (String) -> Unit,
+    nombreCliente: (String)
 ) {
     val imagePath =
         mutableStateOf(if (item.imagePath != null && item.imagePath.isNotEmpty()) item.imagePath else "")
