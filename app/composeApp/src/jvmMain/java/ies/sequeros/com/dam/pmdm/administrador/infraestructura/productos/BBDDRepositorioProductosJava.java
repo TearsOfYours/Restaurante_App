@@ -62,6 +62,7 @@ public class BBDDRepositorioProductosJava {
                         rs.getString("id"),
                         rs.getDouble("precio"),
                         rs.getString("image_path"),
+                        rs.getString("descripcion"),
                         rs.getBoolean("enabled")
                 );
                 productos.add(p);

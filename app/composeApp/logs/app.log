@@ -2574,3 +2574,273 @@ dic 05, 2025 10:39:24 P. M. ies.sequeros.com.dam.pmdm.administrador.infraestruc
 INFO: Ejecutando SQL: select * from CATEGORIA | Parametros: 
 dic 05, 2025 10:39:24 P. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.productos.ProductoDao getAll
 INFO: Ejecutando SQL: select * from PRODUCTO | Parametros: 
+dic 05, 2025 10:47:21 P. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.dependientes.DependienteDao getAll
+INFO: Ejecutando SQL: select * from DEPENDIENTE | Parametros: 
+dic 05, 2025 10:47:21 P. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.categorias.CategoriaDao getAll
+INFO: Ejecutando SQL: select * from CATEGORIA | Parametros: 
+dic 05, 2025 10:47:21 P. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.productos.ProductoDao getAll
+INFO: Ejecutando SQL: select * from PRODUCTO | Parametros: 
+dic 05, 2025 10:47:28 P. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.categorias.CategoriaDao getById
+INFO: Ejecutando SQL: select * from CATEGORIA where id=? | Parametros: [id=9c58bc1b-cdd7-4215-bcab-6f08e6770c13]
+dic 05, 2025 10:47:28 P. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.categorias.CategoriaDao update
+INFO: Ejecutando SQL: UPDATE CATEGORIA SET nombre = ? WHERE id = ? | Params: [1]=papoiAa1, [2]=9c58bc1b-cdd7-4215-bcab-6f08e6770c13]
+dic 05, 2025 10:47:30 P. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.productos.ProductoDao getById
+INFO: Ejecutando SQL: select * from PRODUCTO where id=? | Parametros: [id=3fa19cf9-4756-492e-9e5a-2edf9a5db290]
+dic 05, 2025 10:47:30 P. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.productos.ProductoDao update
+INFO: Ejecutando SQL: UPDATE PRODUCTO SET nombre = ?, precio = ?, idCategoria = ?, image_path = ?, enabled = ? WHERE id = ? | Params: [1]=papoiAa1, [2]=1212.0, [3]=9c58bc1b-cdd7-4215-bcab-6f08e6770c13, [4]=3fa19cf9-4756-492e-9e5a-2edf9a5db290.jpg, [5]=false, [6]=3fa19cf9-4756-492e-9e5a-2edf9a5db290
+dic 05, 2025 10:48:07 P. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.productos.ProductoDao getById
+INFO: Ejecutando SQL: select * from PRODUCTO where id=? | Parametros: [id=3fa19cf9-4756-492e-9e5a-2edf9a5db290]
+dic 05, 2025 10:48:07 P. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.productos.ProductoDao update
+INFO: Ejecutando SQL: UPDATE PRODUCTO SET nombre = ?, precio = ?, idCategoria = ?, image_path = ?, enabled = ? WHERE id = ? | Params: [1]=papoiAa1, [2]=1212.0, [3]=9c58bc1b-cdd7-4215-bcab-6f08e6770c13, [4]=3fa19cf9-4756-492e-9e5a-2edf9a5db290.jpg, [5]=true, [6]=3fa19cf9-4756-492e-9e5a-2edf9a5db290
+dic 06, 2025 1:04:56 A. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.dependientes.DependienteDao getAll
+INFO: Ejecutando SQL: select * from DEPENDIENTE | Parametros: 
+dic 06, 2025 1:04:56 A. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.categorias.CategoriaDao getAll
+INFO: Ejecutando SQL: select * from CATEGORIA | Parametros: 
+dic 06, 2025 1:04:56 A. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.productos.ProductoDao getAll
+INFO: Ejecutando SQL: select * from PRODUCTO | Parametros: 
+dic 06, 2025 1:05:34 A. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.dependientes.DependienteDao getById
+INFO: Ejecutando SQL: select * from DEPENDIENTE where id=? | Parametros: [id=fd7f0128-64b8-40bb-9b79-2ecfc9dbe636]
+dic 06, 2025 1:05:34 A. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.dependientes.DependienteDao update
+INFO: Ejecutando SQL: UPDATE DEPENDIENTE SET name = ?, email = ?, password = ?, image_path = ?, enabled = ?, is_admin = ? WHERE id = ? | Params: [1]=papoi, [2]=papoi@., [3]=papoiAa1, [4]=fd7f0128-64b8-40bb-9b79-2ecfc9dbe636.jpg, [5]=false, [6]=true, [7]=fd7f0128-64b8-40bb-9b79-2ecfc9dbe636]
+dic 06, 2025 1:05:35 A. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.dependientes.DependienteDao getById
+INFO: Ejecutando SQL: select * from DEPENDIENTE where id=? | Parametros: [id=fd7f0128-64b8-40bb-9b79-2ecfc9dbe636]
+dic 06, 2025 1:05:35 A. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.dependientes.DependienteDao update
+INFO: Ejecutando SQL: UPDATE DEPENDIENTE SET name = ?, email = ?, password = ?, image_path = ?, enabled = ?, is_admin = ? WHERE id = ? | Params: [1]=papoi, [2]=papoi@., [3]=papoiAa1, [4]=fd7f0128-64b8-40bb-9b79-2ecfc9dbe636.jpg, [5]=true, [6]=true, [7]=fd7f0128-64b8-40bb-9b79-2ecfc9dbe636]
+dic 06, 2025 1:05:36 A. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.dependientes.DependienteDao getById
+INFO: Ejecutando SQL: select * from DEPENDIENTE where id=? | Parametros: [id=fd7f0128-64b8-40bb-9b79-2ecfc9dbe636]
+dic 06, 2025 1:05:36 A. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.dependientes.DependienteDao update
+INFO: Ejecutando SQL: UPDATE DEPENDIENTE SET name = ?, email = ?, password = ?, image_path = ?, enabled = ?, is_admin = ? WHERE id = ? | Params: [1]=papoi, [2]=papoi@., [3]=papoiAa1, [4]=fd7f0128-64b8-40bb-9b79-2ecfc9dbe636.jpg, [5]=false, [6]=true, [7]=fd7f0128-64b8-40bb-9b79-2ecfc9dbe636]
+dic 06, 2025 1:05:36 A. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.dependientes.DependienteDao getById
+INFO: Ejecutando SQL: select * from DEPENDIENTE where id=? | Parametros: [id=fd7f0128-64b8-40bb-9b79-2ecfc9dbe636]
+dic 06, 2025 1:05:36 A. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.dependientes.DependienteDao update
+INFO: Ejecutando SQL: UPDATE DEPENDIENTE SET name = ?, email = ?, password = ?, image_path = ?, enabled = ?, is_admin = ? WHERE id = ? | Params: [1]=papoi, [2]=papoi@., [3]=papoiAa1, [4]=fd7f0128-64b8-40bb-9b79-2ecfc9dbe636.jpg, [5]=true, [6]=true, [7]=fd7f0128-64b8-40bb-9b79-2ecfc9dbe636]
+dic 06, 2025 1:05:36 A. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.dependientes.DependienteDao getById
+INFO: Ejecutando SQL: select * from DEPENDIENTE where id=? | Parametros: [id=fd7f0128-64b8-40bb-9b79-2ecfc9dbe636]
+dic 06, 2025 1:05:36 A. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.dependientes.DependienteDao update
+INFO: Ejecutando SQL: UPDATE DEPENDIENTE SET name = ?, email = ?, password = ?, image_path = ?, enabled = ?, is_admin = ? WHERE id = ? | Params: [1]=papoi, [2]=papoi@., [3]=papoiAa1, [4]=fd7f0128-64b8-40bb-9b79-2ecfc9dbe636.jpg, [5]=false, [6]=true, [7]=fd7f0128-64b8-40bb-9b79-2ecfc9dbe636]
+dic 06, 2025 1:05:37 A. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.dependientes.DependienteDao getById
+INFO: Ejecutando SQL: select * from DEPENDIENTE where id=? | Parametros: [id=fd7f0128-64b8-40bb-9b79-2ecfc9dbe636]
+dic 06, 2025 1:05:37 A. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.dependientes.DependienteDao update
+INFO: Ejecutando SQL: UPDATE DEPENDIENTE SET name = ?, email = ?, password = ?, image_path = ?, enabled = ?, is_admin = ? WHERE id = ? | Params: [1]=papoi, [2]=papoi@., [3]=papoiAa1, [4]=fd7f0128-64b8-40bb-9b79-2ecfc9dbe636.jpg, [5]=true, [6]=true, [7]=fd7f0128-64b8-40bb-9b79-2ecfc9dbe636]
+dic 06, 2025 1:05:37 A. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.dependientes.DependienteDao getById
+INFO: Ejecutando SQL: select * from DEPENDIENTE where id=? | Parametros: [id=fd7f0128-64b8-40bb-9b79-2ecfc9dbe636]
+dic 06, 2025 1:05:37 A. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.dependientes.DependienteDao update
+INFO: Ejecutando SQL: UPDATE DEPENDIENTE SET name = ?, email = ?, password = ?, image_path = ?, enabled = ?, is_admin = ? WHERE id = ? | Params: [1]=papoi, [2]=papoi@., [3]=papoiAa1, [4]=fd7f0128-64b8-40bb-9b79-2ecfc9dbe636.jpg, [5]=false, [6]=true, [7]=fd7f0128-64b8-40bb-9b79-2ecfc9dbe636]
+dic 06, 2025 1:05:37 A. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.dependientes.DependienteDao getById
+INFO: Ejecutando SQL: select * from DEPENDIENTE where id=? | Parametros: [id=fd7f0128-64b8-40bb-9b79-2ecfc9dbe636]
+dic 06, 2025 1:05:37 A. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.dependientes.DependienteDao update
+INFO: Ejecutando SQL: UPDATE DEPENDIENTE SET name = ?, email = ?, password = ?, image_path = ?, enabled = ?, is_admin = ? WHERE id = ? | Params: [1]=papoi, [2]=papoi@., [3]=papoiAa1, [4]=fd7f0128-64b8-40bb-9b79-2ecfc9dbe636.jpg, [5]=true, [6]=true, [7]=fd7f0128-64b8-40bb-9b79-2ecfc9dbe636]
+dic 06, 2025 1:05:40 A. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.dependientes.DependienteDao getById
+INFO: Ejecutando SQL: select * from DEPENDIENTE where id=? | Parametros: [id=fd7f0128-64b8-40bb-9b79-2ecfc9dbe636]
+dic 06, 2025 1:05:40 A. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.dependientes.DependienteDao update
+INFO: Ejecutando SQL: UPDATE DEPENDIENTE SET name = ?, email = ?, password = ?, image_path = ?, enabled = ?, is_admin = ? WHERE id = ? | Params: [1]=papoi, [2]=papoi@., [3]=papoiAa1, [4]=fd7f0128-64b8-40bb-9b79-2ecfc9dbe636.jpg, [5]=false, [6]=true, [7]=fd7f0128-64b8-40bb-9b79-2ecfc9dbe636]
+dic 06, 2025 1:05:40 A. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.dependientes.DependienteDao getById
+INFO: Ejecutando SQL: select * from DEPENDIENTE where id=? | Parametros: [id=fd7f0128-64b8-40bb-9b79-2ecfc9dbe636]
+dic 06, 2025 1:05:40 A. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.dependientes.DependienteDao update
+INFO: Ejecutando SQL: UPDATE DEPENDIENTE SET name = ?, email = ?, password = ?, image_path = ?, enabled = ?, is_admin = ? WHERE id = ? | Params: [1]=papoi, [2]=papoi@., [3]=papoiAa1, [4]=fd7f0128-64b8-40bb-9b79-2ecfc9dbe636.jpg, [5]=true, [6]=true, [7]=fd7f0128-64b8-40bb-9b79-2ecfc9dbe636]
+dic 06, 2025 1:05:53 A. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.dependientes.DependienteDao getById
+INFO: Ejecutando SQL: select * from DEPENDIENTE where id=? | Parametros: [id=fd7f0128-64b8-40bb-9b79-2ecfc9dbe636]
+dic 06, 2025 1:05:53 A. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.dependientes.DependienteDao update
+INFO: Ejecutando SQL: UPDATE DEPENDIENTE SET name = ?, email = ?, password = ?, image_path = ?, enabled = ?, is_admin = ? WHERE id = ? | Params: [1]=papoi, [2]=papoi@., [3]=papoiAa1, [4]=fd7f0128-64b8-40bb-9b79-2ecfc9dbe636.jpg, [5]=true, [6]=false, [7]=fd7f0128-64b8-40bb-9b79-2ecfc9dbe636]
+dic 06, 2025 1:05:54 A. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.dependientes.DependienteDao getById
+INFO: Ejecutando SQL: select * from DEPENDIENTE where id=? | Parametros: [id=fd7f0128-64b8-40bb-9b79-2ecfc9dbe636]
+dic 06, 2025 1:05:54 A. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.dependientes.DependienteDao update
+INFO: Ejecutando SQL: UPDATE DEPENDIENTE SET name = ?, email = ?, password = ?, image_path = ?, enabled = ?, is_admin = ? WHERE id = ? | Params: [1]=papoi, [2]=papoi@., [3]=papoiAa1, [4]=fd7f0128-64b8-40bb-9b79-2ecfc9dbe636.jpg, [5]=true, [6]=true, [7]=fd7f0128-64b8-40bb-9b79-2ecfc9dbe636]
+dic 06, 2025 1:05:54 A. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.dependientes.DependienteDao getById
+INFO: Ejecutando SQL: select * from DEPENDIENTE where id=? | Parametros: [id=fd7f0128-64b8-40bb-9b79-2ecfc9dbe636]
+dic 06, 2025 1:05:54 A. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.dependientes.DependienteDao update
+INFO: Ejecutando SQL: UPDATE DEPENDIENTE SET name = ?, email = ?, password = ?, image_path = ?, enabled = ?, is_admin = ? WHERE id = ? | Params: [1]=papoi, [2]=papoi@., [3]=papoiAa1, [4]=fd7f0128-64b8-40bb-9b79-2ecfc9dbe636.jpg, [5]=false, [6]=true, [7]=fd7f0128-64b8-40bb-9b79-2ecfc9dbe636]
+dic 06, 2025 1:05:55 A. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.dependientes.DependienteDao getById
+INFO: Ejecutando SQL: select * from DEPENDIENTE where id=? | Parametros: [id=fd7f0128-64b8-40bb-9b79-2ecfc9dbe636]
+dic 06, 2025 1:05:55 A. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.dependientes.DependienteDao update
+INFO: Ejecutando SQL: UPDATE DEPENDIENTE SET name = ?, email = ?, password = ?, image_path = ?, enabled = ?, is_admin = ? WHERE id = ? | Params: [1]=papoi, [2]=papoi@., [3]=papoiAa1, [4]=fd7f0128-64b8-40bb-9b79-2ecfc9dbe636.jpg, [5]=true, [6]=true, [7]=fd7f0128-64b8-40bb-9b79-2ecfc9dbe636]
+dic 06, 2025 1:06:22 A. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.productos.ProductoDao getById
+INFO: Ejecutando SQL: select * from PRODUCTO where id=? | Parametros: [id=3fa19cf9-4756-492e-9e5a-2edf9a5db290]
+dic 06, 2025 1:06:22 A. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.productos.ProductoDao update
+INFO: Ejecutando SQL: UPDATE PRODUCTO SET nombre = ?, precio = ?, idCategoria = ?, image_path = ?, enabled = ? WHERE id = ? | Params: [1]=papoiAa1, [2]=1212.0, [3]=9c58bc1b-cdd7-4215-bcab-6f08e6770c13, [4]=3fa19cf9-4756-492e-9e5a-2edf9a5db290.jpg, [5]=false, [6]=3fa19cf9-4756-492e-9e5a-2edf9a5db290
+dic 06, 2025 1:06:23 A. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.productos.ProductoDao getById
+INFO: Ejecutando SQL: select * from PRODUCTO where id=? | Parametros: [id=3fa19cf9-4756-492e-9e5a-2edf9a5db290]
+dic 06, 2025 1:06:23 A. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.productos.ProductoDao update
+INFO: Ejecutando SQL: UPDATE PRODUCTO SET nombre = ?, precio = ?, idCategoria = ?, image_path = ?, enabled = ? WHERE id = ? | Params: [1]=papoiAa1, [2]=1212.0, [3]=9c58bc1b-cdd7-4215-bcab-6f08e6770c13, [4]=3fa19cf9-4756-492e-9e5a-2edf9a5db290.jpg, [5]=true, [6]=3fa19cf9-4756-492e-9e5a-2edf9a5db290
+dic 06, 2025 1:06:23 A. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.productos.ProductoDao getById
+INFO: Ejecutando SQL: select * from PRODUCTO where id=? | Parametros: [id=3fa19cf9-4756-492e-9e5a-2edf9a5db290]
+dic 06, 2025 1:06:23 A. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.productos.ProductoDao update
+INFO: Ejecutando SQL: UPDATE PRODUCTO SET nombre = ?, precio = ?, idCategoria = ?, image_path = ?, enabled = ? WHERE id = ? | Params: [1]=papoiAa1, [2]=1212.0, [3]=9c58bc1b-cdd7-4215-bcab-6f08e6770c13, [4]=3fa19cf9-4756-492e-9e5a-2edf9a5db290.jpg, [5]=false, [6]=3fa19cf9-4756-492e-9e5a-2edf9a5db290
+dic 06, 2025 1:06:25 A. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.productos.ProductoDao getById
+INFO: Ejecutando SQL: select * from PRODUCTO where id=? | Parametros: [id=3fa19cf9-4756-492e-9e5a-2edf9a5db290]
+dic 06, 2025 1:06:25 A. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.productos.ProductoDao update
+INFO: Ejecutando SQL: UPDATE PRODUCTO SET nombre = ?, precio = ?, idCategoria = ?, image_path = ?, enabled = ? WHERE id = ? | Params: [1]=papoiAa1, [2]=1212.0, [3]=9c58bc1b-cdd7-4215-bcab-6f08e6770c13, [4]=3fa19cf9-4756-492e-9e5a-2edf9a5db290.jpg, [5]=true, [6]=3fa19cf9-4756-492e-9e5a-2edf9a5db290
+dic 06, 2025 1:06:25 A. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.productos.ProductoDao getById
+INFO: Ejecutando SQL: select * from PRODUCTO where id=? | Parametros: [id=3fa19cf9-4756-492e-9e5a-2edf9a5db290]
+dic 06, 2025 1:06:25 A. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.productos.ProductoDao update
+INFO: Ejecutando SQL: UPDATE PRODUCTO SET nombre = ?, precio = ?, idCategoria = ?, image_path = ?, enabled = ? WHERE id = ? | Params: [1]=papoiAa1, [2]=1212.0, [3]=9c58bc1b-cdd7-4215-bcab-6f08e6770c13, [4]=3fa19cf9-4756-492e-9e5a-2edf9a5db290.jpg, [5]=false, [6]=3fa19cf9-4756-492e-9e5a-2edf9a5db290
+dic 07, 2025 4:14:29 A. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.dependientes.DependienteDao getAll
+INFO: Ejecutando SQL: select * from DEPENDIENTE | Parametros: 
+dic 07, 2025 4:14:29 A. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.categorias.CategoriaDao getAll
+INFO: Ejecutando SQL: select * from CATEGORIA | Parametros: 
+dic 07, 2025 4:14:29 A. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.productos.ProductoDao registerToObject
+SEVERE: null
+java.sql.SQLSyntaxErrorException: Column 'descripcion' not found.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:112)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:89)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:81)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:55)
+	at com.mysql.cj.jdbc.result.ResultSetImpl.findColumn(ResultSetImpl.java:604)
+	at com.mysql.cj.jdbc.result.ResultSetImpl.getString(ResultSetImpl.java:926)
+	at ies.sequeros.com.dam.pmdm.administrador.infraestructura.productos.ProductoDao.registerToObject(ProductoDao.java:213)
+	at ies.sequeros.com.dam.pmdm.administrador.infraestructura.productos.ProductoDao.getAll(ProductoDao.java:100)
+	at ies.sequeros.com.dam.pmdm.administrador.infraestructura.productos.BBDDRepositorioProductosJava.getAll(BBDDRepositorioProductosJava.java:41)
+	at ies.sequeros.com.dam.pmdm.administrador.infraestructura.BBDDProductoRepository.getAll(BBDDProductoRepository.kt:33)
+	at ies.sequeros.com.dam.pmdm.administrador.aplicacion.productos.listar.ListarProductosUseCase.invoke(ListarProductosUseCase.kt:14)
+	at ies.sequeros.com.dam.pmdm.administrador.ui.productos.ProductoViewModel$1.invokeSuspend(ProductosViewModel.kt:51)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.internal.DispatchedContinuationKt.resumeCancellableWith(DispatchedContinuation.kt:375)
+	at kotlinx.coroutines.intrinsics.CancellableKt.startCoroutineCancellable(Cancellable.kt:26)
+	at kotlinx.coroutines.CoroutineStart.invoke(CoroutineStart.kt:358)
+	at kotlinx.coroutines.AbstractCoroutine.start(AbstractCoroutine.kt:134)
+	at kotlinx.coroutines.BuildersKt__Builders_commonKt.launch(Builders.common.kt:53)
+	at kotlinx.coroutines.BuildersKt.launch(Unknown Source)
+	at kotlinx.coroutines.BuildersKt__Builders_commonKt.launch$default(Builders.common.kt:44)
+	at kotlinx.coroutines.BuildersKt.launch$default(Unknown Source)
+	at ies.sequeros.com.dam.pmdm.administrador.ui.productos.ProductoViewModel.<init>(ProductosViewModel.kt:50)
+	at ies.sequeros.com.dam.pmdm.AppKt.App$lambda$8$0(App.kt:46)
+	at androidx.lifecycle.viewmodel.internal.ViewModelProviders.createViewModelFromInitializers$lifecycle_viewmodel(ViewModelProviders.kt:85)
+	at androidx.lifecycle.viewmodel.InitializerViewModelFactory.create(InitializerViewModelFactory.desktop.kt:35)
+	at androidx.lifecycle.viewmodel.ViewModelProviderImpl_desktopKt.createViewModel(ViewModelProviderImpl.desktop.kt:27)
+	at androidx.lifecycle.viewmodel.ViewModelProviderImpl.getViewModel$lifecycle_viewmodel(ViewModelProviderImpl.kt:60)
+	at androidx.lifecycle.viewmodel.ViewModelProviderImpl.getViewModel$lifecycle_viewmodel$default(ViewModelProviderImpl.kt:43)
+	at androidx.lifecycle.ViewModelProvider.get(ViewModelProvider.desktop.kt:35)
+	at androidx.lifecycle.viewmodel.compose.ViewModelKt__ViewModelKt.get(ViewModel.kt:172)
+	at androidx.lifecycle.viewmodel.compose.ViewModelKt.get(ViewModel.kt:1)
+	at androidx.lifecycle.viewmodel.compose.ViewModelKt__ViewModelKt.viewModel(ViewModel.kt:106)
+	at androidx.lifecycle.viewmodel.compose.ViewModelKt.viewModel(ViewModel.kt:1)
+	at ies.sequeros.com.dam.pmdm.AppKt.App(App.kt:272)
+	at ies.sequeros.com.dam.pmdm.ComposableSingletons$MainKt$lambda$-1167175247$1$2.invoke(main.kt:68)
+	at ies.sequeros.com.dam.pmdm.ComposableSingletons$MainKt$lambda$-1167175247$1$2.invoke(main.kt:66)
+	at androidx.compose.runtime.internal.ComposableLambdaImpl.invoke(ComposableLambda.kt:130)
+	at androidx.compose.runtime.internal.ComposableLambdaImpl.invoke(ComposableLambda.kt:51)
+	at androidx.compose.ui.awt.ComposeWindow$setContent$5.invoke(ComposeWindow.desktop.kt:161)
+	at androidx.compose.ui.awt.ComposeWindow$setContent$5.invoke(ComposeWindow.desktop.kt:160)
+	at androidx.compose.runtime.internal.ComposableLambdaImpl.invoke(ComposableLambda.kt:121)
+	at androidx.compose.runtime.internal.ComposableLambdaImpl.invoke(ComposableLambda.kt:51)
+	at androidx.compose.ui.awt.WindowContentLayout_desktopKt.WindowContentLayout(WindowContentLayout.desktop.kt:110)
+	at androidx.compose.ui.awt.ComposeWindowPanel$setContent$3$1.invoke(ComposeWindowPanel.desktop.kt:146)
+	at androidx.compose.ui.awt.ComposeWindowPanel$setContent$3$1.invoke(ComposeWindowPanel.desktop.kt:145)
+	at androidx.compose.runtime.internal.ComposableLambdaImpl.invoke(ComposableLambda.kt:121)
+	at androidx.compose.runtime.internal.ComposableLambdaImpl.invoke(ComposableLambda.kt:51)
+	at androidx.compose.runtime.CompositionLocalKt.CompositionLocalProvider(CompositionLocal.kt:390)
+	at androidx.compose.ui.awt.ComposeWindowPanel$setContent$3.invoke(ComposeWindowPanel.desktop.kt:143)
+	at androidx.compose.ui.awt.ComposeWindowPanel$setContent$3.invoke(ComposeWindowPanel.desktop.kt:142)
+	at androidx.compose.runtime.internal.ComposableLambdaImpl.invoke(ComposableLambda.kt:121)
+	at androidx.compose.runtime.internal.ComposableLambdaImpl.invoke(ComposableLambda.kt:51)
+	at androidx.compose.ui.scene.ComposeContainer$setContent$1$1.invoke(ComposeContainer.desktop.kt:385)
+	at androidx.compose.ui.scene.ComposeContainer$setContent$1$1.invoke(ComposeContainer.desktop.kt:384)
+	at androidx.compose.runtime.internal.ComposableLambdaImpl.invoke(ComposableLambda.kt:121)
+	at androidx.compose.runtime.internal.ComposableLambdaImpl.invoke(ComposableLambda.kt:51)
+	at androidx.compose.runtime.CompositionLocalKt.CompositionLocalProvider(CompositionLocal.kt:370)
+	at androidx.compose.ui.scene.ComposeContainer_desktopKt.ProvideContainerCompositionLocals(ComposeContainer.desktop.kt:579)
+	at androidx.compose.ui.scene.ComposeContainer_desktopKt.access$ProvideContainerCompositionLocals(ComposeContainer.desktop.kt:1)
+	at androidx.compose.ui.scene.ComposeContainer$setContent$1.invoke(ComposeContainer.desktop.kt:384)
+	at androidx.compose.ui.scene.ComposeContainer$setContent$1.invoke(ComposeContainer.desktop.kt:383)
+	at androidx.compose.runtime.internal.ComposableLambdaImpl.invoke(ComposableLambda.kt:121)
+	at androidx.compose.runtime.internal.ComposableLambdaImpl.invoke(ComposableLambda.kt:51)
+	at androidx.compose.ui.scene.ComposeSceneMediator$setContent$1$1$1$1.invoke(ComposeSceneMediator.desktop.kt:596)
+	at androidx.compose.ui.scene.ComposeSceneMediator$setContent$1$1$1$1.invoke(ComposeSceneMediator.desktop.kt:595)
+	at androidx.compose.runtime.internal.ComposableLambdaImpl.invoke(ComposableLambda.kt:121)
+	at androidx.compose.runtime.internal.ComposableLambdaImpl.invoke(ComposableLambda.kt:51)
+	at androidx.compose.ui.layout.OverlayLayout_skikoKt.OverlayLayout(OverlayLayout.skiko.kt:81)
+	at androidx.compose.ui.viewinterop.InteropContainer_skikoKt.TrackInteropPlacementContainer(InteropContainer.skiko.kt:138)
+	at androidx.compose.ui.viewinterop.SwingInteropContainer$invoke$1.invoke(SwingInteropContainer.desktop.kt:276)
+	at androidx.compose.ui.viewinterop.SwingInteropContainer$invoke$1.invoke(SwingInteropContainer.desktop.kt:275)
+	at androidx.compose.runtime.internal.ComposableLambdaImpl.invoke(ComposableLambda.kt:121)
+	at androidx.compose.runtime.internal.ComposableLambdaImpl.invoke(ComposableLambda.kt:51)
+	at androidx.compose.runtime.CompositionLocalKt.CompositionLocalProvider(CompositionLocal.kt:390)
+	at androidx.compose.ui.viewinterop.SwingInteropContainer.invoke(SwingInteropContainer.desktop.kt:273)
+	at androidx.compose.ui.scene.ComposeSceneMediator$setContent$1$1$1.invoke(ComposeSceneMediator.desktop.kt:595)
+	at androidx.compose.ui.scene.ComposeSceneMediator$setContent$1$1$1.invoke(ComposeSceneMediator.desktop.kt:594)
+	at androidx.compose.runtime.internal.ComposableLambdaImpl.invoke(ComposableLambda.kt:121)
+	at androidx.compose.runtime.internal.ComposableLambdaImpl.invoke(ComposableLambda.kt:51)
+	at androidx.compose.runtime.CompositionLocalKt.CompositionLocalProvider(CompositionLocal.kt:370)
+	at androidx.compose.ui.scene.BaseComposeScene$setContent$1$2.invoke(BaseComposeScene.skiko.kt:150)
+	at androidx.compose.ui.scene.BaseComposeScene$setContent$1$2.invoke(BaseComposeScene.skiko.kt:149)
+	at androidx.compose.runtime.internal.ComposableLambdaImpl.invoke(ComposableLambda.kt:121)
+	at androidx.compose.runtime.internal.ComposableLambdaImpl.invoke(ComposableLambda.kt:51)
+	at androidx.compose.runtime.CompositionLocalKt.CompositionLocalProvider(CompositionLocal.kt:370)
+	at androidx.compose.ui.platform.CompositionLocalsKt.ProvideCommonCompositionLocals(CompositionLocals.kt:216)
+	at androidx.compose.ui.platform.Wrapper_skikoKt$setContent$2$1.invoke(Wrapper.skiko.kt:47)
+	at androidx.compose.ui.platform.Wrapper_skikoKt$setContent$2$1.invoke(Wrapper.skiko.kt:46)
+	at androidx.compose.runtime.internal.ComposableLambdaImpl.invoke(ComposableLambda.kt:121)
+	at androidx.compose.runtime.internal.ComposableLambdaImpl.invoke(ComposableLambda.kt:51)
+	at androidx.compose.runtime.CompositionLocalKt.CompositionLocalProvider(CompositionLocal.kt:370)
+	at androidx.compose.runtime.CompositionLocalKt.CompositionLocalProvider(CompositionLocal.kt:410)
+	at androidx.compose.ui.platform.Wrapper_skikoKt.provide(Wrapper.skiko.kt:60)
+	at androidx.compose.ui.platform.Wrapper_skikoKt.access$provide(Wrapper.skiko.kt:1)
+	at androidx.compose.ui.platform.Wrapper_skikoKt$setContent$2.invoke(Wrapper.skiko.kt:46)
+	at androidx.compose.ui.platform.Wrapper_skikoKt$setContent$2.invoke(Wrapper.skiko.kt:45)
+	at androidx.compose.runtime.internal.ComposableLambdaImpl.invoke(ComposableLambda.kt:121)
+	at androidx.compose.runtime.internal.ComposableLambdaImpl.invoke(ComposableLambda.kt:51)
+	at androidx.compose.runtime.internal.Expect_jvmKt.invokeComposable(Expect.jvm.kt:24)
+	at androidx.compose.runtime.ComposerImpl.doCompose-aFTiNEg(Composer.kt:3843)
+	at androidx.compose.runtime.ComposerImpl.composeContent--ZbOJvo$runtime(Composer.kt:3747)
+	at androidx.compose.runtime.CompositionImpl.composeContent(Composition.kt:832)
+	at androidx.compose.runtime.Recomposer.composeInitial$runtime(Recomposer.kt:1233)
+	at androidx.compose.runtime.CompositionImpl.composeInitial(Composition.kt:672)
+	at androidx.compose.runtime.CompositionImpl.setContent(Composition.kt:639)
+	at androidx.compose.ui.platform.Wrapper_skikoKt.setContent(Wrapper.skiko.kt:45)
+	at androidx.compose.ui.scene.CanvasLayersComposeSceneImpl.createComposition(CanvasLayersComposeScene.skiko.kt:215)
+	at androidx.compose.ui.scene.BaseComposeScene.setContent(BaseComposeScene.skiko.kt:149)
+	at androidx.compose.ui.scene.ComposeSceneMediator.setContent$lambda$14(ComposeSceneMediator.desktop.kt:594)
+	at androidx.compose.ui.scene.ComposeSceneMediator.onComponentAttached(ComposeSceneMediator.desktop.kt:564)
+	at androidx.compose.ui.scene.ComposeContainer.addNotify(ComposeContainer.desktop.kt:324)
+	at androidx.compose.ui.awt.ComposeWindowPanel.addNotify(ComposeWindowPanel.desktop.kt:123)
+	at java.desktop/java.awt.Container.addNotify(Container.java:2791)
+	at java.desktop/javax.swing.JComponent.addNotify(JComponent.java:4852)
+	at java.desktop/java.awt.Container.addNotify(Container.java:2791)
+	at java.desktop/javax.swing.JComponent.addNotify(JComponent.java:4852)
+	at java.desktop/java.awt.Container.addNotify(Container.java:2791)
+	at java.desktop/javax.swing.JComponent.addNotify(JComponent.java:4852)
+	at java.desktop/javax.swing.JRootPane.addNotify(JRootPane.java:713)
+	at java.desktop/java.awt.Container.addNotify(Container.java:2791)
+	at java.desktop/java.awt.Window.addNotify(Window.java:738)
+	at java.desktop/java.awt.Frame.addNotify(Frame.java:495)
+	at java.desktop/java.awt.Window.pack(Window.java:775)
+	at androidx.compose.ui.util.Windows_desktopKt.setSizeImpl-6HolHcs(Windows.desktop.kt:115)
+	at androidx.compose.ui.util.Windows_desktopKt.setSizeSafely-hQcJfNw(Windows.desktop.kt:54)
+	at androidx.compose.ui.awt.SwingWindow_desktopKt.SwingWindow$lambda$37$lambda$36(SwingWindow.desktop.kt:294)
+	at androidx.compose.ui.awt.SwingWindow_desktopKt.SwingWindow$lambda$12$lambda$11(SwingWindow.desktop.kt:130)
+	at androidx.compose.ui.awt.AwtWindow_desktopKt.AwtWindow$lambda$7$lambda$6(AwtWindow.desktop.kt:77)
+	at androidx.compose.ui.util.UpdateEffect_desktopKt.UpdateEffect$lambda$8$lambda$7$performUpdate$lambda$4(UpdateEffect.desktop.kt:59)
+	at androidx.compose.runtime.snapshots.Snapshot$Companion.observe(Snapshot.kt:2495)
+	at androidx.compose.runtime.snapshots.SnapshotStateObserver$ObservedScopeMap.observe(SnapshotStateObserver.kt:464)
+	at androidx.compose.runtime.snapshots.SnapshotStateObserver.observeReads(SnapshotStateObserver.kt:248)
+	at androidx.compose.ui.util.UpdateEffect_desktopKt.UpdateEffect$lambda$8$lambda$7$performUpdate(UpdateEffect.desktop.kt:55)
+	at androidx.compose.ui.util.UpdateEffect_desktopKt.UpdateEffect$lambda$8$lambda$7(UpdateEffect.desktop.kt:64)
+	at androidx.compose.runtime.DisposableEffectImpl.onRemembered(Effects.kt:85)
+	at androidx.compose.runtime.internal.RememberEventDispatcher.dispatchRememberList(RememberEventDispatcher.kt:253)
+	at androidx.compose.runtime.internal.RememberEventDispatcher.dispatchRememberObservers(RememberEventDispatcher.kt:225)
+	at androidx.compose.runtime.CompositionImpl.applyChangesInLocked(Composition.kt:1122)
+	at androidx.compose.runtime.CompositionImpl.applyChanges(Composition.kt:1149)
+	at androidx.compose.runtime.Recomposer.composeInitial$runtime(Recomposer.kt:1266)
+	at androidx.compose.runtime.CompositionImpl.composeInitial(Composition.kt:672)
+	at androidx.compose.runtime.CompositionImpl.setContent(Composition.kt:639)
+	at androidx.compose.ui.window.Application_desktopKt$awaitApplication$2$1$2.invokeSuspend(Application.desktop.kt:219)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at java.desktop/java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:318)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:723)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:702)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)
+
+dic 07, 2025 4:14:29 A. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.productos.ProductoDao getAll
+INFO: Ejecutando SQL: select * from PRODUCTO | Parametros: 
+dic 07, 2025 4:15:27 A. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.dependientes.DependienteDao getAll
+INFO: Ejecutando SQL: select * from DEPENDIENTE | Parametros: 
+dic 07, 2025 4:15:27 A. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.categorias.CategoriaDao getAll
+INFO: Ejecutando SQL: select * from CATEGORIA | Parametros: 
+dic 07, 2025 4:15:27 A. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.productos.ProductoDao getAll
+INFO: Ejecutando SQL: select * from PRODUCTO | Parametros: 

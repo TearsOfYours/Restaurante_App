@@ -6,5 +6,6 @@ data class ProductoDTO (
     val idCategoria: String,
     val id: String,
     val imagePath: String,
+    val descripcion: String,
     val enabled: Boolean
 )
