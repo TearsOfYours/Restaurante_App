@@ -38,7 +38,8 @@ fun MenuRestaurante(
     nombreCliente: String,
     onExit: () -> Unit,
     onTerminar: () -> Unit,
-    onToProduct: () -> Unit
+    onToProduct: () -> Unit,
+    getCatId: (String) -> Unit
 ) {
     val items by menuCartaViewModel.items.collectAsState()
     Scaffold(
@@ -104,17 +105,20 @@ fun MenuRestaurante(
 
                     LazyVerticalGrid(
                         columns = GridCells.Adaptive(
-                            minSize = 140.dp
+                            minSize = 200.dp
                         )
                     ) {
                         items(items.size) { index ->
                             ClienteCategoriaCard(
                                 item = items[index],
                                 toProducts = {selected ->
-                                    menuCartaViewModel.setSelectedCategoria(selected)
+                                    menuCartaViewModel.setSelectedCategoria(selected.id)
                                     onToProduct()
                                 },
-                                onSelect = {items[index].id}
+                                onSelect = { id ->
+                                    menuCartaViewModel.setSelectedCategoria(id)
+                                    getCatId(id)
+                                },
 
                             )
 

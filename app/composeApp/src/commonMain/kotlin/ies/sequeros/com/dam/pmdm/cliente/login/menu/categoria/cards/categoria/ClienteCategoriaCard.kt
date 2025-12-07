@@ -7,6 +7,7 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
@@ -19,6 +20,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.unit.dp
 import ies.sequeros.com.dam.pmdm.administrador.aplicacion.categorias.listar.CategoriaDTO
 import ies.sequeros.com.dam.pmdm.commons.ui.ImagenDesdePath
@@ -45,8 +47,7 @@ fun ClienteCategoriaCard(
         ),
         onClick = {
             toProducts(item)
-            onSelect(item.id!!)
-                  },
+            onSelect(item.id!!)},
     ) {
         Column(
             modifier = Modifier
@@ -57,7 +58,7 @@ fun ClienteCategoriaCard(
         ) {
             Box(
                 modifier = Modifier
-                    .size(60.dp)
+                    .size(200.dp)
                     //.clip(CircleShape)
                     .border(
                         1.dp,
@@ -67,7 +68,11 @@ fun ClienteCategoriaCard(
                     .background(MaterialTheme.colorScheme.surfaceVariant),
                 contentAlignment = Alignment.Center
             ) {
-                ImagenDesdePath(imagePath, Res.drawable.hombre, Modifier.fillMaxWidth())
+                ImagenDesdePath(imagePath,
+                    Res.drawable.hombre,
+                    Modifier.fillMaxSize()
+                    .fillMaxSize()
+                    .clip(RoundedCornerShape(12.dp)))
             }
             Text(item.name)
 

@@ -77,9 +77,6 @@ fun CategoriaCard(
                 contentAlignment = Alignment.Center
             ) {
                 ImagenDesdePath(imagePath, Res.drawable.hombre, Modifier.fillMaxWidth())
-                print("Categoria")
-                print(imagePath)
-                print("\n")
             }
             Text(item.name)
 

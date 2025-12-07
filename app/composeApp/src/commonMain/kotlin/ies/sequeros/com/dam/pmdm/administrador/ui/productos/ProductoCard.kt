@@ -69,9 +69,6 @@ fun ProductoCard(
                 contentAlignment = Alignment.Center
             ) {
                 ImagenDesdePath(imagePath, Res.drawable.hombre, Modifier.fillMaxWidth())
-                print("Producto")
-                print(imagePath)
-                print("\n")
             }
             Text(item.name, style = MaterialTheme.typography.titleMedium)
             Text("Precio: ${item.precio} €", style = MaterialTheme.typography.bodyMedium)

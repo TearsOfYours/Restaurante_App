@@ -31,7 +31,7 @@ class MenuCartaViewModel(
     private val _items = MutableStateFlow<MutableList<CategoriaDTO>>(mutableListOf())
     val items: StateFlow<List<CategoriaDTO>> = _items.asStateFlow()
 
-    private val _selected = MutableStateFlow<CategoriaDTO?>(null)
+    private val _selected = MutableStateFlow<String?>(null)
     val selected = _selected.asStateFlow()
 
     init {
@@ -44,14 +44,14 @@ class MenuCartaViewModel(
         }
     }
 
-    fun setSelectedCategoria(item: CategoriaDTO?) {
+    fun setSelectedCategoria(item: String?) {
         _selected.value = item
     }
 
     fun update(formState: CategoriaFormState) {
         val command = ActualizarCategoriaCommand(
             formState.nombre,
-            selected.value!!.id!!,
+            selected.value!!,
             formState.imagePath
         )
         viewModelScope.launch {

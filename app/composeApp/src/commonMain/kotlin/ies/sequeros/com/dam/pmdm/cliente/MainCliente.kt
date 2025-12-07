@@ -64,7 +64,8 @@ fun MainCliente(
                     }
                 },
                 { navController.navigate(ClienteRoutes.Pedido) },
-                {navController.navigate(ClienteRoutes.Producto)})
+                {navController.navigate(ClienteRoutes.Producto)},
+                {id -> idCategoria = id })
         }
 
         composable(ClienteRoutes.Pedido) {
@@ -72,7 +73,7 @@ fun MainCliente(
         }
 
         composable(ClienteRoutes.Producto) {
-            ClienteCategoriaMain(clienteCategoriaMainViewModel)
+            ClienteCategoriaMain(clienteCategoriaMainViewModel, idCategoria)
         }
 
     }

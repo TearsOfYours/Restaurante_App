@@ -4,5 +4,6 @@ import ies.sequeros.com.dam.pmdm.administrador.aplicacion.productos.listar.Produ
 
 data class ClienteCategoriaMainState(
     val categoriaId: String? = null,
-    val productos: List<ProductoDTO> = emptyList()
+    val productos: List<ProductoDTO> = emptyList(),
+    val productosFiltrados: List<ProductoDTO> = emptyList()
 )

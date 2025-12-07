@@ -27,6 +27,7 @@ import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import ies.sequeros.com.dam.pmdm.administrador.ui.categorias.CategoriasViewModel
 import ies.sequeros.com.dam.pmdm.administrador.ui.productos.ProductoViewModel
+import ies.sequeros.com.dam.pmdm.administrador.ui.productos.form.CategoriasComboBox
 import ies.sequeros.com.dam.pmdm.administrador.ui.productos.form.ProductoFormState
 import ies.sequeros.com.dam.pmdm.administrador.ui.productos.form.ProductoFormViewModel
 import ies.sequeros.com.dam.pmdm.commons.ui.ImagenDesdePath
@@ -95,20 +96,13 @@ fun ProductoForm(
         // ------------------ Categoría ---------------------
         Text("Categoría:", style = MaterialTheme.typography.titleSmall)
 
-        categorias.forEach { categoria ->
-            Row(
-                Modifier.fillMaxWidth(),
-                horizontalArrangement = Arrangement.SpaceBetween
-            ) {
-                Text(categoria.name)
-
-                RadioButton(
-                    selected = state.idCategoria == categoria.id,
-                    onClick = { productoFormViewModel.onIdCategoriaChange(categoria.id) }
-                )
+        CategoriasComboBox(
+            categorias = categorias,
+            current = categorias.find { it.id == state.idCategoria },
+            onSelect = { categoria ->
+                productoFormViewModel.onIdCategoriaChange(categoria.id)
             }
-        }
-
+        )
         state.idCategoriaError?.let {
             Text(
                 it,
