@@ -3574,3 +3574,27 @@ INFORMACIÓN: Ejecutando SQL: select * from CATEGORIA | Parametros:
 dic 08, 2025 5:50:31 P. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.pedidos.PedidoDao getAll
 INFORMACIÓN: Ejecutando SQL: SELECT * FROM PEDIDO | Parametros: 
 >>>>>>> c4804a6cc448bcf53f93a09d5cf68fa1a7225101
+dic 08, 2025 6:16:32 P. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.productos.ProductoDao getAll
+INFO: Ejecutando SQL: select * from PRODUCTO | Parametros: 
+dic 08, 2025 6:16:32 P. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.dependientes.DependienteDao getAll
+INFO: Ejecutando SQL: select * from DEPENDIENTE | Parametros: 
+dic 08, 2025 6:16:32 P. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.categorias.CategoriaDao getAll
+INFO: Ejecutando SQL: select * from CATEGORIA | Parametros: 
+dic 08, 2025 6:16:32 P. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.productos.ProductoDao getAll
+INFO: Ejecutando SQL: select * from PRODUCTO | Parametros: 
+dic 08, 2025 6:16:36 P. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.categorias.CategoriaDao getAll
+INFO: Ejecutando SQL: select * from CATEGORIA | Parametros: 
+dic 08, 2025 6:16:36 P. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.pedidos.PedidoDao getAll
+INFO: Ejecutando SQL: SELECT * FROM PEDIDO | Parametros: 
+dic 08, 2025 6:23:29 P. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.productos.ProductoDao getAll
+INFO: Ejecutando SQL: select * from PRODUCTO | Parametros: 
+dic 08, 2025 6:23:29 P. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.dependientes.DependienteDao getAll
+INFO: Ejecutando SQL: select * from DEPENDIENTE | Parametros: 
+dic 08, 2025 6:23:29 P. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.categorias.CategoriaDao getAll
+INFO: Ejecutando SQL: select * from CATEGORIA | Parametros: 
+dic 08, 2025 6:23:29 P. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.productos.ProductoDao getAll
+INFO: Ejecutando SQL: select * from PRODUCTO | Parametros: 
+dic 08, 2025 6:23:32 P. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.categorias.CategoriaDao getAll
+INFO: Ejecutando SQL: select * from CATEGORIA | Parametros: 
+dic 08, 2025 6:23:32 P. M. ies.sequeros.com.dam.pmdm.administrador.infraestructura.pedidos.PedidoDao getAll
+INFO: Ejecutando SQL: SELECT * FROM PEDIDO | Parametros: 

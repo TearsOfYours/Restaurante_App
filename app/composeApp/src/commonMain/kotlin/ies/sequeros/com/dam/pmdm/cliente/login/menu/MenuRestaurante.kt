@@ -46,8 +46,8 @@ fun MenuRestaurante(
 
     PantallaBase(
         titulo = { Text("Buenos días, $nombreCliente") },
-        onTerminar = {onTerminar()},
-        onSalir ={ onExit()}
+        onTerminar = { onTerminar() },
+        onSalir ={ onExit() }
     ) { paddingValues ->
         Column(modifier = Modifier.padding(paddingValues)) {
             LazyVerticalGrid(

@@ -58,8 +58,8 @@ fun ClienteCategoriaMain(
 
     PantallaBase(
         titulo = { Text("Buenos días, $nombreCliente") },
-        onTerminar = onTerminar,
-        onSalir = onSalir,
+        onTerminar = { onTerminar() },
+        onSalir = { onSalir() },
 
     ) { paddingValues ->
         Row(
