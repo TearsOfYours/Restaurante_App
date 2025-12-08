@@ -7,5 +7,5 @@ import androidx.compose.runtime.Composable
 fun TerminarPedido(
     realizarPedidoViewModel: RealizarPedidoViewModel
 ){
-    Text("Terminar")
+    Text("Realizar Pedido")
 }

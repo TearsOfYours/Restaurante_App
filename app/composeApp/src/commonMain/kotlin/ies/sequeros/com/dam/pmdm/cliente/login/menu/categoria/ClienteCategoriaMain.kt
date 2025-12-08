@@ -48,7 +48,7 @@ fun ClienteCategoriaMain(
     idCat: (String),
     onTerminar: () -> Unit,
     onSalir: () -> Unit,
-    onNombreCliente: (String)
+    onNombreCliente: String
 ) {
     val state by clienteCategoriaMainViewModel.uiState.collectAsState()
     var nombreCliente = onNombreCliente
@@ -66,7 +66,7 @@ fun ClienteCategoriaMain(
             modifier = Modifier
                 .fillMaxSize().padding(paddingValues)
         ) {
-            // ---------- COLUMNA IZQUIERDA (Listado de Cards) ----------
+            // ---------- COLUMNA IZQUIERDA ----------
             Box(
                 modifier = Modifier
                     .weight(0.65f)    // Ocupa el 65% del ancho
@@ -96,7 +96,7 @@ fun ClienteCategoriaMain(
                     .background(Color.LightGray)
             )
 
-            // ---------- COLUMNA DERECHA (Detalle) ----------
+            // ---------- COLUMNA DERECHA ----------
             Box(
                 modifier = Modifier
                     .weight(0.35f)    // Ocupa el 35% del ancho
@@ -113,15 +113,18 @@ fun ClienteCategoriaMain(
 
                     Spacer(modifier = Modifier.height(16.dp))
 
-                    // Se podrá ver la información de cada pedido
+                    // Aquí tendrá que estar la descripción del producto
                     Text("Selecciona un producto para ver más información.")
 
                     Spacer(modifier = Modifier.fillMaxWidth().height(40.dp))
+
+                    // Para añadir productos al pedido
                     Row(
                         Modifier.fillMaxWidth(),
                         horizontalArrangement = Arrangement.SpaceBetween,
                         verticalAlignment = Alignment.CenterVertically
                     ) {
+                        // Falta por implementar
                         Button(
                             onClick = {},
                             content = { Icon(Icons.Default.Add, "Add") })

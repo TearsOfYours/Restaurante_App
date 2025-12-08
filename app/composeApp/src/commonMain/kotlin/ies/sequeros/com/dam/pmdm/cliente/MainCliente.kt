@@ -69,7 +69,9 @@ fun MainCliente(
         }
 
         composable(ClienteRoutes.Producto) {
-            ClienteCategoriaMain(clienteCategoriaMainViewModel, idCategoria, {}, {}, nombre)
+            ClienteCategoriaMain(clienteCategoriaMainViewModel, idCategoria, {}, {
+                navController.navigate(ClienteRoutes.Login) {onExit()}
+            }, nombre)
         }
 
     }
