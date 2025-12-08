@@ -15,6 +15,7 @@ nombre VARCHAR(255) NOT NULL,
 precio DOUBLE NOT NULL,
 idCategoria VARCHAR(36) NOT NULL,
 image_path VARCHAR(255),
+descripcion VARCHAR(255),
 enabled BOOLEAN,
 CONSTRAINT fk_id_categoria 
 FOREIGN KEY (idCategoria)

@@ -32,8 +32,9 @@ class ActualizarProductoUseCase(private val repositorio: IProductoRepositorio,
         }
 
         var newProduct= item.copy(
-            name=command.name,
-            //si se ha sustituido
+            name = command.name,
+            precio = command.precio,
+            idCategoria = command.idCategoria,
             imagePath = nuevaImagePath
         )
         repositorio.update(newProduct)

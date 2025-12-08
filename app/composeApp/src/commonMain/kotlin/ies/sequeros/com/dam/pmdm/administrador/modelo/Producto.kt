@@ -9,5 +9,6 @@ data class Producto(
     var id: String,
     val precio: Double,
     val imagePath:String,
+    val descripcion: String,
     val enabled:Boolean = true
 )
