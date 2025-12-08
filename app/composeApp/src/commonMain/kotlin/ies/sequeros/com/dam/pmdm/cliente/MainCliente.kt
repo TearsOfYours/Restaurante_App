@@ -58,11 +58,7 @@ fun MainCliente(
         composable(ClienteRoutes.Menu) {
             MenuRestaurante(
                 menuCartaViewModel, nombre,
-                {
-                    navController.navigate(ClienteRoutes.Login) {
-                        onExit()
-                    }
-                },
+                { navController.navigate(ClienteRoutes.Login) { onExit() } },
                 { navController.navigate(ClienteRoutes.Pedido) },
                 {navController.navigate(ClienteRoutes.Producto)},
                 {id -> idCategoria = id })
@@ -73,7 +69,7 @@ fun MainCliente(
         }
 
         composable(ClienteRoutes.Producto) {
-            ClienteCategoriaMain(clienteCategoriaMainViewModel, idCategoria, {}, {})
+            ClienteCategoriaMain(clienteCategoriaMainViewModel, idCategoria, {}, {}, nombre)
         }
 
     }

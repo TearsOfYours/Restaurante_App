@@ -47,9 +47,11 @@ fun ClienteCategoriaMain(
     clienteCategoriaMainViewModel: ClienteCategoriaMainViewModel,
     idCat: (String),
     onTerminar: () -> Unit,
-    onSalir: () -> Unit
+    onSalir: () -> Unit,
+    onNombreCliente: (String)
 ) {
     val state by clienteCategoriaMainViewModel.uiState.collectAsState()
+    var nombreCliente = onNombreCliente
     LaunchedEffect(idCat) {
         clienteCategoriaMainViewModel.filtrarPorCategoria(idCat)
     }
@@ -62,7 +64,7 @@ fun ClienteCategoriaMain(
     ) { paddingValues ->
         Row(
             modifier = Modifier
-                .fillMaxSize()
+                .fillMaxSize().padding(paddingValues)
         ) {
             // ---------- COLUMNA IZQUIERDA (Listado de Cards) ----------
             Box(
@@ -74,6 +76,7 @@ fun ClienteCategoriaMain(
                     columns = GridCells.Adaptive(minSize = 150.dp),
                     modifier = Modifier.fillMaxSize(),
                     contentPadding = PaddingValues(8.dp)
+
                 ) {
                     items(state.productosFiltrados) { producto ->
                         ProductoCard(

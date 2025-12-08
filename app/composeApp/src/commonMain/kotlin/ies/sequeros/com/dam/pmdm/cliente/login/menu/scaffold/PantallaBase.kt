@@ -26,8 +26,8 @@ import androidx.compose.ui.unit.dp
 @Composable
 fun PantallaBase(
     titulo: @Composable () -> Unit,
-    onTerminar: (() -> Unit)? = null,
-    onSalir: (() -> Unit)? = null,
+    onTerminar: () -> Unit,
+    onSalir: () -> Unit,
     contenido: @Composable (PaddingValues) -> Unit
 ) {
     Scaffold(
@@ -59,12 +59,8 @@ fun PantallaBase(
                         .padding(horizontal = 32.dp),
                     horizontalArrangement = Arrangement.SpaceBetween
                 ) {
-                    if (onTerminar != null) {
-                        Button(onClick = onTerminar) { Text("Terminar Pedido") }
-                    }
-                    if (onSalir != null) {
-                        Button(onClick = onSalir) { Text("Cancelar Pedido") }
-                    }
+                    Button(onClick = onTerminar) { Text("Terminar Pedido") }
+                    Button(onClick = onSalir) { Text("Cancelar Pedido") }
                 }
             }
         },
