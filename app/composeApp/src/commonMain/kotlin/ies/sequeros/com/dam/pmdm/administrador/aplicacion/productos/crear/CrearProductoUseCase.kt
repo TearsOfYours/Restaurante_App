@@ -1,5 +1,6 @@
 package ies.sequeros.com.dam.pmdm.administrador.aplicacion.productos.crear
 
+import androidx.compose.foundation.defaultScrollbarStyle
 import ies.sequeros.com.dam.pmdm.administrador.aplicacion.categorias.listar.CategoriaDTO
 import ies.sequeros.com.dam.pmdm.administrador.aplicacion.categorias.listar.toDTO
 import ies.sequeros.com.dam.pmdm.administrador.aplicacion.productos.listar.ProductoDTO
@@ -30,7 +31,9 @@ class CrearProductoUseCase(private val repositorio: IProductoRepositorio, privat
             idCategoria = categoria.id,
             id = id,
             precio = createProductCommand.precio,
-            imagePath = imageName
+            imagePath = imageName,
+            enabled = true,
+            descripcion = ""
         )
 
         val element=repositorio.findByName(item.name)

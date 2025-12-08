@@ -30,6 +30,7 @@ kotlin {
         commonMain.dependencies {
             //navegacion
             implementation("org.jetbrains.androidx.navigation:navigation-compose:2.9.1")
+            //implementation(project(":cliente"))
 
             //fecha y hora
             implementation("org.jetbrains.kotlinx:kotlinx-datetime:0.6.1")

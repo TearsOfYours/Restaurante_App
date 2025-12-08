@@ -5,4 +5,5 @@ data class ActualizarCategoriaCommand(
     val name: String,
     val id: String,
     val imagePath: String,
+    val enabled: Boolean = true
 )

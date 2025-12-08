@@ -6,3 +6,9 @@ data class PedidoDTO(
     val fecha: String,
     val estado: String = "PENDIENTE"
 )
+data class LineaPedidoDTO(
+    val nombreProducto: String,
+    val cantidad: Int,
+    val precioUnitario: Double,
+    val subtotal: Double
+)

@@ -8,5 +8,5 @@ fun PedidosDependiente(
     pedidosDependienteViewModel: PedidosDependienteViewModel,
     onClose:() -> Unit,
 ){
-    Text("HOLLAAAAA")
+    Text("Pedidos de Dependiente")
 }

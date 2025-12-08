@@ -1,5 +1,6 @@
 package ies.sequeros.com.dam.pmdm.administrador.infraestructura.ficheros
 
+import ies.sequeros.com.dam.pmdm.administrador.aplicacion.pedidos.listar.PedidoDTO
 import ies.sequeros.com.dam.pmdm.administrador.modelo.IPedidoRepositorio
 import ies.sequeros.com.dam.pmdm.administrador.modelo.Pedido
 import ies.sequeros.com.dam.pmdm.commons.infraestructura.AlmacenDatos
@@ -43,6 +44,9 @@ class FilePedidoRepository(
     override suspend fun getById(id: String) =
         getAll().firstOrNull { it.id == id }
 
+    override suspend fun getByCliente(clienteName: String): List<Pedido> =
+        getAll().filter { it.name == clienteName }
+
     override suspend fun create(pedido: Pedido) {
         val current = getAll().toMutableList()
         current.add(pedido)
@@ -54,6 +58,6 @@ class FilePedidoRepository(
         save(current)
     }
 
-    override suspend fun findByName(name: String) =
+    suspend fun findByName(name: String): Pedido? =
         getAll().firstOrNull { it.name == name }
 }

@@ -98,19 +98,8 @@ fun Dependientes(
         ){
             items(filteredItems.size) { item ->
                 DependienteCard(filteredItems.get(item),
-                    {
-
-                        val element=it.copy(
-                            enabled = !it.enabled
-                        )
-                       dependientesViewModel.switchEnableDependiente(element)
-                    },{
-
-                        val element=it.copy(
-                            enabled = !it.enabled
-                        )
-                        dependientesViewModel.switchEnableDependiente(element)
-                    },{},{
+                    onActivate = { dependientesViewModel.switchEnableDependiente(it) },
+                    onDeactivate = { dependientesViewModel.switchEnableDependiente(it) },{},{
                         onSelectItem(it);
 
                     },{

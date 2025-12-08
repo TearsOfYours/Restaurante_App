@@ -66,7 +66,7 @@ class DependientesViewModel(
     fun switchEnableDependiente(item: DependienteDTO) {
         val command= ActivarDependienteCommand(
             item.id,
-            item.enabled,
+            !item.enabled,
         )
 
         viewModelScope.launch {

@@ -168,10 +168,12 @@ fun DependienteCard(
             ) {
                 // Activar / Desactivar
                 OutlinedIconButton(
-                    onClick = { if (item.enabled)
-                        onDeactivate(item)
-                    else
-                        onActivate(item) },
+                    onClick = {
+                        if (item.enabled)
+                            onDeactivate(item)
+                        else
+                            onActivate(item)
+                    },
                     colors = IconButtonDefaults.filledTonalIconButtonColors(
                         containerColor = if (item.enabled)
                             MaterialTheme.colorScheme.errorContainer
@@ -184,6 +186,7 @@ fun DependienteCard(
                         contentDescription = if (item.enabled) "Desactivar" else "Activar"
                     )
                 }
+
 
                 // Cambiar admin
                 OutlinedIconButton(

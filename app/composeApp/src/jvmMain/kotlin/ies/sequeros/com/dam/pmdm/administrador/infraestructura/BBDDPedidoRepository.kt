@@ -12,12 +12,16 @@ class BBDDPedidoRepository(
         return bbddRepositorioPedidosJava.getAll()
     }
 
-    override suspend fun findByName(name: String): Pedido? {
+    suspend fun findByName(name: String): Pedido? {
         return bbddRepositorioPedidosJava.findByName(name)
     }
 
     override suspend fun getById(id: String): Pedido? {
         return bbddRepositorioPedidosJava.getById(id)
+    }
+
+    override suspend fun getByCliente(name: String): List<Pedido> {
+        return bbddRepositorioPedidosJava.getAll().filter { it.name == name }
     }
 
     override suspend fun create(pedido: Pedido) {

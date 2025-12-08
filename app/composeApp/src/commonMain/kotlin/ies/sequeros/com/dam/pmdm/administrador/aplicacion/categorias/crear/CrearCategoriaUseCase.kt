@@ -22,6 +22,7 @@ class CrearCategoriaUseCase(private val repositorio: ICategoriaRepositorio, priv
             id = id,
             name = createUserCommand.name,
             imagePath = imageName,
+            enabled = true
         )
         val element=repositorio.findByName(item.name)
         if(element!=null)

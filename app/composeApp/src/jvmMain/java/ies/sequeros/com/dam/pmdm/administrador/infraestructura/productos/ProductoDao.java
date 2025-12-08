@@ -1,6 +1,10 @@
 package ies.sequeros.com.dam.pmdm.administrador.infraestructura.productos;
 
 
+import ies.sequeros.com.dam.pmdm.administrador.infraestructura.dependientes.DependienteDao;
+import ies.sequeros.com.dam.pmdm.administrador.modelo.Dependiente;
+import ies.sequeros.com.dam.pmdm.administrador.infraestructura.dependientes.DependienteDao;
+import ies.sequeros.com.dam.pmdm.administrador.modelo.Dependiente;
 import ies.sequeros.com.dam.pmdm.administrador.modelo.Producto;
 import ies.sequeros.com.dam.pmdm.commons.infraestructura.DataBaseConnection;
 import ies.sequeros.com.dam.pmdm.commons.infraestructura.IDao;
@@ -19,13 +23,13 @@ public class ProductoDao implements IDao<Producto> {
     private final String table_name = "PRODUCTO";
     private final String selectall = "select * from " + table_name;
     private final String selectbyid = "select * from " + table_name + " where id=?";
-    private final String findbyname = "select * from " + table_name + " where name=?";
+    private final String findbyname = "select * from " + table_name + " where nombre=?";
 
-    private final String deletebyid = "delete from " + table_name + " where id='?'";
-    private final String insert = "INSERT INTO " + table_name + " (nombre, precio, idCategoria, id) " +
-            "VALUES (?, ?, ?. ?)";
+    private final String deletebyid = "delete from " + table_name + " where id=?";
+    private final String insert = "INSERT INTO " + table_name + " (id, nombre, precio, idCategoria, image_path, descripcion, enabled) " +
+            "VALUES (?, ?, ?, ?, ?, ?, ?)";
     private final String update =
-            "UPDATE " + table_name + " SET nombre = ?, precio = ?" +
+            "UPDATE " + table_name + " SET nombre = ?, precio = ?, idCategoria = ?, image_path = ?, descripcion = ?, enabled = ? " +
                     "WHERE id = ?";
     public ProductoDao() {
     }
@@ -117,17 +121,24 @@ public class ProductoDao implements IDao<Producto> {
             final PreparedStatement pst =
                     conn.getConnection().prepareStatement(update);
             pst.setString(1, item.getName());
-            pst.setString(2, item.getId());
-            pst.setString(3, String.valueOf(item.getIdCategoria()));
+            pst.setDouble(2, item.getPrecio());
+            pst.setString(3, item.getIdCategoria());
+            pst.setString(4, item.getImagePath());
+            pst.setString(5, item.getDescripcion());
+            pst.setBoolean(6, item.getEnabled());
+            pst.setString(7, item.getId());
             pst.executeUpdate();
             pst.close();
             Logger logger = Logger.getLogger(ProductoDao.class.getName());
             logger.info(() ->
                     "Ejecutando SQL: " + update +
                             " | Params: [1]=" + item.getName() +
-                            ", [2]=" + item.getId() +
+                            ", [2]=" + item.getPrecio() +
                             ", [3]=" + item.getIdCategoria() +
-                            "]"
+                            ", [4]=" + item.getImagePath() +
+                            ", [5]=" + item.getDescripcion() +
+                            ", [6]=" + item.getEnabled() +
+                            ", [7]=" + item.getId()
             );
         } catch (final SQLException ex) {
             Logger.getLogger(ProductoDao.class.getName()).log(Level.SEVERE,
@@ -153,26 +164,32 @@ public class ProductoDao implements IDao<Producto> {
         }
     }
 
-    @Override
     public void insert(final Producto item) {
 
         final PreparedStatement pst;
         try {
             pst = conn.getConnection().prepareStatement(insert,
                     Statement.RETURN_GENERATED_KEYS);
-            pst.setString(1, item.getName());
-            pst.setString(2, item.getId());
-            pst.setString(3, String.valueOf(item.getIdCategoria()));
+            pst.setString(1, item.getId());
+            pst.setString(2, item.getName());
+            pst.setDouble(3, item.getPrecio());
+            pst.setString(4, item.getIdCategoria());
+            pst.setString(5, item.getImagePath());
+            pst.setString(6, item.getDescripcion());
+            pst.setBoolean(7, item.getEnabled());
 
             pst.executeUpdate();
             pst.close();
             Logger logger = Logger.getLogger(ProductoDao.class.getName());
             logger.info(() ->
                     "Ejecutando SQL: " + insert +
-                            " | Params: [1]=" + item.getName() +
-                            ", [2]=" + item.getId() +
-                            ", [3]=" + item.getIdCategoria() +
-                            "]"
+                            " | Params: [1]=" + item.getId() +
+                            ", [2]=" + item.getName() +
+                            ", [3]=" + item.getPrecio() +
+                            ", [4]=" + item.getIdCategoria() +
+                            ", [5]=" + item.getImagePath() +
+                            ", [6]=" + item.getDescripcion() +
+                            ", [7]=" + item.getEnabled()
             );
 
         } catch (final SQLException ex) {
@@ -182,16 +199,19 @@ public class ProductoDao implements IDao<Producto> {
     }
 
     //pasar de registro a objeeto
+
     private Producto registerToObject(final ResultSet r) {
         Producto pt =null;
         try {
 
-            pt=new Producto(
-                    r.getString("Nombre"),
-                    r.getString("IDCATEGORIA"),
-                    r.getString("ID"),
-                    r.getDouble("PRECIO"),
-                    r.getString("IMAGEPATH")
+            pt = new Producto(
+                    r.getString("nombre"),
+                    r.getString("idCategoria"),
+                    r.getString("id"),
+                    r.getDouble("precio"),
+                    r.getString("image_path"),
+                    r.getString("descripcion"),
+                    r.getBoolean("enabled")
             );
             return pt;
         } catch (final SQLException ex) {
@@ -200,4 +220,6 @@ public class ProductoDao implements IDao<Producto> {
         }
         return pt;
     }
+
+
 }

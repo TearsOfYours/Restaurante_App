@@ -59,4 +59,8 @@ public class BBDDRepositorioPedidosJava {
             e.printStackTrace();
         }
     }
+    public List<Pedido> getByCliente(String clienteId) {
+        return dao.getByCliente(clienteId);
+    }
+
 }

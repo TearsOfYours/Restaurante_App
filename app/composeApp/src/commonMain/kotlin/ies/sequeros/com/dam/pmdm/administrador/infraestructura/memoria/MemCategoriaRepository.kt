@@ -4,7 +4,7 @@ import ies.sequeros.com.dam.pmdm.administrador.modelo.Categoria
 import ies.sequeros.com.dam.pmdm.administrador.modelo.Dependiente
 import ies.sequeros.com.dam.pmdm.administrador.modelo.ICategoriaRepositorio
 import ies.sequeros.com.dam.pmdm.administrador.modelo.IDependienteRepositorio
-
+/*
 class MemCategoriaRepository: ICategoriaRepositorio {
 
     private val items=hashMapOf<String, Categoria>();
@@ -62,3 +62,4 @@ class MemCategoriaRepository: ICategoriaRepositorio {
 
 
 }
+*/
