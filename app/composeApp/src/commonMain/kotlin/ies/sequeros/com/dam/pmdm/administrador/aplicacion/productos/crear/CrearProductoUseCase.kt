@@ -1,6 +1,5 @@
 package ies.sequeros.com.dam.pmdm.administrador.aplicacion.productos.crear
 
-import androidx.compose.foundation.defaultScrollbarStyle
 import ies.sequeros.com.dam.pmdm.administrador.aplicacion.categorias.listar.CategoriaDTO
 import ies.sequeros.com.dam.pmdm.administrador.aplicacion.categorias.listar.toDTO
 import ies.sequeros.com.dam.pmdm.administrador.aplicacion.productos.listar.ProductoDTO
