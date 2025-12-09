@@ -77,7 +77,6 @@ fun ClienteCategoriaCard(
             Text(item.name)
 
         }
-        //Falta por implementar el código para que se pueda activar o desactivar
 
         Row(
             modifier = Modifier.fillMaxWidth(),

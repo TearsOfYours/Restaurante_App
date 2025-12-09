@@ -46,7 +46,7 @@ fun App(pedidoRepositorio: IPedidoRepositorio, productoRepositorio: IProductoRep
 
     appViewModel.setWindowsAdatativeInfo( currentWindowAdaptiveInfo())
     val navController= rememberNavController()
-//para cambiar el modo
+    //para cambiar el modo
     AppTheme(appViewModel.darkMode.collectAsState()) {
 
         NavHost(
@@ -63,15 +63,16 @@ fun App(pedidoRepositorio: IPedidoRepositorio, productoRepositorio: IProductoRep
                     navController.navigate(AppRoutes.Cliente)
                 })
             }
+            //Administrador
             composable (AppRoutes.Administrador){
                 MainAdministrador(appViewModel,mainViewModel,administradorViewModel,
                     dependientesViewModel,categoriasViewModel, productosViewModel, pedidosViewModel
 
                 ) { navController.popBackStack() }
             }
+            //Cliente
             composable(AppRoutes.Cliente) {
                 MainCliente(
-                    appViewModel,
                     categoriaRepositorio,
                     pedidoRepositorio,
                     productoRepositorio,
@@ -81,6 +82,7 @@ fun App(pedidoRepositorio: IPedidoRepositorio, productoRepositorio: IProductoRep
                     navController.popBackStack()
                 }
             }
+            //Dependiente
             composable(AppRoutes.Dependiente) {
                 MainDependiente(appViewModel, mainDependienteViewModel) {}
             }

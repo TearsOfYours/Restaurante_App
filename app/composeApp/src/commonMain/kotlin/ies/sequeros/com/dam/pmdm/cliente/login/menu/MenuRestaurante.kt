@@ -44,15 +44,18 @@ fun MenuRestaurante(
 ) {
     val items by menuCartaViewModel.items.collectAsState()
 
+    //Scaffold
     PantallaBase(
         titulo = { Text("Buenos días, $nombreCliente") },
         onTerminar = { onTerminar() },
         onSalir ={ onExit() }
+        // El padding necesario para que no se coloce detras del scaffold
     ) { paddingValues ->
         Column(modifier = Modifier.padding(paddingValues)) {
             LazyVerticalGrid(
                 columns = GridCells.Adaptive(200.dp)
             ) {
+                //Generación de todas las categorías
                 items(items.size) { index ->
 
                     ClienteCategoriaCard(

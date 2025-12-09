@@ -9,7 +9,6 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import ies.sequeros.com.dam.pmdm.AppViewModel
 import ies.sequeros.com.dam.pmdm.administrador.modelo.ICategoriaRepositorio
 import ies.sequeros.com.dam.pmdm.administrador.modelo.IPedidoRepositorio
 import ies.sequeros.com.dam.pmdm.administrador.modelo.IProductoRepositorio
@@ -25,7 +24,6 @@ import ies.sequeros.com.dam.pmdm.commons.infraestructura.AlmacenDatos
 
 @Composable
 fun MainCliente(
-    appViewModel: AppViewModel,
     categoriaRepositorio: ICategoriaRepositorio,
     pedidoRepositorio: IPedidoRepositorio,
     productoRepositorio: IProductoRepositorio,
@@ -33,6 +31,7 @@ fun MainCliente(
     clienteCategoriaMainViewModel: ClienteCategoriaMainViewModel,
     onExit: () -> Unit
 ) {
+    //ViewModels
     val loginClienteViewModel = viewModel { LoginClienteViewModel() }
     val menuCartaViewModel = viewModel { MenuCartaViewModel(productoRepositorio, categoriaRepositorio, pedidoRepositorio, almacenDatos) }
     val realizarPedidoViewModel = viewModel { RealizarPedidoViewModel(productoRepositorio, categoriaRepositorio, pedidoRepositorio, almacenDatos) }
@@ -44,17 +43,15 @@ fun MainCliente(
         navController,
         startDestination = ClienteRoutes.Login
     ) {
-
+        //Login Cliente
         composable(ClienteRoutes.Login) {
-            LoginCliente(appViewModel, loginClienteViewModel, { nameLogin ->
+            LoginCliente(loginClienteViewModel) { nameLogin ->
                 nombre = nameLogin
                 navController.navigate(ClienteRoutes.Menu)
-            }, {
-                navController.popBackStack()
-            })
+            }
 
         }
-
+        //Menu de restaurante
         composable(ClienteRoutes.Menu) {
             MenuRestaurante(
                 menuCartaViewModel, nombre,
@@ -63,11 +60,11 @@ fun MainCliente(
                 {navController.navigate(ClienteRoutes.Producto)},
                 {id -> idCategoria = id })
         }
-
+        //Navegar al pedido
         composable(ClienteRoutes.Pedido) {
             TerminarPedido(realizarPedidoViewModel)
         }
-
+        //Todos los productos dentro de una categoria
         composable(ClienteRoutes.Producto) {
             ClienteCategoriaMain(clienteCategoriaMainViewModel, idCategoria, {}, {
                 navController.navigate(ClienteRoutes.Login) {onExit()}

@@ -25,9 +25,6 @@ fun MainDependiente(
         navController,
         startDestination = DependienteRoutes.Login
     ){
-        composable(DependienteRoutes.MainDependiente){
-            PrincipalDependiente()
-        }
         composable(DependienteRoutes.Login) {
             LoginDependiente(appViewModel, loginDependienteViewModel, {
                navController.navigate(DependienteRoutes.Pedidos)

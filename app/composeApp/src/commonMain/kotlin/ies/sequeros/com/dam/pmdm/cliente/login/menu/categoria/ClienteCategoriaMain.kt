@@ -55,7 +55,7 @@ fun ClienteCategoriaMain(
     LaunchedEffect(idCat) {
         clienteCategoriaMainViewModel.filtrarPorCategoria(idCat)
     }
-
+    //Scaffold
     PantallaBase(
         titulo = { Text("Buenos días, $nombreCliente") },
         onTerminar = { onTerminar() },
@@ -66,7 +66,7 @@ fun ClienteCategoriaMain(
             modifier = Modifier
                 .fillMaxSize().padding(paddingValues)
         ) {
-            // ---------- COLUMNA IZQUIERDA ----------
+            // Columna izquierda con todos los productos
             Box(
                 modifier = Modifier
                     .weight(0.65f)    // Ocupa el 65% del ancho
@@ -88,7 +88,7 @@ fun ClienteCategoriaMain(
                 }
             }
 
-            // ---------- SEPARADOR VERTICAL ----------
+            // Separador
             Box(
                 modifier = Modifier
                     .width(1.dp)
@@ -96,7 +96,7 @@ fun ClienteCategoriaMain(
                     .background(Color.LightGray)
             )
 
-            // ---------- COLUMNA DERECHA ----------
+            // Columna derecha con la información de cada producto (falta implementar)
             Box(
                 modifier = Modifier
                     .weight(0.35f)    // Ocupa el 35% del ancho
@@ -124,7 +124,7 @@ fun ClienteCategoriaMain(
                         horizontalArrangement = Arrangement.SpaceBetween,
                         verticalAlignment = Alignment.CenterVertically
                     ) {
-                        // Falta por implementar
+                        // Falta por implementar a línea pedido
                         Button(
                             onClick = {},
                             content = { Icon(Icons.Default.Add, "Add") })

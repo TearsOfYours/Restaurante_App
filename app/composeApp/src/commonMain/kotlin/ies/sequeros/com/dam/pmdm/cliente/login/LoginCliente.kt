@@ -8,37 +8,27 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.wrapContentHeight
 import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.foundation.text.KeyboardOptions
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.PersonOutline
 import androidx.compose.material3.Button
-import androidx.compose.material3.Icon
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import ies.sequeros.com.dam.pmdm.AppViewModel
-import vegaburguer.composeapp.generated.resources.Res
 
 @Composable
 fun LoginCliente(
-    appViewModel: AppViewModel,
     loginClienteViewModel: LoginClienteViewModel,
-    onLogin: (String) -> Unit,
-    onClose: () -> Unit)
+    onLogin: (String) -> Unit)
     {
         val state by loginClienteViewModel.uiState.collectAsState()
 
@@ -81,7 +71,7 @@ fun LoginCliente(
                             }
                         )
                     )
-
+                // El nombre del cliente tiene que tener al menos 3 letras para que sea válido
                     state.nombreError?.let { error ->
                         Text(
                             text = error,
@@ -94,6 +84,7 @@ fun LoginCliente(
 
             Spacer(modifier = Modifier.height(20.dp))
 
+            //Botón de iniciar sesión
             Button(
                 onClick = {
                     loginClienteViewModel.submit(

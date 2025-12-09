@@ -42,7 +42,7 @@ fun CategoriaForm(
 {
     val state by categoriaFormViewModel.uiState.collectAsState()
     val formValid by categoriaFormViewModel.isFormValid.collectAsState()
-    val selected = categoriaViewModel.selected.collectAsState()
+
     val imagePath =
         remember { mutableStateOf(if (state.imagePath != null && state.imagePath.isNotEmpty()) state.imagePath else "") }
 
@@ -50,7 +50,7 @@ fun CategoriaForm(
     Column(
         modifier = Modifier.fillMaxSize().verticalScroll(rememberScrollState())
     ) {
-        // ------------------ Nombre ---------------------
+        // Nombre
         OutlinedTextField(
             value = state.nombre,
             onValueChange = {categoriaFormViewModel.onNombreChange(it)},
@@ -66,10 +66,10 @@ fun CategoriaForm(
             )
         }
 
+        //Para seleccionar una imagen
         Text("Selecciona un avatar:", style = MaterialTheme.typography.titleSmall)
 
         HorizontalDivider(thickness = 1.dp, color = MaterialTheme.colorScheme.outlineVariant)
-        val scope = rememberCoroutineScope()
 
         SelectorImagenComposable({ it: String ->
             categoriaFormViewModel.onImagenPathChange(it)//  dependienteViewModel.almacenDatos.copy(it, "prueba","/dependientes_imgs/")
@@ -84,6 +84,7 @@ fun CategoriaForm(
                 color = MaterialTheme.colorScheme.error
             )
         }
+        //Confirmar la inserción de la nueva categoría, debe tener un nombre e imagen
         Button(
             onClick = {
                 categoriaFormViewModel.submit(
@@ -93,9 +94,17 @@ fun CategoriaForm(
                     onFailure = {}
                 )
             },
-            //enabled = formValid
+            enabled = formValid
         ) {
             Icon(Icons.Default.Save, contentDescription = null)
+        }
+
+        Button(
+            onClick = {
+                onClose()
+            },
+        ){
+            Text("Cancelar")
         }
 
 

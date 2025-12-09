@@ -30,6 +30,7 @@ fun PantallaBase(
     onSalir: () -> Unit,
     contenido: @Composable (PaddingValues) -> Unit
 ) {
+    //Scaffold con la ventana superior e inferior para tomar pedido o cancelarlo
     Scaffold(
         modifier = Modifier.fillMaxSize(),
         topBar = {
